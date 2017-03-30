@@ -62,7 +62,7 @@
 			</div>
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<nav class="col-9" role="navigation" id="site_nav">
+			<nav class="col-8 right-1" role="navigation" id="site_nav">
 				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'fs-blog'); ?>"><?php _e('Menu', 'fs-blog'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',

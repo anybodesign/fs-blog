@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-03-30 14:54+0200\n"
-"PO-Revision-Date: 2017-03-30 14:54+0200\n"
+"POT-Creation-Date: 2017-03-30 16:16+0200\n"
+"PO-Revision-Date: 2017-03-30 16:16+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -19,10 +19,6 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: 404.php:21
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Page introuvable."
 
 #: 404.php:23
 msgid "It looks like nothing was found at this location. Maybe try a search?"
@@ -58,19 +54,19 @@ msgstr "Menu principal"
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:140
+#: functions.php:139
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:149
+#: functions.php:148
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:158
+#: functions.php:157
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:167
+#: functions.php:166
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
@@ -93,23 +89,6 @@ msgstr "Déplier le menu de navigation"
 #: header.php:66
 msgid "Menu"
 msgstr "Menu"
-
-#: inc/custom-settings.php:10 inc/custom-settings.php:11
-#: inc/custom-settings.php:69
-msgid "Custom Settings"
-msgstr "Réglages personnalisés"
-
-#: inc/custom-settings.php:27
-msgid "Site Settings"
-msgstr "Paramètres du site"
-
-#: inc/custom-settings.php:36
-msgid "Copyright"
-msgstr "Copyright"
-
-#: inc/custom-settings.php:58
-msgid "The site&rsquo;s copyright, displayed in the footer"
-msgstr "Le copyright du site, affiché dans le footer"
 
 #: inc/subnav-walker.php:12
 msgid "Unfold Sub-Menu"
@@ -171,10 +150,18 @@ msgstr "Pages :"
 msgid "Recent Posts"
 msgstr "Articles récents"
 
-#: template-parts/page-banner.php:29
+#: template-parts/page-banner.php:25
+msgid "Hello :)"
+msgstr "Hello :)"
+
+#: template-parts/page-banner.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
+
+#: template-parts/page-banner.php:34
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Page introuvable."
 
 #: template-parts/post-meta.php:15
 msgid "Posted on&nbsp;"
@@ -207,6 +194,18 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "Custom Settings"
+#~ msgstr "Réglages personnalisés"
+
+#~ msgid "Site Settings"
+#~ msgstr "Paramètres du site"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "The site&rsquo;s copyright, displayed in the footer"
+#~ msgstr "Le copyright du site, affiché dans le footer"
 
 #~ msgid "Scroll Down"
 #~ msgstr "Faire défiler vers le bas"

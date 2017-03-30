@@ -81,7 +81,13 @@ body {
 	// If we place a Logo
 	
 	img {
-		height: 70px; width: auto;
+		height: 70px; 
+		width: auto;
+		
+		@include rwd(large) {
+			max-width: none;			
+		}
+
 	}
 	img + span {
 		@include a11y-hidden();

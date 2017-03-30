@@ -1,0 +1,273 @@
+// -------------------------
+// 
+// = Main Navigation
+// 
+// -------------------------
+
+
+// Skiplinks
+
+
+.skiplinks-nav {
+	position: absolute;
+	z-index: 100; 
+}
+.skiplinks-menu {
+	
+	li {
+		font-family: $font-regular;
+	}
+	a {
+		position: absolute;
+		top: -500px; left: $grid-padding;
+		display: block;
+		padding: $grid-padding;
+		background-color: #000;
+		color: #fff;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:focus {
+			top:$grid-padding;
+		}
+
+	}
+}
+
+
+// Main nav
+
+
+#site_nav {
+	
+	@include rwd(large) {
+		padding-bottom: 0;
+	}
+}
+
+.main-menu {
+	
+	display: none;
+	padding-top: $grid-padding;
+	
+	@include rwd(large) {
+		padding-top: 0;
+		text-align: right; 
+	}
+	
+	& > li {
+		position: relative;
+		display: block;
+		font-family: 'Title';
+		font-size: 1.8rem;
+		
+		@include rwd(medium) {
+			display: inline-block;
+			margin: 0 $grid-padding;
+		}
+		
+		& > a {
+			display: block;
+			text-decoration: none;
+			padding: $grid-padding;
+			border-bottom: #eee 1px solid;
+			
+			@include rwd(medium) {
+				border-color: transparent; 
+			}
+			@include rwd(large) {
+				border-width: 5px;
+				padding: $grid-padding*5 $grid-padding;
+				
+			}
+		}
+		& > a:hover, & > a:focus {
+			color: $primary-color;
+
+		}
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			border-color: $text-color;
+
+		}
+		
+		// If Menu item has children
+		
+		&.menu-item-has-children {
+			
+			@include rwd(medium) {
+				padding-right: $grid-padding*3;
+			}
+			@include rwd(wide) {
+				padding-right: 0;
+				
+				&:hover > .sub-menu,
+				&:focus > .sub-menu {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+				
+		}
+		
+		// Sub-Menus behaviors
+		
+		.sub-menu {
+			display: none;
+			position: relative;
+			border-bottom: #ccc 1px dashed;
+			
+			@include rwd(medium) {
+				position: absolute;
+				background-color: #fff;
+				padding: $grid-padding;
+				text-align: left;
+				border-bottom: 0;
+				min-width: 100%;
+				z-index: 100;
+			}
+			@include rwd(wide) {
+				display: block;
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity .2s ease-in-out;
+			}
+			
+			
+		
+			& > li {
+				
+				& > a {
+					display: block;
+					text-decoration: none;
+					padding: $grid-padding;
+					
+				}
+				& > a:hover, & > a:focus,
+				&.current-menu-item > a {
+					color: $secondary-color;
+				}
+				
+				@include rwd(medium) {
+					white-space: nowrap;
+					border-bottom: #ccc 1px solid;
+				}
+			}
+			
+			.current-menu-item &,
+			.current-menu-ancestor & {
+				
+			}			
+		}
+		
+	}
+	
+	@include rwd(medium) {
+		display: block;
+	}
+	
+}
+
+.sub-menu-unfold {
+	position: absolute;
+	top: $grid-padding*1.5; right: 0;
+	display: block;
+	height: 24px; width: 24px;
+	margin-top: 0;
+	border: 0; padding: 0;
+	background: transparent !important;
+	
+	&::after, &::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 11px; left: 4px;
+		width: 16px; height: 3px;
+		background-color: $third-color;
+		@include transition();
+		
+	}
+	&::after {
+		transform: rotate(-90deg);
+	}
+	&::before {}
+	
+	span {
+		@include a11y-hidden();
+	}
+	
+	&.sub-menu-opened::after {transform: rotate(45deg);}
+	&.sub-menu-opened::before {transform: rotate(-45deg);}
+	
+	@include rwd(medium) {
+		height: 16px; width: 16px;
+		top: 50%; margin-top: -8px;
+		border-radius: 8px;
+		
+		&::after, &::before {
+			top: 7px; left: 3px;
+			width: 10px; height: 2px;
+		} 
+	}
+	@include rwd(large) {
+		margin-top: -10px;
+	}	
+	@include rwd(wide) {
+		display: none;
+	}
+}
+
+
+
+#menu-toggle {
+
+	// Hamburger Menu
+	
+	display: block; 
+	height: 23px; width: 23px;
+	position: relative;
+	border: 0; border-radius: 0; padding: 0;
+	margin: 0 auto;
+	cursor: pointer;
+	@include a11y-hide(60px);
+
+	span {
+		position: absolute; 
+		top: 10px; right: 0;
+	}
+	span, span::after, span::before {
+		display: block;
+		width: 23px; height: 3px;
+		background-color: #000;
+		transition: all .3s linear;
+	}
+	span::after, span::before {
+		position: absolute;
+		content: ""; 
+	}
+	span::after {bottom: -9px; left: 0;}
+	span::before {top: -9px; left: 0;}
+
+	&.menu-opened span {
+		background-color: transparent; 
+		height: 1px;
+	}
+	&.menu-opened span::after {
+		top: 0;
+		transform: rotate(45deg);
+		background-color: $secondary-color;
+	}
+	&.menu-opened span::before {
+		top: 0;
+		transform: rotate(-45deg);
+		background-color: $secondary-color;
+	}
+
+	&:hover {
+		background-color: transparent;
+	}	
+	
+	@include rwd(medium) {
+		display: none;				
+	}
+}

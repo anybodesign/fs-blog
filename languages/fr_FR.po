@@ -1,0 +1,417 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: From Scratch\n"
+"POT-Creation-Date: 2016-11-28 11:40+0100\n"
+"PO-Revision-Date: 2016-11-28 11:41+0100\n"
+"Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
+"Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Page introuvable."
+
+#: 404.php:23
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
+"une recherche?"
+
+#: comments.php:18
+msgid "They talk about it"
+msgstr "Ils en parlent"
+
+#: comments.php:33
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: comments.php:40
+msgid "Do we talk about it?"
+msgstr "On en discute ?"
+
+#: comments.php:41
+msgid "Add my comment!"
+msgstr "Ajouter mon commentaire !"
+
+#: functions.php:58
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: functions.php:59
+msgid "Footer Menu"
+msgstr "Menu pied de page"
+
+#: functions.php:146
+msgid "Sidebar Widgets Area"
+msgstr "Zone de widget Sidebar"
+
+#: functions.php:155
+msgid "Footer Widgets Area #1"
+msgstr "Zone #1 de widgets du pied de page"
+
+#: functions.php:164
+msgid "Footer Widgets Area #2"
+msgstr "Zone #2 de widgets du pied de page"
+
+#: functions.php:173
+msgid "Footer Widgets Area #3"
+msgstr "Zone #3 de widgets du pied de page"
+
+#: header.php:33
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
+
+#: header.php:34
+msgid "Go to main content\t"
+msgstr "Aller au contenu principal\t"
+
+#: header.php:43 header.php:50
+msgid "Go to Home Page"
+msgstr "Aller à la page d'accueil"
+
+#: header.php:66
+msgid "Unfold navigation menu"
+msgstr "Déplier le menu de navigation"
+
+#: header.php:66
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/custom-settings.php:10 inc/custom-settings.php:11
+#: inc/custom-settings.php:69
+msgid "Custom Settings"
+msgstr "Réglages personnalisés"
+
+#: inc/custom-settings.php:27
+msgid "Site Settings"
+msgstr "Paramètres du site"
+
+#: inc/custom-settings.php:36
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/custom-settings.php:58
+msgid "The site&rsquo;s copyright, displayed in the footer"
+msgstr "Le copyright du site, affiché dans le footer"
+
+#: inc/subnav-walker.php:12
+msgid "Unfold Sub-Menu"
+msgstr "Déplier le sous-menu"
+
+#: index.php:42
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: index.php:43
+msgid "Next page"
+msgstr "Page suivante"
+
+#: index.php:44
+msgid "Page"
+msgstr "Page"
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: template-parts/content-none.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
+
+#: template-parts/content-none.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Aucun résultat ne correspond à vos critères de recherche. Essayez avec "
+"d’autres mots clés."
+
+#: template-parts/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
+"recherche."
+
+#: template-parts/content-posts.php:36
+#, php-format
+msgid "Continue reading %s"
+msgstr "Lire la suite de l'article %s"
+
+#: template-parts/content-posts.php:48
+msgid "Tagged with:"
+msgstr "Étiquetté&nbsp;:"
+
+#: template-parts/content-posts.php:55 template-parts/content-search.php:33
+msgid "Pages:"
+msgstr "Pages :"
+
+#: template-parts/footer-posts.php:20
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: template-parts/page-banner.php:31
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: template-parts/post-meta.php:15
+msgid "Posted on&nbsp;"
+msgstr "Posté le&nbsp;"
+
+#: template-parts/post-meta.php:16
+msgid "by&nbsp;"
+msgstr "par&nbsp;"
+
+#: template-parts/post-meta.php:17
+msgid "in&nbsp;"
+msgstr "dans&nbsp;"
+
+#: template-parts/post-meta.php:22
+msgid "Comment(s)"
+msgstr "Commentaire(s)"
+
+#. Theme Name of the plugin/theme
+msgid "FS Blog"
+msgstr "FS Blog"
+
+#. Description of the plugin/theme
+msgid "A WordPress Theme for your blog, based on From Scratch."
+msgstr "Un thème WordPress pour votre blog, basé sur From Scratch."
+
+#. Author of the plugin/theme
+msgid "Thomas Villain"
+msgstr "Thomas Villain"
+
+#. Author URI of the plugin/theme
+msgid "https://anybodesign.com/"
+msgstr "https://anybodesign.com/"
+
+#~ msgid "Scroll Down"
+#~ msgstr "Faire défiler vers le bas"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Service"
+#~ msgstr "Service"
+
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgid "Parent service:"
+#~ msgstr "Service parent :"
+
+#~ msgid "All services"
+#~ msgstr "Tous les services"
+
+#~ msgid "Add New Service"
+#~ msgstr "Ajouter un nouveau service"
+
+#~ msgid "Add New"
+#~ msgstr "Ajouter"
+
+#~ msgid "New Service"
+#~ msgstr "Nouveau service"
+
+#~ msgid "Edit Service"
+#~ msgstr "Modifier le service"
+
+#~ msgid "Update Service"
+#~ msgstr "Mettre à jour le service"
+
+#~ msgid "View Service"
+#~ msgstr "Voir le service"
+
+#~ msgid "Search Service"
+#~ msgstr "Chercher le service"
+
+#~ msgid "Not found"
+#~ msgstr "Introuvable"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "Introuvable dans la corbeille\t"
+
+#~ msgid "Our Services"
+#~ msgstr "Nos services"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Slides"
+#~ msgstr "Slides"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Slide"
+#~ msgstr "Slide"
+
+#~ msgid "Slider"
+#~ msgstr "Slider"
+
+#~ msgid "Slides"
+#~ msgstr "Slides"
+
+#~ msgid "Parent Slide:"
+#~ msgstr "Slide parente : "
+
+#~ msgid "All Slides"
+#~ msgstr "Toutes les slides"
+
+#~ msgid "Add New Slide"
+#~ msgstr "Ajouter une nouvelle slide"
+
+#~ msgid "New Slide"
+#~ msgstr "Nouvelle slide"
+
+#~ msgid "Edit Slide"
+#~ msgstr "Modifier la slide"
+
+#~ msgid "Update Slide"
+#~ msgstr "Mettre à jour la slide"
+
+#~ msgid "View Slide"
+#~ msgstr "Voir la slide"
+
+#~ msgid "Search Slide"
+#~ msgstr "Chercher une slide"
+
+#~ msgid "The Slides"
+#~ msgstr "Les slides"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Services Categories"
+#~ msgstr "Catégories de services"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Services Category"
+#~ msgstr "Catégorie de services"
+
+#~ msgid "Services Categories"
+#~ msgstr "Catégories de services"
+
+#~ msgid "All Services Categories"
+#~ msgstr "Toutes les catégories de services"
+
+#~ msgid "Parent Services Category"
+#~ msgstr "Catégorie de services parente"
+
+#~ msgid "Parent Services Category:"
+#~ msgstr "Catégorie de services parente :"
+
+#~ msgid "New Services Category"
+#~ msgstr "Nouvelle catégorie de services"
+
+#~ msgid "Add New Services Category"
+#~ msgstr "Ajouter une nouvelle catégorie de services"
+
+#~ msgid "Edit Services Category"
+#~ msgstr "Modifier la catégorie de services"
+
+#~ msgid "Update Services Category"
+#~ msgstr "Mettre à jour la catégorie de services"
+
+#~ msgid "View Services Category"
+#~ msgstr "Voir la catégorie de services"
+
+#~ msgid "Separate items with commas"
+#~ msgstr "Séparer les éléments par des virgules"
+
+#~ msgid "Add or remove items"
+#~ msgstr "Ajouter ou supprimer des éléments"
+
+#~ msgid "Choose from the most used"
+#~ msgstr "Choisir parmi les plus utilisés"
+
+#~ msgid "Popular Services Category"
+#~ msgstr "Catégorie de services populaire"
+
+#~ msgid "Search Services Category"
+#~ msgstr "Rechercher une catégorie de services"
+
+#~ msgid "Not Found"
+#~ msgstr "Introuvable"
+
+#~ msgid "FS Company"
+#~ msgstr "FS Company"
+
+#~ msgid "A WordPress Theme for your company, based on From Scratch."
+#~ msgstr "Un thème WordPress pour votre entreprise, basé sur From Scratch."
+
+#~ msgid "http://anybodesign.com/"
+#~ msgstr "http://anybodesign.com/"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Service Category"
+#~ msgstr "Catégorie de service"
+
+#~ msgid "Primary Widgets Area"
+#~ msgstr "Zone primaire Widgets"
+
+#~ msgid "Social Networks"
+#~ msgstr "Réseaux sociaux"
+
+#~ msgid "Twitter URL"
+#~ msgstr "URL Twitter"
+
+#~ msgid "Facebook URL"
+#~ msgstr "URL Facebook"
+
+#~ msgid "Google+ URL"
+#~ msgstr "URL Google+"
+
+#~ msgid "Enter your Social Networks URLs"
+#~ msgstr "Entrez les URLs de vos réseaux sociaux"
+
+#~ msgid ""
+#~ "Your browser should be <a href=\"http://browsehappy.com\">updated</a> to "
+#~ "improve your experience."
+#~ msgstr ""
+#~ "Votre navigateur doit être <a href=\"http://browsehappy.com\">mis à jour</"
+#~ "a> afin d'améliorer votre expérience."
+
+#~ msgid "From Scratch"
+#~ msgstr "From Scratch"
+
+#~ msgid "https://github.com/anybodesign/from-scratch"
+#~ msgstr "https://github.com/anybodesign/from-scratch"
+
+#~ msgid "A WordPress Starter Theme using Prid'"
+#~ msgstr "Un starter thème WordPress utilisant Prid'"
+
+#~ msgid "Sorry! Couldn’t find any post!"
+#~ msgstr "Désolé ! Impossible de trouver des articles !"
+
+#~ msgid "The site’s copyright, displayed in the footer"
+#~ msgstr "Copyright du site, affiché dans le pied de page"
+
+#~ msgid "A WordPress Starter Theme"
+#~ msgstr "Un starter thème pour WordPress"
+
+#~ msgid "Search results"
+#~ msgstr "Résultats de la recherche"
+
+#~ msgid "Site Copyright"
+#~ msgstr "Copyright du Site"
+
+#~ msgid "All Settings"
+#~ msgstr "Tous les paramètres"
+
+#~ msgid "Thomas Villain - Anybodesign"
+#~ msgstr "Thomas Villain - Anybodesign"

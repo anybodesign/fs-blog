@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-03-30 16:16+0200\n"
-"PO-Revision-Date: 2017-03-30 16:16+0200\n"
+"POT-Creation-Date: 2017-03-31 00:42+0200\n"
+"PO-Revision-Date: 2017-03-31 00:42+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -42,31 +42,31 @@ msgstr "On en discute ?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire !"
 
-#: footer.php:74
+#: footer.php:82
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
 
-#: functions.php:58
+#: functions.php:62
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:59
+#: functions.php:63
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:139
+#: functions.php:143
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:148
+#: functions.php:152
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:157
+#: functions.php:161
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:166
+#: functions.php:170
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
@@ -75,20 +75,78 @@ msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
 #: header.php:34
-msgid "Go to main content\t"
-msgstr "Aller au contenu principal\t"
+msgid "Go to main content"
+msgstr "Aller au contenu principal"
 
-#: header.php:43 header.php:50
+#: header.php:47
 msgid "Go to Home Page"
 msgstr "Aller à la page d'accueil"
 
-#: header.php:66
+#: header.php:69
 msgid "Unfold navigation menu"
 msgstr "Déplier le menu de navigation"
 
-#: header.php:66
+#: header.php:69
 msgid "Menu"
 msgstr "Menu"
+
+#: inc/customizer.php:17
+msgid "Theme Colors"
+msgstr "Couleurs du thème"
+
+#: inc/customizer.php:18
+msgid "Colors customisation"
+msgstr "Personnalisation des couleurs"
+
+#: inc/customizer.php:22
+msgid "Theme Pictures"
+msgstr "Images du thème"
+
+#: inc/customizer.php:23
+msgid "Pictures customisation"
+msgstr "Personnalisation des images"
+
+#: inc/customizer.php:38
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: inc/customizer.php:54
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: inc/customizer.php:66
+msgid "Custom footer text"
+msgstr "Texte de pied de page personnalisé"
+
+#: inc/customizer.php:67
+msgid "Add a custom text instead of the year and blog name."
+msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
+
+#: inc/customizer.php:80
+msgid "Display WordPress Link"
+msgstr "Afficher le lien WordPress"
+
+#: inc/customizer.php:90
+msgid "Default Banner"
+msgstr "Bannière par défaut"
+
+#: inc/customizer.php:91
+msgid "Choose a default picture for the banner.<br> (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image par défaut pour la bannière.<br>(2048 x 625 pixels max.)"
+
+#: inc/customizer.php:99
+msgid "404 error"
+msgstr "Erreur 404"
+
+#: inc/customizer.php:100
+msgid "Choose a picture for the 404 error page.<br> (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image pour la page d’erreur 404.<br>(2048 x 625 pixels max.)"
+
+#: inc/customizer.php:110
+msgid "Site Logo"
+msgstr "Logo du site"
 
 #: inc/subnav-walker.php:12
 msgid "Unfold Sub-Menu"
@@ -195,8 +253,8 @@ msgstr "Thomas Villain"
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
 
-#~ msgid "Custom Settings"
-#~ msgstr "Réglages personnalisés"
+#~ msgid "Third color"
+#~ msgstr "Troisième couleur"
 
 #~ msgid "Site Settings"
 #~ msgstr "Paramètres du site"
@@ -409,9 +467,6 @@ msgstr "https://anybodesign.com/"
 
 #~ msgid "Search results"
 #~ msgstr "Résultats de la recherche"
-
-#~ msgid "Site Copyright"
-#~ msgstr "Copyright du Site"
 
 #~ msgid "All Settings"
 #~ msgstr "Tous les paramètres"

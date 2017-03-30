@@ -309,10 +309,13 @@
 				top: $grid-padding;
 				right: $grid-padding;
 			}
+			a {
+				color: $secondary-color;				
+			}
 			time {
 				font-family: $font-mono;
 				font-size: 1.1rem;
-				color: $secondary-color;
+				color: inherit;
 			}
 		}
 	}

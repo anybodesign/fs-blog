@@ -31,7 +31,7 @@
 		<nav class="skiplinks-nav" role="navigation">
 			<ul class="skiplinks-menu">
 				<li><a href="#site_nav"><?php _e('Go to main menu', 'fs-blog'); ?></a></li>
-				<li><a href="#site_content"><?php _e('Go to main content	', 'fs-blog'); ?></a></li>
+				<li><a href="#site_content"><?php _e('Go to main content', 'fs-blog'); ?></a></li>
 			</ul>
 		</nav>
 		
@@ -40,24 +40,27 @@
 			<div class="col-3 site-brand">
 				<?php if ( is_front_page() ) { ?>
 				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blog'); ?>">
-						<img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/fromscratch-logo.svg" alt="logo">
-						<span><?php bloginfo( 'name' ); ?></span>
-					</a>
-				</h1>
 				<?php } else { ?>
 				<p class="site-title">
+				<?php } ?>
+					
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blog'); ?>">
-						<img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/fromscratch-logo.svg" alt="logo">						
+						<?php if(get_theme_mod('site_logo')) { ?>
+						<img class="logo" src="<?php echo(get_theme_mod('site_logo', 'none')); ?>" alt="logo site">
+						<?php } ?>
 						<span><?php bloginfo( 'name' ); ?></span>
 					</a>
+				
+				<?php if ( is_front_page() ) { ?>
+				</h1>
+				<?php } else { ?>
 				</p>
 				<?php } ?>
 	
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
 					if ( $site_desc || is_customize_preview() ) { ?>
-					<p class="site-desc screen-reader-text"><?php echo $site_desc; ?></p>  <?php // if logo —> .screen-reader-text ?>
+					<p class="site-desc <?php if(get_theme_mod('site_logo')) { echo'screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
 				<?php } ?>
 			</div>
 			

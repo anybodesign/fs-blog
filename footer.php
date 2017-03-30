@@ -71,7 +71,17 @@
 					
 					<div class="footer-mentions">
 						<p class="footer-copyright">
-							&copy; <?php echo date(' Y '); echo esc_url( bloginfo( 'name' ) ) ?>. <a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
+							
+							<?php if(get_theme_mod('footer_text')) {
+								echo get_theme_mod('footer_text', ''); 
+							} else {
+								echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
+							} ?>
+							
+							<?php if(get_theme_mod('display_wp') == true) { ?>
+							<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
+							<?php } ?>
+							
 						</p>
 						
 						<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>

@@ -332,7 +332,7 @@ input[type=submit].action-btn {
 	text-decoration: none;
 	background-color: $primary-color;
 	color: #fff;
-	transition: background .2s linear;
+	transition: opacity .2s linear;
 }
 .action-btn:hover,
 .action-btn:focus,
@@ -340,7 +340,8 @@ button.action-btn:hover,
 button.action-btn:focus,
 input[type=submit].action-btn:hover,
 input[type=submit].action-btn:focus {
-	background-color: darken($primary-color, 5%);
+	//background-color: darken($primary-color, 5%);
+	opacity: .7;
 }
 
 .action-btn-white,
@@ -350,6 +351,7 @@ input[type=submit].action-btn-white {
 	background-color: #fff;
 	color: $text-color;
 }
+/*
 .action-btn-white:hover,
 .action-btn-white:focus,
 button.action-btn-white:hover,
@@ -359,6 +361,7 @@ input[type=submit].action-btn-white:focus {
 	background-color: $primary-color;
 	color: #fff;
 }
+*/
 
 .action-btn-dark,
 button.action-btn-dark,
@@ -367,6 +370,7 @@ input[type=submit].action-btn-dark {
 	background-color: $secondary-color;
 	color: #fff;
 }
+/*
 .action-btn-dark:hover,
 .action-btn-dark:focus,
 button.action-btn-dark:hover,
@@ -376,6 +380,7 @@ input[type=submit].action-btn-dark:focus {
 	background-color: lighten($secondary-color, 10%);
 	color: #fff;
 }
+*/
 
 
 form {

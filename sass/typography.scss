@@ -378,6 +378,12 @@ input[type=submit].action-btn-dark:focus {
 }
 
 
+form {
+	input[type="submit"] {
+		@extend .action-btn;
+	}
+}
+
 
 
 /* ------------------------------

@@ -71,7 +71,7 @@
 					
 					<div class="footer-mentions">
 						<p class="footer-copyright">
-							&copy; <?php echo date(' Y '); if (get_option( 'from_scratch_settings' )['from_scratch_copyright']) { echo get_option( 'from_scratch_settings' )['from_scratch_copyright']; } else { echo esc_url( bloginfo( 'name' ) ); } ?>
+							&copy; <?php echo date(' Y '); echo esc_url( bloginfo( 'name' ) ) ?>. <a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
 						</p>
 						
 						<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>

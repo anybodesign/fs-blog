@@ -11,22 +11,28 @@
 
 get_header(); ?>
 
-				<div id="primary" class="content-area" role="main">
+				<main id="primary" class="content-area" role="main">
+
+					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 					
-					<div class="row">
-						<div class="col-12">
-		
+					<div class="row inner">
+
+						<div class="col-6 left-1 right-1">
+
 							<section class="error-404 not-found">
-								<header class="page-header">
-									<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'from-scratch' ); ?></h1>
-								</header>
-								<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'from-scratch' ); ?></p>
+								<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-blog' ); ?></p>
 								<?php get_search_form(); ?>		
 							</section>	
-												
-						</div>					
+
+						</div>
+						
+						<div class="col-3 right-1">
+							<?php get_sidebar(); ?>
+						</div>
+					
 					</div>
-				
-				</div> <?php // END primary ?>
+
+				</main> <?php // END primary ?>
+
 
 <?php get_footer(); ?>

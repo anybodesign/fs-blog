@@ -39,9 +39,9 @@ get_header(); ?>
 							
 							<div id="posts_nav">
 								<?php the_posts_pagination(array(
-										'prev_text'          => __( 'Previous page', 'from-scratch' ),
-										'next_text'          => __( 'Next page', 'from-scratch' ),
-										'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'from-scratch' ) . ' </span>',
+										'prev_text'          => __( 'Previous page', 'fs-blog' ),
+										'next_text'          => __( 'Next page', 'fs-blog' ),
+										'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-blog' ) . ' </span>',
 									)); ?>
 							</div>
 				

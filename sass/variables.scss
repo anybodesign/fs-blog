@@ -7,8 +7,8 @@
 // Grid Padding & Max Width
 
 
-$grid-padding: 0.3125em; 	// @note: The padding gutter! equiv. 5px
-$max-width: 75em;			// @note: 1200px
+$grid-padding: .3125em; 	// @note: The padding gutter! equiv. 5px
+$max-width: 80em;			// @note: 1200px
 
 
 
@@ -19,25 +19,20 @@ $width-small: 25em; 		// @note: 400px
 $width-medium: 40em;		// @note: 640px
 $width-large: 50em; 		// @note: 800px
 $width-wide: 80em;	 		// @note: 1280px
+$width-xwide: 100em;		// @note: 1600px
 
 
 
 // Colors
 
 
-/*
-$primary-color: #303030;
-$secondary-color: #606060;
-$third-color: #404040;
-$text-color: #303030;
-$bg-color: #fff;
-*/
-
 $primary-color: #9c0;		// @note: Green
 $secondary-color: #606060;	// @note: Grey
-$third-color: #404040;		// @note: Light Grey
+$third-color: #404040;		// @note: Medium Grey
 $text-color: #303030;		// @note: Dark Grey
 $bg-color: #fff;			// @note: White
+
+
 
 // Fonts
 

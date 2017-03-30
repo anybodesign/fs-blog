@@ -1,5 +1,3 @@
-# From Scratch
+# FS Blog
 
-A WordPress Starter Theme by Thomas Villain @ anybodesign.com
-
-**Work in Progress :)**
+A WordPress Theme for your blog, made with the From Scratch starter theme by Thomas Villain

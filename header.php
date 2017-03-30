@@ -30,8 +30,8 @@
 		
 		<nav class="skiplinks-nav" role="navigation">
 			<ul class="skiplinks-menu">
-				<li><a href="#site_nav"><?php _e('Go to main menu', 'from-scratch'); ?></a></li>
-				<li><a href="#site_content"><?php _e('Go to main content	', 'from-scratch'); ?></a></li>
+				<li><a href="#site_nav"><?php _e('Go to main menu', 'fs-blog'); ?></a></li>
+				<li><a href="#site_content"><?php _e('Go to main content	', 'fs-blog'); ?></a></li>
 			</ul>
 		</nav>
 		
@@ -40,14 +40,14 @@
 			<div class="col-3 site-brand">
 				<?php if ( is_front_page() ) { ?>
 				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blog'); ?>">
 						<img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/fromscratch-logo.svg" alt="logo">
 						<span><?php bloginfo( 'name' ); ?></span>
 					</a>
 				</h1>
 				<?php } else { ?>
 				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'from-scratch'); ?>">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blog'); ?>">
 						<img class="logo" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/fromscratch-logo.svg" alt="logo">						
 						<span><?php bloginfo( 'name' ); ?></span>
 					</a>
@@ -63,12 +63,12 @@
 			
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
 			<nav class="col-9" role="navigation" id="site_nav">
-				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'from-scratch'); ?>"><?php _e('Menu', 'from-scratch'); ?><span></span></button>
+				<button id="menu-toggle" title="<?php _e('Unfold navigation menu', 'fs-blog'); ?>"><?php _e('Menu', 'fs-blog'); ?><span></span></button>
 				<?php wp_nav_menu( array(
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
 					'container'			=>	false,
-					'walker'			=>	new from_scratch_subnav_walker()
+					'walker'			=>	new fs_blog_subnav_walker()
 					));
 				?>
 			</nav>

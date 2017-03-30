@@ -17,7 +17,7 @@
 				<div class="col-4">
 					<div class="footer-section">
 						
-						<h3 class="widget-title"><?php _e('Recent Posts', 'from-scratch'); ?></h3>
+						<h3 class="widget-title"><?php _e('Recent Posts', 'fs-blog'); ?></h3>
 						<ul class="recentpost-list">
 						<?php while ($query->have_posts()) : $query->the_post(); ?>
 							<li>

@@ -1,6 +1,6 @@
 <?php defined('ABSPATH') or die(); 
 
-class from_scratch_subnav_walker extends Walker_Nav_Menu {
+class fs_blog_subnav_walker extends Walker_Nav_Menu {
 
    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
        
@@ -9,7 +9,7 @@ class from_scratch_subnav_walker extends Walker_Nav_Menu {
 
        if ( $item->is_dropdown ) {
 
-           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","from-scratch").'</span></button>', $item_html );
+           $item_html = str_replace( '</a>', '</a> <button class="sub-menu-unfold" aria-expanded="false"><span>'.__("Unfold Sub-Menu","fs-blog").'</span></button>', $item_html );
        
        }
        $output .= $item_html;

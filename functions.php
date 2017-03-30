@@ -8,14 +8,14 @@ if ( ! isset( $content_width ) )
 
 // From Scratch Theme Setup
 
-if ( ! function_exists( 'from_scratch_setup' ) ) :
+if ( ! function_exists( 'fs_blog_setup' ) ) :
 
-function from_scratch_setup() {
+function fs_blog_setup() {
 	
 	
 	// I18n
 	
-	load_theme_textdomain( 'from-scratch', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'fs-blog', get_template_directory() . '/languages' );
 	
 	
 	// Theme Support
@@ -48,28 +48,27 @@ function from_scratch_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'from_scratch_setup' );
+add_action( 'after_setup_theme', 'fs_blog_setup' );
 
 
 
 // Menus
 
 register_nav_menus( array(
-	'main_menu' =>  esc_html__( 'Main Menu', 'from-scratch' ),
-	'footer_menu' => esc_html__( 'Footer Menu', 'from-scratch' )
+	'main_menu' =>  esc_html__( 'Main Menu', 'fs-blog' ),
+	'footer_menu' => esc_html__( 'Footer Menu', 'fs-blog' )
 ));
 
 
 
-// Sub-menus Walker // http://wordpress.stackexchange.com/questions/88604/bootstrap-drop-down-menu-with-wp-nav-menu
+// Sub-menus Walker
 
-include( dirname( __FILE__ ) . '/inc/subnav-walker.php' );
-
+include( get_template_directory() . '/inc/subnav-walker.php' );
 
 
 // Enqueue JS & CSS
 
-function from_scratch_scripts_load() {
+function fs_blog_scripts_load() {
     if (!is_admin()) {
 
 		// JS 
@@ -95,7 +94,7 @@ function from_scratch_scripts_load() {
 		
 
 		wp_enqueue_script(
-			'from-scratch-skip-link-focus-fix', 
+			'fs-blog-skip-link-focus-fix', 
 			get_template_directory_uri() . '/js/skip-link-focus-fix.js', 
 			array(), 
 			false, 
@@ -121,29 +120,23 @@ function from_scratch_scripts_load() {
 			'pridx', 
 			get_template_directory_uri() . '/css/pridx.css',
 			array(), 
-			'1.0', 
+			'1.6', 
 			'screen' 
 		);
 		
-		wp_enqueue_style( 'from-scratch-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'fs-blog-style', get_stylesheet_uri() );
 
 	}
 }    
-add_action( 'wp_enqueue_scripts', 'from_scratch_scripts_load' );
-
-
-
-// Custom settings
-
-include( dirname( __FILE__ ) . '/inc/custom-settings.php' );
+add_action( 'wp_enqueue_scripts', 'fs_blog_scripts_load' );
 
 
 
 // Widgets
 
-function from_scratch_widgets_init() {
+function fs_blog_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Sidebar Widgets Area', 'from-scratch' ),
+		'name'			=>	esc_html__( 'Sidebar Widgets Area', 'fs-blog' ),
 		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div class="widget-container">',
@@ -152,7 +145,7 @@ function from_scratch_widgets_init() {
 		'after_title' 	=> 	'</h3>',
 	));
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets Area #1', 'from-scratch' ),
+		'name'			=>	esc_html__( 'Footer Widgets Area #1', 'fs-blog' ),
 		'id'			=>	'footer_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'',
@@ -161,7 +154,7 @@ function from_scratch_widgets_init() {
 		'after_title' 	=> 	'</h3>',
 	));
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets Area #2', 'from-scratch' ),
+		'name'			=>	esc_html__( 'Footer Widgets Area #2', 'fs-blog' ),
 		'id'			=>	'footer_area2',
 		'description' 	=> 	'',
 		'before_widget' => 	'',
@@ -170,7 +163,7 @@ function from_scratch_widgets_init() {
 		'after_title' 	=> 	'</h3>',
 	));
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Footer Widgets Area #3', 'from-scratch' ),
+		'name'			=>	esc_html__( 'Footer Widgets Area #3', 'fs-blog' ),
 		'id'			=>	'footer_area3',
 		'description' 	=> 	'',
 		'before_widget' => 	'',
@@ -179,7 +172,7 @@ function from_scratch_widgets_init() {
 		'after_title' 	=> 	'</h3>',
 	));
 }
-add_action( 'widgets_init', 'from_scratch_widgets_init' );
+add_action( 'widgets_init', 'fs_blog_widgets_init' );
 
 
 // Excerpt

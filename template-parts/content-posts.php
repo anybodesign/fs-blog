@@ -33,7 +33,7 @@
 							<?php
 								the_content(sprintf(
 									
-									wp_kses( __( 'Continue reading %s', 'from-scratch' ), array( 'span' => array( 'class' => array() ) ) ),
+									wp_kses( __( 'Continue reading %s', 'fs-blog' ), array( 'span' => array( 'class' => array() ) ) ),
 									the_title( '<span class="screen-reader-text">"', '"</span>', false )
 								));
 							?>
@@ -45,14 +45,14 @@
 
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
-									<p><?php _e( 'Tagged with:', 'from-scratch' ); ?></p>
+									<p><?php _e( 'Tagged with:', 'fs-blog' ); ?></p>
 									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 							  	</div>
 							<?php } ?>					
 							
 							<?php 
 								wp_link_pages(array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'from-scratch' ),
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fs-blog' ),
 									'after'  => '</div>',
 								));
 							?>

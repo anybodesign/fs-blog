@@ -33,7 +33,7 @@
 				<?php } ?>		
 				
 					
-					<?php if ( is_active_sidebar( 'widgets_area1' ) && is_home() || is_search() || is_archive() ) { 
+					<?php if ( is_active_sidebar( 'widgets_area1' ) && is_home() || is_search() || is_archive() || is_404() ) { 
 						dynamic_sidebar( 'widgets_area1' ); 
 					} ?>
 							

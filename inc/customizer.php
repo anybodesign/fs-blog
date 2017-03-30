@@ -88,7 +88,7 @@ function fs_blog_customize_register($wp_customize) {
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_banner_ctrl', array(
 		'label'			=> __('Default Banner', 'fs-blog'),
-		'description'	=> __('Choose a default picture for the banner.<br> (2048 x 625 pixels max.)', 'fs-blog'),		
+		'description'	=> __('Choose a default picture for the banner. (2048 x 625 pixels max.)', 'fs-blog'),		
 		'section'		=> 'fs_pictures_section',
 		'settings'		=> 'bg_banner',
 	)));
@@ -97,7 +97,7 @@ function fs_blog_customize_register($wp_customize) {
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_404_ctrl', array(
 		'label'			=> __('404 error', 'fs-blog'),
-		'description'	=> __('Choose a picture for the 404 error page.<br> (2048 x 625 pixels max.)', 'fs-blog'),		
+		'description'	=> __('Choose a picture for the 404 error page. (2048 x 625 pixels max.)', 'fs-blog'),		
 		'section'		=> 'fs_pictures_section',
 		'settings'		=> 'bg_404',
 	)));

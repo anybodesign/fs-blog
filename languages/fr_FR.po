@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-03-31 00:42+0200\n"
-"PO-Revision-Date: 2017-03-31 00:42+0200\n"
+"POT-Creation-Date: 2017-03-31 00:46+0200\n"
+"PO-Revision-Date: 2017-03-31 00:46+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -131,18 +131,18 @@ msgid "Default Banner"
 msgstr "Bannière par défaut"
 
 #: inc/customizer.php:91
-msgid "Choose a default picture for the banner.<br> (2048 x 625 pixels max.)"
+msgid "Choose a default picture for the banner. (2048 x 625 pixels max.)"
 msgstr ""
-"Choisissez une image par défaut pour la bannière.<br>(2048 x 625 pixels max.)"
+"Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
 #: inc/customizer.php:99
 msgid "404 error"
 msgstr "Erreur 404"
 
 #: inc/customizer.php:100
-msgid "Choose a picture for the 404 error page.<br> (2048 x 625 pixels max.)"
+msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
-"Choisissez une image pour la page d’erreur 404.<br>(2048 x 625 pixels max.)"
+"Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
 #: inc/customizer.php:110
 msgid "Site Logo"

@@ -6,6 +6,7 @@
  * @subpackage FS_Blog
  * @since FS Blog 1.0
  */
+__( 'Page without Sidebar', 'fs-blog' );
 get_header(); ?>
 
 				<main id="primary" class="content-area" role="main">

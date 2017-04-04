@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-03-31 00:46+0200\n"
-"PO-Revision-Date: 2017-03-31 00:46+0200\n"
+"POT-Creation-Date: 2017-04-04 11:13+0200\n"
+"PO-Revision-Date: 2017-04-04 11:13+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -69,26 +69,6 @@ msgstr "Zone #2 de widgets du pied de page"
 #: functions.php:170
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
-
-#: header.php:33
-msgid "Go to main menu"
-msgstr "Aller au menu principal"
-
-#: header.php:34
-msgid "Go to main content"
-msgstr "Aller au contenu principal"
-
-#: header.php:47
-msgid "Go to Home Page"
-msgstr "Aller à la page d'accueil"
-
-#: header.php:69
-msgid "Unfold navigation menu"
-msgstr "Déplier le menu de navigation"
-
-#: header.php:69
-msgid "Menu"
-msgstr "Menu"
 
 #: inc/customizer.php:17
 msgid "Theme Colors"
@@ -164,6 +144,10 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
+#: pagecustom-nosidebar.php:9
+msgid "Page without Sidebar"
+msgstr "Page sans barre latérale"
+
 #: template-parts/content-none.php:13
 msgid "Nothing Found"
 msgstr "Aucun résultat"
@@ -208,16 +192,36 @@ msgstr "Pages :"
 msgid "Recent Posts"
 msgstr "Articles récents"
 
-#: template-parts/page-banner.php:25
+#: template-parts/header-logo.php:13
+msgid "Go to Home Page"
+msgstr "Aller à la page d'accueil"
+
+#: template-parts/header-nav.php:15
+msgid "Unfold navigation menu"
+msgstr "Déplier le menu de navigation"
+
+#: template-parts/header-nav.php:15
+msgid "Menu"
+msgstr "Menu"
+
+#: template-parts/header-skiplinks.php:15
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
+
+#: template-parts/header-skiplinks.php:16
+msgid "Go to main content"
+msgstr "Aller au contenu principal"
+
+#: template-parts/page-banner.php:32
 msgid "Hello :)"
 msgstr "Hello :)"
 
-#: template-parts/page-banner.php:28
+#: template-parts/page-banner.php:38
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
 
-#: template-parts/page-banner.php:34
+#: template-parts/page-banner.php:44
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Page introuvable."
 

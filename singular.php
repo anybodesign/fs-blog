@@ -18,7 +18,6 @@ get_header(); ?>
 
 					<?php get_template_part( 'template-parts/page', 'content' ); ?>
 
-					
 					<?php if ( comments_open() || get_comments_number() ) : ?>
 					
 					<div class="row inner">

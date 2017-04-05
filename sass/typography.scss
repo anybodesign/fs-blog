@@ -209,15 +209,20 @@ textarea, input, video {
 // Lists
 
 
-ul, ol {padding-left: 1.5em;}
-
-ul {list-style-type: circle;}
-ol {list-style-type: decimal;}
+ul, ol {
+	padding-left: 1.5em;
+}
+ul {
+	list-style: circle;
+}
+ol {
+	list-style: decimal;
+}
 
 nav ul, nav ol {
 	padding: 0; 
 	margin: 0; 
-	list-style-type: none;
+	list-style: none;
 }
 
 li ul, li ol {

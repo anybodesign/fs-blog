@@ -61,6 +61,7 @@ function fs_blog_customize_register($wp_customize) {
 	
 	$wp_customize->add_setting('footer_text', array(
 		'default'			=> '',
+		'sanitize_callback'	=> 'sanitize_text_field',		
 	));
 	$wp_customize->add_control('footer_text_ctrl', array(
 		'label'			=> __('Custom footer text', 'fs-blog'),
@@ -73,6 +74,7 @@ function fs_blog_customize_register($wp_customize) {
 	
 	$wp_customize->add_setting('display_wp', array(
 		'default'	=> true,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 	));
 	
 	$wp_customize->add_control('display_wp_ctrl', array(
@@ -84,7 +86,9 @@ function fs_blog_customize_register($wp_customize) {
 	
 	// Header default image
 	
-	$wp_customize->add_setting('bg_banner');
+	$wp_customize->add_setting('bg_banner', array(
+		'sanitize_callback'		=> 'esc_url_raw'
+	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_banner_ctrl', array(
 		'label'			=> __('Default Banner', 'fs-blog'),
@@ -93,7 +97,9 @@ function fs_blog_customize_register($wp_customize) {
 		'settings'		=> 'bg_banner',
 	)));
 	
-	$wp_customize->add_setting('bg_404');
+	$wp_customize->add_setting('bg_404', array(
+		'sanitize_callback'		=> 'esc_url_raw'
+	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_404_ctrl', array(
 		'label'			=> __('404 error', 'fs-blog'),
@@ -104,11 +110,12 @@ function fs_blog_customize_register($wp_customize) {
 	
 	// Site logo
 	
-	$wp_customize->add_setting('site_logo');
+	$wp_customize->add_setting('site_logo', array(
+		'sanitize_callback'		=> 'esc_url_raw'
+	));
 	
 	$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo_ctrl', array(
 		'label'			=> __('Site Logo', 'fs-blog'),
-		//'description'	=> __('Upload your logo.', 'fs-blog'),		
 		'section'		=> 'title_tagline',
 		'settings'		=> 'site_logo',
 	)));
@@ -120,7 +127,15 @@ function fs_blog_customize_register($wp_customize) {
 add_action('customize_register', 'fs_blog_customize_register');
 
 
-// Customizer Banners Output
+// Sanitize
+
+// Checkbox
+function fs_customizer_sanitize_checkbox( $input ) {
+	if ( $input === true || $input === '1' ) {
+		return '1';
+	}
+	return '';
+}
 
 
 // Customizer Colors Output

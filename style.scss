@@ -299,6 +299,24 @@ p.footer-copyright {
 				background-position: -240px 0;
 			}
 		}
+		a[href*="vimeo.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -280px 0;
+			}
+		}
+		a[href*="tripadvisor.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -320px 0;
+			}
+		}
+		a[href*="snapchat.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -360px 0;
+			}
+		}
 		
 	}
 }

@@ -231,4 +231,4 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setAuthentication(array(
 	'consumer_key' => 'S4YYALTKVXGavp39LZ',
 	'consumer_secret' => '3W8D5LuDcjADwAYJ9hPXYg3WUnmGBRp6',
-)); 
+));

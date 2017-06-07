@@ -216,4 +216,19 @@ function my_mce_before_init_insert_formats( $init_array ) {		// Callback functio
 	return $init_array;  
   
 } 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  // Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  // Attach callback to 'tiny_mce_before_init'
+
+
+
+// Auto-Updater
+
+require 'inc/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://bitbucket.org/anybodesign/fs-blog',
+	__FILE__,
+	'fs-blog'
+);
+$myUpdateChecker->setAuthentication(array(
+	'consumer_key' => 'S4YYALTKVXGavp39LZ',
+	'consumer_secret' => '3W8D5LuDcjADwAYJ9hPXYg3WUnmGBRp6',
+)); 

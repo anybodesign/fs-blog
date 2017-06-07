@@ -38,7 +38,7 @@
 						<div class="col-8 left-2 right-2">
 							
 						<?php if (is_archive() ) { ?>
-							<div class="category-descritpion">
+							<div class="category-description">
 								<?php the_archive_description(); ?>
 							</div>
 						<?php } ?>

@@ -14,6 +14,9 @@ Just upload and activate the theme :)
 
 == Changelog ==
 
+= 1.2.5 - 2017-06-07 =
+* Typo
+
 = 1.2 - 2017-06-07 =
 * Auto-Updater
 

@@ -317,6 +317,24 @@ p.footer-copyright {
 				background-position: -360px 0;
 			}
 		}
+		a[href*="github.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -400px 0;
+			}
+		}
+		a[href*="dribble.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -440px 0;
+			}
+		}
+		a[href*="behance.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -480px 0;
+			}
+		}
 		
 	}
 }

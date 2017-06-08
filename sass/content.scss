@@ -5,8 +5,6 @@
 // -------------------------
 
 
-#site_content {}
-
 .page-banner {
 	position: relative;
 	width: 100%;
@@ -60,6 +58,14 @@
 		border: $text-color 1px solid;
 		background-color: #fff;
 	}
+}
+
+/* ------------------------- */
+/* = iFrames
+/* ------------------------- */
+
+iframe {
+	width: 100%;
 }
 
 

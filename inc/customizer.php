@@ -73,7 +73,7 @@ function fs_blog_customize_register($wp_customize) {
 	// WP Credits
 	
 	$wp_customize->add_setting('display_wp', array(
-		'default'	=> true,
+		'default'	=> false,
 		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 	));
 	
@@ -151,8 +151,12 @@ function fs_blog_colors() {
 		.post-figure,
 		.post:nth-child(2n) .post-figure,
 		.post:nth-child(3n) .post-figure,
-		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit] { 
+		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit],
+		.search-form::after { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		}
+		.search-form::before {
+			border-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		
 		.main-menu > li > a:hover, 

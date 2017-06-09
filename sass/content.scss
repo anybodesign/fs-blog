@@ -189,14 +189,38 @@
 
 .search-form {
 	position: relative;
-	padding: $grid-padding*2 0;
-	
-	input[type=search] {
-		margin-bottom: .5em;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
 	}
-	input[type=submit] {
+	&::before {
+		width: 20px; height: 20px;
+		border: $primary-color 2px solid;
+		border-radius: 100%;
+		top: $grid-padding*2; 
+		left: $grid-padding*2;
+	}
+	&::after {
+		width: 10px;
+		height: 2px;
+		background-color: $primary-color;
+		transform: rotate(45deg);
+		top: 32px;
+		left: 28px;
+	}
+	
+	.search-field {
 		margin-bottom: .5em;
-		@extend .action-btn-dark;
+		padding-left: 2em;
+	}
+	input[type="submit"].search-submit {
+		//margin-bottom: .5em;
+		//@extend .action-btn-dark;
+		@include a11y-hidden();
+		padding: 0;
 	}
 }
 

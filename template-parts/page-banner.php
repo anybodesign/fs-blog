@@ -29,7 +29,12 @@
 						
 						<h1 class="page-title">
 							<?php if ( is_front_page() ) { ?>
-							<?php esc_html_e( 'Hello :)', 'fs-blog' ); ?>
+
+							<?php if(get_theme_mod('welcome_text')) {
+								echo get_theme_mod('welcome_text', ''); 
+							} else {
+								esc_html_e( 'Hello :)', 'fs-blog' ); 	
+							} ?>
 							
 							<?php } else if (is_home() ) { ?>
 							<?php single_post_title(); ?>

@@ -57,6 +57,19 @@ function fs_blog_customize_register($wp_customize) {
 	)));
 	
 	
+	// Banner Welcome text
+	
+	$wp_customize->add_setting('welcome_text', array(
+		'default'			=> 'Hello :)',
+		'sanitize_callback'	=> 'sanitize_text_field',		
+	));
+	$wp_customize->add_control('welcome_text_ctrl', array(
+		'label'			=> __('Custom banner welcome text', 'fs-blog'),
+		'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
+		'section'		=> 'title_tagline',
+		'settings'		=> 'welcome_text',
+	));
+
 	// Footer text
 	
 	$wp_customize->add_setting('footer_text', array(

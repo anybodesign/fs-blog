@@ -165,7 +165,9 @@ function fs_blog_colors() {
 		.post:nth-child(2n) .post-figure,
 		.post:nth-child(3n) .post-figure,
 		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit],
-		.search-form::after { 
+		.search-form::after,
+		.ias_trigger a:link,
+		.ias_trigger a:visited { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		.search-form::before {
@@ -174,9 +176,7 @@ function fs_blog_colors() {
 		
 		.main-menu > li > a:hover, 
 		.main-menu > li > a:focus,
-		.calendar_wrap table td a,
-		.ias_trigger a:link,
-		.ias_trigger a:visited { 
+		.calendar_wrap table td a { 
 			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		
@@ -186,7 +186,9 @@ function fs_blog_colors() {
 		.action-btn-dark,
 		button.action-btn-dark,
 		input[type=submit].action-btn-dark,
-		#site_foot {
+		#site_foot,
+		.ias_trigger a:hover,
+		.ias_trigger a:active {
 			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}
 		.site-desc,
@@ -195,8 +197,6 @@ function fs_blog_colors() {
 		.main-menu>li .sub-menu>li>a:hover, 
 		.main-menu>li .sub-menu>li>a:focus, 
 		.main-menu>li .sub-menu>li.current-menu-item>a,
-		.ias_trigger a:hover,
-		.ias_trigger a:active,
 		.comment-list .comment-meta .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}

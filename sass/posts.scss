@@ -15,12 +15,18 @@
 
 .post {
 	position: relative;
+	margin-bottom: $grid-padding*4;
+	border-bottom: #ccc 1px solid;
 
 	&:nth-child(2n) .post-figure {
 		background-color: lighten($primary-color, 5%);
 	}
 	&:nth-child(3n) .post-figure {
 		background-color: darken($primary-color, 5%);
+	}
+	
+	&.has-post-thumbnail {
+		border-bottom: 0;
 	}
 }
 

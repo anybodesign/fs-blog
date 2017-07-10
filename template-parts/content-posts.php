@@ -9,17 +9,15 @@
  * @since FS Blog 1.0
  */
 ?>
-
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
 						
 						<header class="post-header">
 
-							<figure class="post-figure">
 							<?php if ( '' != get_the_post_thumbnail() ) { ?>
+							<figure class="post-figure">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							<?php } ?>
 							</figure>
+							<?php } ?>
 							
 							<?php if ( is_single() ) { ?>
 								<h1 class="post-title"><?php the_title(); ?></h1>

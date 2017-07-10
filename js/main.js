@@ -67,7 +67,12 @@ jQuery(document).ready(function($) {
 		});
 		
 	});	
-
 	
+	
+	
+	// Cat Dropdown
+	
+	$('#cat').wrap('<div class="formfield-select--container"></div>');
+
 
 });

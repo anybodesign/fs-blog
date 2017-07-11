@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-07-07 11:55+0200\n"
-"PO-Revision-Date: 2017-07-07 11:57+0200\n"
+"POT-Creation-Date: 2017-07-11 18:45+0200\n"
+"PO-Revision-Date: 2017-07-11 18:45+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -94,45 +94,49 @@ msgstr "Couleur primaire"
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: inc/customizer.php:67
+#: inc/customizer.php:69
+msgid "Hide the tagline (in an accessible way)"
+msgstr "Masquer le slogan (de manière accessible)"
+
+#: inc/customizer.php:81
 msgid "Custom banner welcome text"
 msgstr "Texte de bienvenue personnalisé de la bannière"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:82
 msgid "Add a custom text instead of Hello."
 msgstr "Ajouter un texte personnalisé au lieu de Hello."
 
-#: inc/customizer.php:80
+#: inc/customizer.php:94
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:81
+#: inc/customizer.php:95
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:95
+#: inc/customizer.php:109
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:107
+#: inc/customizer.php:121
 msgid "Default Banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:108
+#: inc/customizer.php:122
 msgid "Choose a default picture for the banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:132
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:119
+#: inc/customizer.php:133
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:131
+#: inc/customizer.php:145
 msgid "Site Logo"
 msgstr "Logo du site"
 
@@ -208,16 +212,16 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:36
+#: template-parts/content-posts.php:34
 #, php-format
 msgid "Continue reading %s"
 msgstr "Lire la suite de l'article %s"
 
-#: template-parts/content-posts.php:48
+#: template-parts/content-posts.php:46
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:55 template-parts/content-search.php:33
+#: template-parts/content-posts.php:53 template-parts/content-search.php:33
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -289,6 +293,9 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "Hide the tagline"
+#~ msgstr "Masquer le slogan"
 
 #~ msgid "Third color"
 #~ msgstr "Troisième couleur"

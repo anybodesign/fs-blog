@@ -57,6 +57,20 @@ function fs_blog_customize_register($wp_customize) {
 	)));
 	
 	
+	// Hide/Show Baseline
+	
+	$wp_customize->add_setting('wp_baseline', array(
+		'default'	=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+	));
+	
+	$wp_customize->add_control('wp_baseline_ctrl', array(
+		'type'			=> 'checkbox',
+		'label'			=> __('Hide the tagline (in an accessible way)', 'fs-blog'),
+		'section'		=> 'title_tagline',
+		'settings'		=> 'wp_baseline',
+	));
+	
 	// Banner Welcome text
 	
 	$wp_customize->add_setting('welcome_text', array(

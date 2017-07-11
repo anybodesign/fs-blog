@@ -28,13 +28,20 @@
 						</header>
 						
 						<div class="post-content">
+							
 							<?php
 								the_content(sprintf(
 									
-									wp_kses( __( 'Continue reading %s', 'fs-blog' ), array( 'span' => array( 'class' => array() ) ) ),
-									the_title( '<span class="screen-reader-text">"', '"</span>', false )
+									wp_kses( 
+										__( 'Continue reading %s', 'fs-blog' ), 
+										array( 'span' => array('class' => array()) )
+									),
+									the_title( 
+										'<span class="screen-reader-text">"', '"</span>', false
+									)
 								));
 							?>
+							
 						</div>
 						
 						<footer class="post-footer">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-07-11 18:45+0200\n"
-"PO-Revision-Date: 2017-07-11 18:45+0200\n"
+"POT-Creation-Date: 2017-07-11 19:30+0200\n"
+"PO-Revision-Date: 2017-07-11 19:33+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -212,16 +212,16 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:34
+#: template-parts/content-posts.php:35
 #, php-format
 msgid "Continue reading %s"
-msgstr "Lire la suite de l'article %s"
+msgstr "Continuer la lecture %s"
 
-#: template-parts/content-posts.php:46
+#: template-parts/content-posts.php:48
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:53 template-parts/content-search.php:33
+#: template-parts/content-posts.php:55 template-parts/content-search.php:33
 msgid "Pages:"
 msgstr "Pages :"
 

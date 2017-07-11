@@ -124,6 +124,22 @@ function fs_blog_customize_register($wp_customize) {
 		'settings'		=> 'bg_banner',
 	)));
 	
+	// No picture
+	
+	$wp_customize->add_setting('bg_banner_none', array(
+		'default'	=> false,
+		'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+	));
+	
+	$wp_customize->add_control('bg_banner_none_ctrl', array(
+		'type'			=> 'checkbox',
+		'label'			=> __('No picture in the banner', 'fs-blog'),
+		'section'		=> 'fs_pictures_section',
+		'settings'		=> 'bg_banner_none',
+	));
+	
+	// 404 Image
+	
 	$wp_customize->add_setting('bg_404', array(
 		'sanitize_callback'		=> 'esc_url_raw'
 	));
@@ -220,6 +236,12 @@ function fs_blog_colors() {
 			background-image: url(<?php echo get_theme_mod('bg_banner', 'none'); ?>);
 		}
 		<?php } ?>
+		<?php if(get_theme_mod('bg_banner_none') == true) { ?>
+		.page-banner {
+			background-image: none;
+		}
+		<?php } ?>
+		
 		<?php if(get_theme_mod('bg_404')) { ?>
 		.error404 .page-banner {
 			background-image: url(<?php echo get_theme_mod('bg_404', 'none'); ?>);

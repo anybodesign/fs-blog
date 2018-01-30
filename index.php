@@ -16,14 +16,14 @@ get_header(); ?>
 					<div class="row inner">
 
 						<?php if (is_archive() ) { ?>
-							<div class="col-8 left-2 right-2">
+							<div class="col-8">
 								<div class="category-description">
 									<?php the_archive_description(); ?>
 								</div>
 							</div>
 						<?php } ?>
 						
-						<div class="col-6 left-1 right-1">
+						<div class="col-8">
 
 						<?php if ( have_posts() ) : ?>
 							
@@ -53,7 +53,7 @@ get_header(); ?>
 						
 						</div>
 						
-						<div class="col-3 right-1">
+						<div class="col-3 left-1">
 							<?php get_sidebar(); ?>
 						</div>
 					

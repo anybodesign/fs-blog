@@ -17,7 +17,7 @@ get_header(); ?>
 					
 					<div class="row inner">
 
-						<div class="col-6 left-1 right-1">
+						<div class="col-8">
 
 							<section class="error-404 not-found">
 								<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-blog' ); ?></p>
@@ -26,7 +26,7 @@ get_header(); ?>
 
 						</div>
 						
-						<div class="col-3 right-1">
+						<div class="col-3">
 							<?php get_sidebar(); ?>
 						</div>
 					

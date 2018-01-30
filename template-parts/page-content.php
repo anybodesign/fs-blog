@@ -1,20 +1,19 @@
 <?php if ( !defined('ABSPATH') ) die(); ?>
-				
+
 					<?php
 						$parent = $post->post_parent;
 						
-						if ($parent)
-						$children = wp_list_pages("title_li=&child_of=".$parent."&echo=0");
+						if ($post->post_parent)
+						$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
 						else
 						$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 						
-						if ($children && ! is_page_template('pagecustom-nosidebar.php') ) {
+						if ($children) { $col = 'col-8'; } else { $col = 'col-10 left-1 right-1'; }
 					?>
-
-
+				
 					<div class="row inner">
 						
-						<div class="col-6 left-1 right-1">
+						<div class="<?php echo $col; ?>">
 
 							<div class="page-content">
 								<?php the_content(); ?>
@@ -25,36 +24,19 @@
 							<?php endif;?>
 						</div>
 						
-						<div class="col-3 right-1">
-							<?php get_sidebar(); ?>
+						<?php if ($children) { ?>
+						<div class="col-3 left-1">
+							<aside class="widget-area" role="complementary">
+							
+								<div class="widget-container">
+									<ul class="subpages-list">
+										<?php echo $children; ?>
+									</ul>
+								</div>
+								
+							</aside>
 						</div>
-					
-					</div>
-					
-					<?php } else { ?>
-					
-					
-					<div class="row inner">
-						<div class="col-8 left-2 right-2">
-							
-						<?php if (is_archive() ) { ?>
-							<div class="category-description">
-								<?php the_archive_description(); ?>
-							</div>
 						<?php } ?>
-							
-							<div class="page-content">
-								<?php the_content(); ?>
-							</div>
-							
-						<?php if ( is_singular('post') ) { 
-							
-							get_template_part('template-parts/post', 'meta');
-													
-						} ?>
-							
-						</div>					
+						
+					
 					</div>
-					
-					
-					<?php } ?>

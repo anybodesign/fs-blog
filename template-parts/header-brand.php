@@ -10,9 +10,9 @@
  */
 ?>
 			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-			<div class="col-3 left-1 site-brand">
+			<div class="site-brand">
 			<?php else: ?>
-			<div class="col-10 left-1 right-1 site-brand">
+			<div class="site-brand">
 			<?php endif; ?>
 				
 				<?php if ( is_front_page() ) { ?>

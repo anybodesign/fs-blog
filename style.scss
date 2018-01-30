@@ -117,6 +117,25 @@ span.display-name {
 	color: $secondary-color;
 }
 
+.site-brand-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: $grid-padding;
+	padding-bottom: 0;
+	
+	@include rwd(medium) {
+		flex-direction: column;
+	}
+	@include rwd(large) {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	@include rwd(wide) {
+		padding: 0;
+	}
+}
+
 
 /* ------------------------- */
 /* = Nav

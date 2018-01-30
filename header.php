@@ -30,12 +30,13 @@
 		
 		<?php get_template_part('template-parts/header', 'skiplinks'); ?>
 		
-		<div class="row x-middle inner">
-
-			<?php get_template_part('template-parts/header', 'brand'); ?>
-	
-			<?php get_template_part('template-parts/header', 'nav'); ?>
+		<div class="row inner">
 			
+			<div class="site-brand-container">
+				<?php get_template_part('template-parts/header', 'brand'); ?>
+				<?php get_template_part('template-parts/header', 'nav'); ?>
+			</div>
+
 		</div>
 
 	</header>

@@ -39,19 +39,44 @@
 
 
 #site_nav {
+	flex: 1 1 auto;
+	text-align: right;
 	
+	display: flex;
+	justify-content: flex-end;
+	
+	@include rwd(medium) {
+		display: block;
+	}
 	@include rwd(large) {
+		display: block;
 		padding-bottom: 0;
 	}
 }
 
 .main-menu {
-	
 	display: none;
+	
+	position: absolute;
+	top: 80px; 
+	left: 0;
+	width: 100%;
 	padding-top: $grid-padding;
+	text-align: left;
+	background-color: #fff;
+	z-index: 10;
+
+	@include rwd(medium) {
+		top: auto;
+		text-align: center;
+	}
 	
 	@include rwd(large) {
+		position: relative;
+		left: auto;
+		width: auto;
 		padding-top: 0;
+		background-color: transparent;
 		text-align: right; 
 	}
 	
@@ -227,7 +252,7 @@
 	height: 23px; width: 23px;
 	position: relative;
 	border: 0; border-radius: 0; padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	cursor: pointer;
 	@include a11y-hide(60px);
 

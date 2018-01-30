@@ -12,7 +12,7 @@
 
 		<nav class="skiplinks-nav" role="navigation">
 			<ul class="skiplinks-menu">
-				<li><a href="#site_nav"><?php _e('Go to main menu', 'fs-blog'); ?></a></li>
 				<li><a href="#site_content"><?php _e('Go to main content', 'fs-blog'); ?></a></li>
+				<li><a href="#site_nav"><?php _e('Go to main menu', 'fs-blog'); ?></a></li>
 			</ul>
 		</nav>

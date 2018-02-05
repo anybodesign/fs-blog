@@ -2,6 +2,8 @@
 				
 					<div class="row inner">
 						
+						<?php if (is_singular('post')) { ?>
+						
 						<div class="col-8">
 
 							<?php if (is_archive() ) { ?>
@@ -23,5 +25,18 @@
 						<div class="col-3 left-1">
 							<?php get_sidebar(); ?>
 						</div>
+						
+						
+						<?php } else { ?>
+						
+						<div class="col-10 left-1 right-1">
+
+							<div class="page-content">
+								<?php the_content(); ?>
+							</div>
+
+						</div>
+						
+						<?php } ?>
 					
 					</div>

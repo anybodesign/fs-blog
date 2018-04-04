@@ -206,17 +206,24 @@ function my_mce_before_init_insert_formats( $init_array ) {		// Callback functio
 	
 	$style_formats = array(  // Define the style_formats array
 		
-		array(  // Each array child is a format with it's own settings
-			'title' => 'Châpo',  
-			'inline' => 'span',  
-			'classes' => 'chapo',
-			'wrapper' => true,
-		),
-		array(  // Each array child is a format with it's own settings
-			'title' => 'Mention',  
-			'inline' => 'small',  
-			'wrapper' => true,
-		)
+		array(
+            'title' => esc_html__( 'Intro Text', 'fs-blog' ),
+            'selector' => 'p',
+            'classes' => 'text-intro',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => esc_html__( 'Mention Text', 'fs-blog' ),
+            'selector' => 'p',
+            'classes' => 'text-mentions',
+            'wrapper' => true,
+        ),
+        array(
+            'title' => esc_html__( 'Action button', 'fs-blog' ),
+            'selector' => 'a',
+            'classes' => 'action-btn',
+        )
+		
 	);  
 	$init_array['style_formats'] = json_encode( $style_formats );  	// Insert the array, JSON ENCODED, into 'style_formats'
 	

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-07-11 20:29+0200\n"
-"PO-Revision-Date: 2017-07-11 20:30+0200\n"
+"POT-Creation-Date: 2018-04-04 12:24+0200\n"
+"PO-Revision-Date: 2018-04-04 12:31+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 "Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
-"une recherche?"
+"une recherche&nbsp;?"
 
 #: comments.php:18
 msgid "They talk about it"
@@ -36,15 +36,15 @@ msgstr "Les commentaires sont fermés."
 
 #: comments.php:40
 msgid "Do we talk about it?"
-msgstr "On en discute ?"
+msgstr "On en discute&nbsp;?"
 
 #: comments.php:41
 msgid "Add my comment!"
-msgstr "Ajouter mon commentaire !"
+msgstr "Ajouter mon commentaire&nbsp;!"
 
 #: footer.php:82
 msgid "Powered by WordPress!"
-msgstr "Propulsé par WordPress !"
+msgstr "Propulsé par WordPress&nbsp;!"
 
 #: functions.php:62
 msgid "Main Menu"
@@ -69,6 +69,18 @@ msgstr "Zone #2 de widgets du pied de page"
 #: functions.php:170
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
+
+#: functions.php:210
+msgid "Intro Text"
+msgstr "Texte d’intro"
+
+#: functions.php:216
+msgid "Mention Text"
+msgstr "Mentions"
+
+#: functions.php:222
+msgid "Action button"
+msgstr "Bouton d’action"
 
 #: inc/customizer.php:17
 msgid "Theme Colors"
@@ -152,7 +164,7 @@ msgstr "Vérifier les mises à jour"
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
-msgstr "L'extension %s est à jour."
+msgstr "L’extension %s est à jour."
 
 #: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:407
 #, php-format
@@ -167,7 +179,7 @@ msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
 #: inc/plugin-update-checker/Puc/v4p1/Vcs/PluginUpdateChecker.php:83
 msgid "There is no changelog available."
-msgstr "Il n'y a aucun historique des mises à jour disponible."
+msgstr "Il n’y a aucun historique des mises à jour disponible."
 
 #: inc/subnav-walker.php:12
 msgid "Unfold Sub-Menu"
@@ -198,7 +210,8 @@ msgstr "Aucun résultat"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
+"Prêt à publier votre premier article&nbsp;? <a href=« %1$s »>Commencez ici</"
+"a>."
 
 #: template-parts/content-none.php:21
 msgid ""
@@ -227,7 +240,7 @@ msgstr "Étiquetté&nbsp;:"
 
 #: template-parts/content-posts.php:60 template-parts/content-search.php:33
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Pages&nbsp;:"
 
 #: template-parts/footer-posts.php:20
 msgid "Recent Posts"
@@ -235,7 +248,7 @@ msgstr "Articles récents"
 
 #: template-parts/header-logo.php:13
 msgid "Go to Home Page"
-msgstr "Aller à la page d'accueil"
+msgstr "Aller à la page d’accueil"
 
 #: template-parts/header-nav.php:15
 msgid "Unfold navigation menu"
@@ -246,12 +259,12 @@ msgid "Menu"
 msgstr "Menu"
 
 #: template-parts/header-skiplinks.php:15
-msgid "Go to main menu"
-msgstr "Aller au menu principal"
-
-#: template-parts/header-skiplinks.php:16
 msgid "Go to main content"
 msgstr "Aller au contenu principal"
+
+#: template-parts/header-skiplinks.php:16
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
 
 #: template-parts/page-banner.php:36
 msgid "Hello :)"
@@ -260,11 +273,11 @@ msgstr "Hello :)"
 #: template-parts/page-banner.php:43
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour : %s"
+msgstr "Résultats de la recherche pour&nbsp;: %s"
 
 #: template-parts/page-banner.php:49
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Page introuvable."
+msgstr "Oops&nbsp;! Page introuvable."
 
 #: template-parts/post-meta.php:15
 msgid "Posted on&nbsp;"

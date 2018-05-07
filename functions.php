@@ -238,11 +238,8 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  // A
 
 require 'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://bitbucket.org/anybodesign/fs-blog',
+	'https://github.com/anybodesign/fs-blog',
 	__FILE__,
 	'fs-blog'
 );
-$myUpdateChecker->setAuthentication(array(
-	'consumer_key' => 'S4YYALTKVXGavp39LZ',
-	'consumer_secret' => '3W8D5LuDcjADwAYJ9hPXYg3WUnmGBRp6',
-));
+$myUpdateChecker->setBranch('master');

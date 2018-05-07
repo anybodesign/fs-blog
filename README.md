@@ -8,6 +8,12 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.4.6 - 2018-05-07
+* Bugfix: Footer widgets below latests posts
+
+### 1.4.5 - 2018-05-07
+* Auto-Update from Github
+
 ### 1.4.4 - 2018-05-07
 * Customizer Footer Options (bio, last posts)
 

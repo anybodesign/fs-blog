@@ -36,21 +36,23 @@
 				
 				
 				
-				<?php if ( is_active_sidebar( 'footer_area2' ) ) { ?> 
+				<?php if ( is_active_sidebar( 'footer_area2' ) || get_theme_mod('last_posts') == true ) { ?> 
 					
 				<div class="col-4">
+					<?php if ( get_theme_mod('last_posts') == false ) {
+						// :p
+					} else {
+						get_template_part( 'template-parts/footer', 'posts' );
+					} ?>
+
 					<div class="footer-section">
 					<?php dynamic_sidebar( 'footer_area2' ); ?> 
 					</div>
+					
 				</div>
 					
 				<?php } ?>
 
-				<?php if ( get_theme_mod('last_posts') == false ) {
-					// :p
-				} else {
-					get_template_part( 'template-parts/footer', 'posts' );
-				} ?>
 				
 
 

@@ -16,24 +16,22 @@
 			
 			<div class="row x-center inner">
 				
-				<?php if ( is_active_sidebar( 'footer_area1' ) ) { ?> 
+				<?php if ( is_active_sidebar( 'footer_area1' ) || get_theme_mod('author_bio') == true ) { ?> 
 					
 				<div class="col-4">
 					<div class="footer-section">
-					<?php dynamic_sidebar( 'footer_area1' ); ?> 
-					</div>
-				</div>
-					
-				<?php } else { ?>
 
-				<div class="col-4">
-					<div class="footer-section">
+					<?php if ( get_theme_mod('author_bio') == false ) {
+						// :p
+					} else {
+						get_template_part( 'template-parts/footer', 'biography' );
+					} ?>
 						
-						<?php get_template_part( 'template-parts/footer', 'biography' ); ?>
-						
+					<?php dynamic_sidebar( 'footer_area1' ); ?> 
+					
 					</div>
 				</div>
-				
+					
 				<?php } ?>
 				
 				
@@ -46,13 +44,13 @@
 					</div>
 				</div>
 					
-				<?php } else { ?>
-				
-				
-				<?php get_template_part( 'template-parts/footer', 'posts' ); ?>
-
-
 				<?php } ?>
+
+				<?php if ( get_theme_mod('last_posts') == false ) {
+					// :p
+				} else {
+					get_template_part( 'template-parts/footer', 'posts' );
+				} ?>
 				
 
 

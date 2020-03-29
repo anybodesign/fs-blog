@@ -1,0 +1,209 @@
+/* ------------------------- */
+/* = Footer
+/* ------------------------- */
+
+
+#site_foot {
+	background-color: $secondary-color;
+	padding-top: $grid-padding*4;
+}
+
+.footer-section {
+	
+	p,
+	.widget-title {
+		color: #fff;
+	}
+	
+	ul {
+		padding: 0;
+		list-style: none;
+		
+		li {
+			color: #fff;
+			
+			a {
+				display: block;
+				padding: $grid-padding;
+				text-decoration: none;
+				border-bottom: #fff 1px solid;
+				transition: background .2s ease-in-out;
+				
+				img {
+					width: 60px;
+					display: inline-block;
+					vertical-align: top;
+					margin-right: $grid-padding;
+				}
+				&:focus, &:hover {
+					background-color: rgba(255,255,255,0.2);
+				}
+			}
+		}
+		
+		&.recentpost-list {
+			
+			a {
+				display: flex;
+				width: 100%;
+				padding-bottom: $grid-padding*2;
+			}	
+		}
+		.recentpost-title {
+			flex: 1;
+			padding-left: $grid-padding;
+			
+			p {
+				font-size: 1.4rem;
+			}	
+		}
+		
+	}
+}
+
+
+.author-info {
+	
+	@include rwd(large) {
+		display: flex;
+		
+		.author-avatar {
+			width: 60px;
+			margin-right: $grid-padding;
+		}
+		.author-description {
+			flex: 1;
+		}	
+	}
+	
+	.author-avatar {
+		
+		img {
+			border-radius: 100%;
+		}
+	}
+
+}
+
+.footer-mentions {
+	text-align: center;
+}
+.footer-nav, 
+.footer-copyright {
+	display: block;
+	
+	@include rwd(large) {
+		display: inline-block; 
+		vertical-align: bottom;
+	}
+}
+
+.footer-menu {
+	margin: 0;
+	
+	li {
+		color: #fff;
+		display: inline;
+		margin: 0 .25em;
+		font-size: 1.4rem;
+	}
+}
+
+p.footer-copyright {
+	margin-bottom: 0;
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+
+// Social Icons
+
+.menu {
+	
+	li {
+		
+		a[href*="facebook.com"] {
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 30px; height: 30px;
+				margin-right: $grid-padding*2;
+				background: url(img/social-icons-white.svg) 0 0 no-repeat;
+			}
+		}
+		a[href*="twitter.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -40px 0;
+			}
+		}
+		a[href*="instagram.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -80px 0;
+			}
+		}
+		a[href*="linkedin.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -120px 0;
+			}
+		}
+		a[href*="pinterest.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -160px 0;
+			}
+		}
+		a[href*="youtube.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -200px 0;
+			}
+		}
+		a[href*="googleplus.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -240px 0;
+			}
+		}
+		a[href*="vimeo.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -280px 0;
+			}
+		}
+		a[href*="tripadvisor.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -320px 0;
+			}
+		}
+		a[href*="snapchat.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -360px 0;
+			}
+		}
+		a[href*="github.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -400px 0;
+			}
+		}
+		a[href*="dribble.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -440px 0;
+			}
+		}
+		a[href*="behance.com"] {
+			@extend a[href*="facebook.com"];
+			&:before {
+				background-position: -480px 0;
+			}
+		}
+		
+	}
+}

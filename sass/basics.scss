@@ -1,0 +1,40 @@
+/* ------------------------- */
+/* = Basics
+/* ------------------------- */
+
+
+html, body, #wrapper {
+	width: 100%; 
+	height: 100%; 
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%; // IE 10-11 min-height bug
+}
+#site_head,
+#site_foot {
+	flex: none; // flex-shrink to 0
+}
+
+body {
+	text-size-adjust: none;
+	background-color: $bg-color;
+}
+
+.inner {
+	position: relative;
+	margin: 0 auto;
+	max-width: $max-width;
+}
+
+[class*="col-"] { 
+	padding: $grid-padding*2; 
+}
+
+// Admin bar
+
+span.display-name {
+	color: #eee;
+}

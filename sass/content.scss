@@ -1,9 +1,10 @@
 // -------------------------
-// 
 // = Content
-// 
 // -------------------------
 
+#site_content {
+	flex: 1 0 auto;	// Stick the footer at the bottom
+}
 
 .page-banner {
 	position: relative;

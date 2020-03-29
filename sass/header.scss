@@ -1,0 +1,74 @@
+
+/* ------------------------- */
+/* = Header
+/* ------------------------- */
+
+
+#site_head {
+	position: relative;
+	text-align: center;
+	margin-bottom: $grid-padding*2;
+	
+	@include rwd(large) {
+		text-align: left;
+		margin-bottom: 0;
+	}
+}
+
+.site-title {
+	line-height: 1;
+	margin-bottom: 0;
+	
+	span {
+		font-size: 2.8rem;
+		font-family: $font-title;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	// If we place a Logo
+	
+	img {
+		height: 70px; 
+		width: auto;
+		
+		@include rwd(large) {
+			max-width: none;			
+		}
+
+	}
+	img + span {
+		@include a11y-hidden();
+	}
+	
+}
+
+.site-desc {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+	font-family: $font-title;
+	color: $secondary-color;
+}
+
+.site-brand-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: $grid-padding;
+	padding-bottom: 0;
+	
+	@include rwd(medium) {
+		flex-direction: column;
+	}
+	@include rwd(large) {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	@include rwd(wide) {
+		padding: $grid-padding 0 0 0;
+	}
+}

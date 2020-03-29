@@ -1,0 +1,226 @@
+// Gutenberg Stuff
+// -
+// + + + + + + + + + + 
+
+
+// Colors
+
+*,
+.wp-block-button__link {
+		
+	&.has-primary-color-background-color {
+		background-color: $primary-color;
+	}
+	&.has-secondary-color-background-color {
+		background-color: $secondary-color;
+	}
+	&.has-third-color-background-color {
+		background-color: $third-color;
+	}
+	&.has-white-color-background-color {
+		background-color: #fff;
+	}
+	&.has-black-color-background-color {
+		background-color: #303030;
+	}
+	
+	&.has-text-color.has-primary-color-color {
+		color: $primary-color;
+	}
+	&.has-text-color.has-secondary-color-color {
+		color: $secondary-color;
+	}
+	&.has-text-color.has-third-color-color {
+		color: $third-color;
+	}
+	&.has-text-color.has-white-color-color {
+		color: #fff;
+	}
+	&.has-text-color.has-black-color-color {
+		color: #303030;
+	}
+}
+
+
+// Links / Button
+
+.wp-block-button {}
+	
+.wp-block-button__link {
+	@extend .action-btn;
+	border-radius: 0;
+}
+
+
+// Text
+
+.has-small-font-size {
+	@extend .text-mentions;
+}
+.has-large-font-size {
+	@extend .text-intro;
+}
+
+
+// Columns 
+
+.wp-block-columns {
+	display: block;
+	
+	.wp-block-column {
+		width: 100% !important;
+		margin: 0;
+	}
+
+	@include rwd(medium) {
+		display: flex;
+
+		.wp-block-column {
+			margin: 0 $grid-padding;
+
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&.columns-2 {
+			.wp-block-column {
+				width: 50%;
+			}
+		}
+		&.columns-3 {
+			.wp-block-column {
+				width: 33.3333%;
+			}
+		}
+		&.columns-4 {
+			.wp-block-column {
+				width: 25%;
+			}
+		}
+	}
+}
+
+
+// Images
+
+.wp-block-image {
+	
+	& img {
+		max-width: none;
+	}
+	
+	&.alignfull {
+		width: 100%;
+	}	
+}
+
+
+// Quotes
+
+.wp-block-quote {
+	margin-bottom: $grid-padding*2 !important;
+	
+	cite {
+		
+	}
+}
+
+
+// Files
+
+.wp-block-file {
+	
+	a:first-child {
+		font-family: $font-regular;
+		text-decoration: none;
+		border-bottom: $secondary-color 2px solid;
+		transition: border .2s ease-in-out;
+		
+		&:hover {
+			border-bottom-width: 4px;
+		}
+		&.focus-visible {
+			background-color: $text-color;
+			border-bottom-color: $text-color;
+			color: #fff;
+		}
+	}
+
+	a.wp-block-file__button {
+		@extend .action-btn;
+		border-radius: 0;
+		font-size: 1.3rem !important;
+	}
+	
+}
+
+
+
+// Table
+
+.wp-block-table {
+
+}
+
+
+// Gallery /Gut  ** backwards compatibility -webkit- prefix? **
+
+.wp-block-gallery {
+	
+	.blocks-gallery-image,
+	.blocks-gallery-item { 
+		figcaption {
+			padding: $grid-padding;
+		}
+	}
+	
+}  
+
+
+// ACF Blocks Stuff
+// -
+// + + + + + + + + + + 
+
+
+[class*=acf-block--] {
+
+	.acf-block-container {
+		width: 100%;
+		
+		&.center-max {
+			padding: $grid-padding;
+			margin: 0 auto;
+			max-width: $max-width;
+		}
+	}
+}
+
+// Text 
+
+.acf-block--text {}
+
+
+// Text+Img
+
+.acf-block--textimg {}
+
+
+// Gallery 
+
+.acf-block--gallery {}
+
+
+// CTA
+
+.acf-block--cta {}
+
+
+// Posts
+
+.acf-block---post {}
+.acf-block-post-item {}
+
+

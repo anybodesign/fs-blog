@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 
-define( 'FS_THEME_VERSION', '3.2' );
+define( 'FS_THEME_VERSION', '1.5' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -260,7 +260,7 @@ add_action( 'wp_enqueue_scripts', 'fs_scripts_load' );
 
 // Customizer
 
-require get_template_directory() . '/inc/customizer.php';
+require FS_THEME_DIR . '/inc/customizer.php';
 
 
 // Menus
@@ -291,7 +291,7 @@ add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 
 // Sub-menus Walker
 
-require get_template_directory() . '/inc/subnav-walker.php';
+require FS_THEME_DIR . '/inc/subnav-walker.php';
 
 
 // Archives titles

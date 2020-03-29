@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2018-05-07 10:49+0200\n"
-"PO-Revision-Date: 2018-05-07 10:49+0200\n"
+"POT-Creation-Date: 2020-03-29 13:53+0200\n"
+"PO-Revision-Date: 2020-03-29 13:55+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -42,45 +42,129 @@ msgstr "On en discute&nbsp;?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire&nbsp;!"
 
-#: footer.php:80
+#: footer.php:82
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress&nbsp;!"
 
-#: functions.php:62
+#: functions.php:112
+msgid "Black"
+msgstr "Noir"
+
+#: functions.php:117
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:125 inc/customizer.php:92
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: functions.php:130 inc/customizer.php:108
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: functions.php:135
+msgid "Complementary color"
+msgstr "Couleur complémentaire"
+
+#: functions.php:146
+msgid "Small"
+msgstr "Petite"
+
+#: functions.php:147
+msgid "S"
+msgstr "S"
+
+#: functions.php:152
+msgid "Large"
+msgstr "Grand"
+
+#: functions.php:153
+msgid "L"
+msgstr "L"
+
+#: functions.php:271
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:63
+#: functions.php:272
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:143
+#: functions.php:338
+msgid "Thumbnail x2"
+msgstr "Thumbnail x2"
+
+#: functions.php:339
+msgid "Medium x2"
+msgstr "Medium x2"
+
+#: functions.php:340
+msgid "Large x2"
+msgstr "Large x2"
+
+#: functions.php:341
+msgid "Screen Medium"
+msgstr "Screen Medium"
+
+#: functions.php:342
+msgid "Screen Full"
+msgstr "Screen Full"
+
+#: functions.php:343
+msgid "Video Medium"
+msgstr "Video Medium"
+
+#: functions.php:344
+msgid "Video Full"
+msgstr "Video Full"
+
+#: functions.php:345
+msgid "Blog post"
+msgstr "Blog post"
+
+#: functions.php:346
+msgid "Blog post Full"
+msgstr "Blog post Full"
+
+#: functions.php:371
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:152
+#: functions.php:380
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:161
+#: functions.php:389
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:170
+#: functions.php:398
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:210
-msgid "Intro Text"
+#: functions.php:431
+msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:216
-msgid "Mention Text"
+#: functions.php:437
+msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:222
+#: functions.php:443
 msgid "Action button"
 msgstr "Bouton d’action"
+
+#: functions.php:463
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#: functions.php:464
+msgid "Keywords"
+msgstr "Mots clés"
+
+#: functions.php:465
+msgid "Search"
+msgstr "Recherche"
 
 #: inc/customizer.php:18
 msgid "Pictures"
@@ -113,14 +197,6 @@ msgstr "Texte de bienvenue personnalisé de la bannière"
 #: inc/customizer.php:71
 msgid "Add a custom text instead of Hello."
 msgstr "Ajouter un texte personnalisé au lieu de Hello."
-
-#: inc/customizer.php:92
-msgid "Primary color"
-msgstr "Couleur primaire"
-
-#: inc/customizer.php:108
-msgid "Secondary color"
-msgstr "Couleur secondaire"
 
 #: inc/customizer.php:121
 msgid "Default Banner"
@@ -164,28 +240,43 @@ msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:358
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:405
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+msgid "View details"
+msgstr "Voir les détails"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#, php-format
+msgid "More information about %s"
+msgstr "Plus d'informations sur %s"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:407
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p1/Plugin/UpdateChecker.php:409
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p1/Vcs/PluginUpdateChecker.php:83
+#: inc/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -205,6 +296,7 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
+#. Template Name of the plugin/theme
 #: pagecustom-nosidebar.php:9
 msgid "Page without Sidebar"
 msgstr "Page sans barre latérale"
@@ -250,7 +342,7 @@ msgstr "Étiquetté&nbsp;:"
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
-#: template-parts/footer-posts.php:20
+#: template-parts/footer-posts.php:19
 msgid "Recent Posts"
 msgstr "Articles récents"
 
@@ -318,6 +410,12 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "Intro Text"
+#~ msgstr "Texte d’intro"
+
+#~ msgid "Mention Text"
+#~ msgstr "Mentions"
 
 #~ msgid "Theme Footer"
 #~ msgstr "Pied de page du thème"
@@ -421,12 +519,6 @@ msgstr "https://anybodesign.com/"
 
 #~ msgid "Update Slide"
 #~ msgstr "Mettre à jour la slide"
-
-#~ msgid "View Slide"
-#~ msgstr "Voir la slide"
-
-#~ msgid "Search Slide"
-#~ msgstr "Chercher une slide"
 
 #~ msgid "The Slides"
 #~ msgstr "Les slides"

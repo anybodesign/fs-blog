@@ -130,6 +130,13 @@
 	}
 }
 
+.wp-block-pullquote {
+	.page-content & {
+		padding: 0;
+		border: 0;
+	}	
+}
+
 
 // Files
 
@@ -183,18 +190,32 @@
 	margin-bottom: $grid-padding*2;
 }
 
-// Gallery /Gut  ** backwards compatibility -webkit- prefix? **
+// Gallery 
 
 .wp-block-gallery {
-	
+	.page-content & {
+		padding: 0;
+		border: 0;
+	}
 	.blocks-gallery-image,
 	.blocks-gallery-item { 
 		figcaption {
 			padding: $grid-padding;
 		}
+		
+		@include img-opacity(.7);
 	}
 	
 }  
+
+// Video
+
+.wp-block-video {
+	.page-content & {
+		padding: 0;
+		border: 0;
+	}
+}
 
 
 // ACF Blocks Stuff

@@ -67,7 +67,7 @@ function fs_blog_customize_register($wp_customize) {
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
 		$wp_customize->add_control('welcome_title', array(
-			'label'			=> __('Front page welcome text', 'fs-blog'),
+			'label'			=> __('Front page welcome title', 'fs-blog'),
 			'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'welcome_title',
@@ -265,13 +265,25 @@ function fs_blog_colors() {
 		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit],
 		.search-form::after,
 		.ias_trigger a:link,
-		.ias_trigger a:visited { 
+		.ias_trigger a:visited,
+		.formfield-radio input[type="radio"] + label::after,
+		.formfield-radio input[type="radio"] + span::after,
+		.sub-menu > li a:hover, 
+		.sub-menu > li a.focus-visible, 
+		.sub-menu > li.current-menu-item a { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		.search-form::before {
 			border-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
-		
+		.formfield-checkbox input[type="checkbox"] + label::after,
+		.formfield-checkbox input[type="checkbox"] + span::after {
+			border-left-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>; 
+			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		}
+		.formfield-select--container {
+			border-top-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
+		}		
 		.main-menu > li > a:hover, 
 		.main-menu > li > a:focus,
 		.calendar_wrap table td a { 

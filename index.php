@@ -12,17 +12,15 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 			
-			<div class="row inner">
+			<div class="page-wrap has-sidebar">
 
 				<?php if (is_archive() ) { ?>
-					<div class="col-8">
-						<div class="category-description">
-							<?php the_archive_description(); ?>
-						</div>
-					</div>
+				<div class="category-description">
+					<?php the_archive_description(); ?>
+				</div>
 				<?php } ?>
 				
-				<div class="col-8">
+				<div class="page-content">
 
 				<?php if ( have_posts() ) : ?>
 					
@@ -52,9 +50,7 @@ get_header(); ?>
 				
 				</div>
 				
-				<div class="col-3 left-1">
-					<?php get_sidebar(); ?>
-				</div>
+				<?php get_sidebar(); ?>
 			
 			</div>
 

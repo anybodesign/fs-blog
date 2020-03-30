@@ -14,9 +14,9 @@
 						<header class="post-header">
 
 							<?php if ( '' != get_the_post_thumbnail() ) { ?>
-							<figure class="post-figure">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							</figure>
+							<div class="post-picture">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blogpost-hd'); ?></a>
+							</div>
 							<?php } ?>
 							
 							<?php if ( is_single() ) { ?>
@@ -47,13 +47,15 @@
 						<footer class="post-footer">
 
 							<?php get_template_part('template-parts/post', 'meta'); ?>							
-
+							
+							<?php if (! is_search() ) { ?>
 							<?php $posttags = get_the_tags(); if ($posttags) { ?>
 							  	<div class="tag-links">
 									<p><?php _e( 'Tagged with:', 'fs-blog' ); ?></p>
 									<?php the_tags('<ul><li>', '</li><li>', '</li></ul>'); ?>
 							  	</div>
 							<?php } ?>					
+							<?php } ?>
 							
 							<?php 
 								wp_link_pages(array(
@@ -62,6 +64,5 @@
 								));
 							?>
 						</footer>
-						
 																		
 					</article>

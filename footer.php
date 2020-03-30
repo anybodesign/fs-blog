@@ -14,89 +14,65 @@
 
 		<footer role="contentinfo" id="site_foot">
 			
-			<div class="row x-center inner">
+			<div class="row inner">
 				
 				<?php if ( is_active_sidebar( 'footer_area1' ) || get_theme_mod('author_bio') == true ) { ?> 
-					
-				<div class="col-4">
-					<div class="footer-section">
-
-					<?php if ( get_theme_mod('author_bio') == false ) {
-						// :p
-					} else {
-						get_template_part( 'template-parts/footer', 'biography' );
-					} ?>
-						
-					<?php dynamic_sidebar( 'footer_area1' ); ?> 
-					
-					</div>
+				<div class="footer-section">
+					<?php 
+						if ( get_theme_mod('author_bio') != false && !is_404() ) {
+							get_template_part( 'template-parts/footer', 'biography' );
+						} 
+						dynamic_sidebar( 'footer_area1' );
+					?>
 				</div>
-					
 				<?php } ?>
-				
-				
 				
 				<?php if ( is_active_sidebar( 'footer_area2' ) || get_theme_mod('last_posts') == true ) { ?> 
-					
-				<div class="col-4">
-					<?php if ( get_theme_mod('last_posts') == false ) {
-						// :p
-					} else {
-						get_template_part( 'template-parts/footer', 'posts' );
-					} ?>
-
-					<div class="footer-section">
-					<?php dynamic_sidebar( 'footer_area2' ); ?> 
-					</div>
-					
+				<div class="footer-section">
+					<?php 
+						if ( get_theme_mod('last_posts') != false ) {
+							get_template_part( 'template-parts/footer', 'posts' );
+						} 
+						dynamic_sidebar( 'footer_area2' );
+					?>
 				</div>
-					
 				<?php } ?>
-
-				
-
 
 				<?php if ( is_active_sidebar( 'footer_area3' ) ) { ?> 
-					
-				<div class="col-4">
-					<div class="footer-section">
+				<div class="footer-section">
 					<?php dynamic_sidebar( 'footer_area3' ); ?> 
-					</div>
 				</div>
-					
 				<?php } ?>
 
 
-				<div class="col-12">				
 					
-					<div class="footer-mentions">
-						<p class="footer-copyright">
-							
-							<?php if(get_theme_mod('footer_text')) {
-								echo get_theme_mod('footer_text', ''); 
-							} else {
-								echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
-							} ?>
-							
-							<?php if(get_theme_mod('display_wp') == true) { ?>
-							<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
-							<?php } ?>
-							
-						</p>
+				<div class="footer-mentions">
+					<p class="footer-copyright">
 						
-						<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-						<nav class="footer-nav">
-						<?php wp_nav_menu( array(
-								'theme_location'	=> 	'footer_menu',
-								'menu_class'		=>	'footer-menu',
-								'container'			=>	false
-								));
-						?>
-						</nav>
-						<?php endif; ?>
-					</div>	
+						<?php if(get_theme_mod('footer_text')) {
+							echo get_theme_mod('footer_text', ''); 
+						} else {
+							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
+						} ?>
+						
+						<?php if(get_theme_mod('display_wp') == true) { ?>
+						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
+						<?php } ?>
+						
+					</p>
 					
-				</div>
+					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
+					<nav class="footer-nav">
+					<?php wp_nav_menu( array(
+							'theme_location'	=> 	'footer_menu',
+							'menu_class'		=>	'footer-menu',
+							'container'			=>	false
+							));
+					?>
+					</nav>
+					<?php endif; ?>
+				</div>	
+				
 			</div>
 			
 		</footer>

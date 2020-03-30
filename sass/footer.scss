@@ -5,10 +5,17 @@
 
 #site_foot {
 	background-color: $secondary-color;
+	padding: $grid-padding;
 	padding-top: $grid-padding*4;
+	
+	& > .row {
+		justify-content: center;
+	}
 }
 
 .footer-section {
+	padding: $grid-padding;
+	width: 33.3333%;
 	
 	p,
 	.widget-title {
@@ -86,6 +93,7 @@
 }
 
 .footer-mentions {
+	width: 100%;
 	text-align: center;
 }
 .footer-nav, 

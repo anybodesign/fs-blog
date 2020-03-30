@@ -14,7 +14,7 @@
 			
 				<?php if ($query->have_posts()) : ?>
 										
-				<div class="footer-section">
+				<div class="footer-posts">
 					
 					<h3 class="widget-title"><?php _e('Recent Posts', 'fs-blog'); ?></h3>
 					<ul class="recentpost-list">

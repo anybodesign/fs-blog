@@ -9,23 +9,17 @@
 							$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 					?>
 				
-					<div class="page-wrap<?php if ($children) { echo ' has-sidebar'; } ?>">
+					<div class="page-wrap<?php if ( $children ) { echo ' has-sidebar'; } ?>">
 						
 						<div class="page-content">
 							<?php the_content(); ?>
-							
-							<?php if ( is_404() ) { ?>
-							<p class="text-intro"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-blog' ); ?></p>
-							<?php get_search_form(); ?>		
-							<?php } ?>
-							
 						</div>
 
 						<?php if ( comments_open() || get_comments_number() ) : ?>
 							<?php comments_template(); ?>
 						<?php endif;?>
 						
-						<?php if ($children) { ?>
+						<?php if ( $children ) { ?>
 						<aside class="page-sidebar" role="complementary">
 						
 							<div class="widget-container">

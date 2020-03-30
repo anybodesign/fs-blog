@@ -8,17 +8,13 @@
  */
 __( 'Page without Sidebar', 'fs-blog' );
 get_header(); ?>
-
-				<main id="primary" class="content-area" role="main">
 				
-				<?php while ( have_posts() ) : the_post(); ?>
-				
-					<?php get_template_part( 'template-parts/page', 'banner' ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+			
+				<?php get_template_part( 'template-parts/page', 'banner' ); ?>
 
-					<?php get_template_part( 'template-parts/page', 'content' ); ?>
+				<?php get_template_part( 'template-parts/page', 'content' ); ?>
 
-				<?php endwhile; ?>
-					
-				</main> <?php // END primary ?>
-								
+			<?php endwhile; ?>
+													
 <?php get_footer(); ?>

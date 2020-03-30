@@ -9,7 +9,7 @@
  * @since FS Blog 1.0
  */
 ?>
-				<aside class="widget-area" role="complementary">
+				<aside class="page-sidebar" role="complementary">
 				
 					<?php if ( is_active_sidebar( 'widgets_area1' ) ) { 
 						dynamic_sidebar( 'widgets_area1' ); 

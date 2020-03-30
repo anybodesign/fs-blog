@@ -25,7 +25,6 @@
 
 <div id="wrapper">
 	
-	
 	<header role="banner" id="site_head">
 		
 		<?php get_template_part('template-parts/header', 'skiplinks'); ?>
@@ -42,4 +41,4 @@
 	</header>
 	
 	
-		<div id="site_content">
+		<main id="site_content" class="content-area" role="main">

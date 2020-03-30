@@ -4,39 +4,37 @@
 						$parent = $post->post_parent;
 						
 						if ($post->post_parent)
-						$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+							$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
 						else
-						$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-						
-						if ($children) { $col = 'col-8'; } else { $col = 'col-10 left-1 right-1'; }
+							$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
 					?>
 				
-					<div class="row inner">
+					<div class="page-wrap<?php if ($children) { echo ' has-sidebar'; } ?>">
 						
-						<div class="<?php echo $col; ?>">
-
-							<div class="page-content">
-								<?php the_content(); ?>
-							</div>
-
-							<?php if ( comments_open() || get_comments_number() ) : ?>
-								<?php comments_template(); ?>
-							<?php endif;?>
+						<div class="page-content">
+							<?php the_content(); ?>
+							
+							<?php if ( is_404() ) { ?>
+							<p class="text-intro"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-blog' ); ?></p>
+							<?php get_search_form(); ?>		
+							<?php } ?>
+							
 						</div>
+
+						<?php if ( comments_open() || get_comments_number() ) : ?>
+							<?php comments_template(); ?>
+						<?php endif;?>
 						
 						<?php if ($children) { ?>
-						<div class="col-3 left-1">
-							<aside class="widget-area" role="complementary">
-							
-								<div class="widget-container">
-									<ul class="subpages-list">
-										<?php echo $children; ?>
-									</ul>
-								</div>
-								
-							</aside>
-						</div>
-						<?php } ?>
+						<aside class="page-sidebar" role="complementary">
 						
+							<div class="widget-container">
+								<ul class="subpages-list">
+									<?php echo $children; ?>
+								</ul>
+							</div>
+							
+						</aside>
+						<?php } ?>
 					
 					</div>

@@ -9,7 +9,7 @@
  * @since FS Blog 1.0
  */
 ?>
-				<aside class="widget-area" role="complementary">
+				<aside class="page-sidebar" role="complementary">
 				
 					<?php
 						$parent = $post->post_parent;

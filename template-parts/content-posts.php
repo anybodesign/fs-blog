@@ -11,20 +11,24 @@
 ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						
-						<header class="post-header">
+						<header class="post-header<?php if ( '' == get_the_post_thumbnail() ) { echo ' no-picture'; }?>">
 
-							<?php if ( '' != get_the_post_thumbnail() ) { ?>
 							<div class="post-picture">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blogpost-hd'); ?></a>
+								<a href="<?php the_permalink(); ?>">
+								<?php if ( '' != get_the_post_thumbnail() ) { ?>
+									<?php the_post_thumbnail('blogpost-hd'); ?>
+								<?php } else { ?>
+									<img src="<?php echo FS_THEME_URL; ?>/img/fallback.png" alt="">
+								<?php } ?>
+								</a>
 							</div>
-							<?php } ?>
 							
-							<?php if ( is_single() ) { ?>
-								<h1 class="post-title"><?php the_title(); ?></h1>
-							<?php } else { ?>
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
-							<?php } ?>
-							
+							<h2 class="post-title">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h2>
+
 						</header>
 						
 						<div class="post-content">

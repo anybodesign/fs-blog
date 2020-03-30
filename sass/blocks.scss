@@ -261,4 +261,18 @@
 .acf-block---post {}
 .acf-block-post-item {}
 
+// Testimonial
 
+.acf-block-testimonials {
+	
+	.testimonal-title {
+		@extend h2;
+	}
+	figure {
+		
+		.page-content & {
+			padding: 0;
+			border: 0;
+		}
+	}
+}

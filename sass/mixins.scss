@@ -3,11 +3,24 @@
 // -------------------------
 
 
+// Center mode
+
+@mixin center() {
+	position: relative;
+	margin-left: auto; 
+	margin-right: auto;
+	max-width: $max-width;	
+}
+
+// Visually obfuscate the text of an element (a11y ok)
+
 @mixin a11y-hide($percent: 150%) {
 	text-indent: $percent;
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+// Visually hide an element (a11y ok)
 
 @mixin a11y-hidden($width: 1px, $height: 1px) {
 	position: absolute;
@@ -90,43 +103,6 @@
 	}
 	@else {
 		@media only screen and (min-width: $width) {
-			@content;
-		}
-	}
-}
-
-
-// Desktop First
-
-@mixin desktop($width) {
-	
-	@if $width == xwide {
-		@media only screen and (max-width: $width-xwide) {
-			@content;
-		}
-	}
-	@if $width == wide {
-		@media only screen and (max-width: $width-wide) {
-			@content;
-		}
-	}
-	@else if $width == large {
-		@media only screen and (max-width: $width-large) {
-			@content;
-		}
-	}
-	@else if $width == medium {
-		@media only screen and (max-width: $width-medium) {
-			@content;
-		}
-	}
-	@else if $width == small {
-		@media only screen and (max-width: $width-small) {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and (max-width: $width) {
 			@content;
 		}
 	}

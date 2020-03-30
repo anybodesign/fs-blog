@@ -3,21 +3,22 @@
 // -------------------------
 
 
-
 // Grid Padding & Max Width
 
-$grid-padding: .3125em; 	// @note: The padding gutter! equiv. 5px
-$max-width: 62em;			// @note: 992px
+$grid-padding: 1rem; 		// @note: The padding gutter! equiv. 10px
+$max-width: 96rem;			// @note: 960px
+
+$half-space: calc( (100% - #{$max-width}) /2 + #{$grid-padding} );  // Half the viewport
 
 
 
 // Break-Points
 
-$width-small: 25em; 		// @note: 400px
-$width-medium: 40em;		// @note: 640px
-$width-large: 50em; 		// @note: 800px
-$width-wide: 80em;	 		// @note: 1280px
-$width-xwide: 100em;		// @note: 1600px
+$width-small: 30em; 		// @note: 480px
+$width-medium: 45em;		// @note: 720px
+$width-large: 60em; 		// @note: 960px
+$width-wide: 75em;	 		// @note: 1200px
+$width-xwide: 90em;	 		// @note: 1440px
 
 
 

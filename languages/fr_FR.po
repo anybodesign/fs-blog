@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-03-29 13:53+0200\n"
-"PO-Revision-Date: 2020-03-29 13:55+0200\n"
+"POT-Creation-Date: 2020-03-30 17:12+0200\n"
+"PO-Revision-Date: 2020-03-30 17:12+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,12 +20,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:23
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
-"une recherche&nbsp;?"
-
 #: comments.php:18
 msgid "They talk about it"
 msgstr "Ils en parlent"
@@ -42,7 +36,7 @@ msgstr "On en discute&nbsp;?"
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire&nbsp;!"
 
-#: footer.php:82
+#: footer.php:59
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress&nbsp;!"
 
@@ -54,11 +48,11 @@ msgstr "Noir"
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:125 inc/customizer.php:92
+#: functions.php:125 inc/customizer.php:106
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:130 inc/customizer.php:108
+#: functions.php:130 inc/customizer.php:122
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
@@ -82,87 +76,87 @@ msgstr "Grand"
 msgid "L"
 msgstr "L"
 
-#: functions.php:271
+#: functions.php:262
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:272
+#: functions.php:263
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:338
+#: functions.php:329
 msgid "Thumbnail x2"
 msgstr "Thumbnail x2"
 
-#: functions.php:339
+#: functions.php:330
 msgid "Medium x2"
 msgstr "Medium x2"
 
-#: functions.php:340
+#: functions.php:331
 msgid "Large x2"
 msgstr "Large x2"
 
-#: functions.php:341
+#: functions.php:332
 msgid "Screen Medium"
 msgstr "Screen Medium"
 
-#: functions.php:342
+#: functions.php:333
 msgid "Screen Full"
 msgstr "Screen Full"
 
-#: functions.php:343
+#: functions.php:334
 msgid "Video Medium"
 msgstr "Video Medium"
 
-#: functions.php:344
+#: functions.php:335
 msgid "Video Full"
 msgstr "Video Full"
 
-#: functions.php:345
+#: functions.php:336
 msgid "Blog post"
 msgstr "Blog post"
 
-#: functions.php:346
+#: functions.php:337
 msgid "Blog post Full"
 msgstr "Blog post Full"
 
-#: functions.php:371
+#: functions.php:375
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:380
+#: functions.php:384
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:389
+#: functions.php:393
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:398
+#: functions.php:402
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:431
+#: functions.php:435
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:437
+#: functions.php:441
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:443
+#: functions.php:447
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:463
+#: functions.php:467
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:464
+#: functions.php:468
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:465
+#: functions.php:469
 msgid "Search"
 msgstr "Recherche"
 
@@ -190,53 +184,70 @@ msgstr "Logo du site"
 msgid "Hide the tagline (in an accessible way)"
 msgstr "Masquer le slogan (de manière accessible)"
 
-#: inc/customizer.php:70
-msgid "Custom banner welcome text"
-msgstr "Texte de bienvenue personnalisé de la bannière"
+#: inc/customizer.php:66
+msgid "Hello there :)"
+msgstr "Coucou :)"
 
-#: inc/customizer.php:71
+#: inc/customizer.php:70
+msgid "Front page welcome title"
+msgstr "Titre de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:71 inc/customizer.php:85
 msgid "Add a custom text instead of Hello."
 msgstr "Ajouter un texte personnalisé au lieu de Hello."
 
-#: inc/customizer.php:121
+#: inc/customizer.php:79
+msgid "Ex: Welcome to my awesome WordPress blog."
+msgstr "Ex : Bienvenue sur mon super blog WordPress."
+
+#: inc/customizer.php:84
+msgid "Front page welcome text"
+msgstr "Texte de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:135
 msgid "Default Banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:122
+#: inc/customizer.php:136
 msgid "Choose a default picture for the banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:137
-msgid "No picture in the banner"
-msgstr "Aucune image dans la bannière"
+#: inc/customizer.php:149
+msgid "Blog Banner"
+msgstr "Bannière de blog"
 
 #: inc/customizer.php:150
+msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:163
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:151
+#: inc/customizer.php:164
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:173
+#: inc/customizer.php:186
 msgid "Show the author’s Bio"
 msgstr "Afficher la bio de l’auteur"
 
-#: inc/customizer.php:187
+#: inc/customizer.php:200
 msgid "Show the last posts"
 msgstr "Afficher les derniers articles"
 
-#: inc/customizer.php:199
+#: inc/customizer.php:212
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:200
+#: inc/customizer.php:213
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:214
+#: inc/customizer.php:227
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
@@ -284,15 +295,15 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:42
+#: index.php:39
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:43
+#: index.php:40
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:44
+#: index.php:41
 msgid "Page"
 msgstr "Page"
 
@@ -334,11 +345,11 @@ msgstr ""
 msgid "Continue reading %s"
 msgstr "Continuer la lecture %s"
 
-#: template-parts/content-posts.php:53
+#: template-parts/content-posts.php:54
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:60 template-parts/content-search.php:33
+#: template-parts/content-posts.php:62
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
@@ -366,16 +377,22 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
-#: template-parts/page-banner.php:36
+#: template-parts/page-404.php:6
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Il semblerait que rien n’ait été trouvé à cette adresse. Essayez peut-être "
+"une recherche&nbsp;?"
+
+#: template-parts/page-banner.php:12
 msgid "Hello :)"
 msgstr "Hello :)"
 
-#: template-parts/page-banner.php:43
+#: template-parts/page-banner.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour&nbsp;: %s"
 
-#: template-parts/page-banner.php:49
+#: template-parts/page-banner.php:25
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops&nbsp;! Page introuvable."
 
@@ -410,6 +427,9 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "No picture in the banner"
+#~ msgstr "Aucune image dans la bannière"
 
 #~ msgid "Intro Text"
 #~ msgstr "Texte d’intro"

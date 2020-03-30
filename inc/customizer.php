@@ -270,7 +270,8 @@ function fs_blog_colors() {
 		.formfield-radio input[type="radio"] + span::after,
 		.sub-menu > li a:hover, 
 		.sub-menu > li a.focus-visible, 
-		.sub-menu > li.current-menu-item a { 
+		.sub-menu > li.current-menu-item a,
+		.post-picture { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		.search-form::before {

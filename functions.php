@@ -357,20 +357,16 @@ function fs_bg_img() {
 	$img_blog = get_theme_mod('bg_blog');
 	$img_banner = get_theme_mod('bg_banner');
 	
-	if ( is_front_page() && $img_blog ) {
+	if ( is_home() && $img_blog ) {
 		$bg = ' style="background-image: url('.get_theme_mod('bg_blog', 'none').')"';
-	}
-	else if ( '' != get_the_post_thumbnail() && is_home() ) {
-		$img_url = get_the_post_thumbnail_url( get_option( 'page_for_posts' ) );
-		$bg = ' style="background-image: url('.$img_url[0].')"';
 	}
 	else if ( is_404() && $img_404 ) {
 		$bg = ' style="background-image: url('.get_theme_mod('bg_404', 'none').')"';
 	}
-	else if ( is_page() && $img_banner && '' == get_the_post_thumbnail() ) {
+	else if ( is_page() && $img_banner && '' == get_the_post_thumbnail() || is_search() ) {
 		$bg = ' style="background-image: url('.get_theme_mod('bg_banner', 'none').')"';
 	}
-	else if ( '' != get_the_post_thumbnail() ) {
+	else if ( is_front_page() || '' != get_the_post_thumbnail() ) {
 		$img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-hd' );
 		$bg = ' style="background-image: url('.$img_url[0].')"';
 	} else {

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-03-30 17:12+0200\n"
-"PO-Revision-Date: 2020-03-30 17:12+0200\n"
+"POT-Creation-Date: 2020-03-30 18:24+0200\n"
+"PO-Revision-Date: 2020-03-30 18:24+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -136,27 +136,31 @@ msgstr "Zone #2 de widgets du pied de page"
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:435
+#: functions.php:426
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: functions.php:446
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:441
+#: functions.php:452
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:447
+#: functions.php:458
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:467
+#: functions.php:478
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:468
+#: functions.php:479
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:469
+#: functions.php:480
 msgid "Search"
 msgstr "Recherche"
 
@@ -340,16 +344,15 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:36
-#, php-format
-msgid "Continue reading %s"
-msgstr "Continuer la lecture %s"
+#: template-parts/content-posts.php:35
+msgid "<p>Read More</p>"
+msgstr "<p>Lire la suite</p>"
 
-#: template-parts/content-posts.php:54
+#: template-parts/content-posts.php:45
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:62
+#: template-parts/content-posts.php:53
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
@@ -427,6 +430,10 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#, php-format
+#~ msgid "Continue reading %s"
+#~ msgstr "Continuer la lecture %s"
 
 #~ msgid "No picture in the banner"
 #~ msgstr "Aucune image dans la bannière"

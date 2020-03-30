@@ -20,15 +20,15 @@
 					<ul class="recentpost-list">
 					<?php while ($query->have_posts()) : $query->the_post(); ?>
 						<li>
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( '' != get_the_post_thumbnail() ) { ?>
-								<div class="recentpost-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
-								<?php } ?>
-								<div class="recentpost-title">
-									<?php the_title(); ?>
-									<?php the_excerpt(); ?>
-								</div>
-							</a>
+							<?php if ( '' != get_the_post_thumbnail() ) { ?>
+							<div class="recentpost-thumbnail">
+								<?php the_post_thumbnail('thumbnail'); ?>
+							</div>
+							<?php } ?>
+							<div class="recentpost-title">
+								<p class="h5-like"><?php the_title(); ?></p>
+								<?php the_excerpt(); ?>
+							</div>
 						</li>					
 					<?php endwhile; ?>
 					</ul>

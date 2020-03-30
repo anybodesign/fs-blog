@@ -418,6 +418,33 @@ function fs_custom_excerpt( $length ) {
 }
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 
+// No #more
+
+/*
+function remove_more_jump_link($link) {
+$offset = strpos($link, '#more-');
+	if ($offset) {
+		$end = strpos($link, '"',$offset);
+	}
+	if ($end) {
+		$link = substr_replace($link, '', $offset, $end-$offset);
+	}
+return $link;
+}
+add_filter('the_content_more_link', 'remove_more_jump_link');
+*/
+
+// Excerpt link
+
+function fs_excerpt_more( $more ) {
+    return sprintf( '… <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'fs-blog' )
+    );
+}
+add_filter( 'excerpt_more', 'fs_excerpt_more' );
+
+
 
 // Tinymce class
 

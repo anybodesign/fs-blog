@@ -28,43 +28,55 @@
 		
 		li {
 			color: #fff;
+			border-bottom: #fff 1px solid;
 			
-			a {
+			& > a {
 				display: block;
 				padding: $grid-padding;
 				text-decoration: none;
-				border-bottom: #fff 1px solid;
 				transition: background .2s ease-in-out;
 				
-				img {
-					width: 60px;
-					display: inline-block;
-					vertical-align: top;
-					margin-right: $grid-padding;
-				}
 				&:focus, &:hover {
 					background-color: rgba(255,255,255,0.2);
 				}
 			}
+			
 		}
 		
 		&.recentpost-list {
 			
-			a {
+			li {
+				position: relative;
 				display: flex;
-				width: 100%;
-				padding-bottom: $grid-padding*2;
-			}	
+				flex-wrap: nowrap;
+				padding: $grid-padding 0;
+				
+				.recentpost-thumbnail {
+					width: 6rem;
+					margin-right: $grid-padding;
+					
+					img {
+						width: 100%;
+						display: block;
+					}
+				}
+
+				.recentpost-title {
+					flex: 1 0 0;
+				}
+				
+				.read-more::after {
+					@include linkblock;
+					transition: opacity .3s ease-in-out;
+					opacity: 0;
+				}
+				.read-more:hover::after,	
+				.read-more:focus::after {
+					background-color: #fff;
+					opacity: .2;
+				}	
+			}
 		}
-		.recentpost-title {
-			flex: 1;
-			padding-left: $grid-padding;
-			
-			p {
-				font-size: 1.4rem;
-			}	
-		}
-		
 	}
 }
 

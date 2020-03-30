@@ -274,6 +274,9 @@ function fs_blog_colors() {
 		.post-picture { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
+		*.has-primary-color-background-color { 
+			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> !important;
+		}
 		.search-form::before {
 			border-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
@@ -290,7 +293,10 @@ function fs_blog_colors() {
 		.calendar_wrap table td a { 
 			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
-		
+		*.has-text-color.has-primary-color-color { 
+			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> !important !
+		}
+
 		#menu-toggle.menu-opened span::before,
 		#menu-toggle.menu-opened span::after,
 		.tag-links ul li a,
@@ -302,11 +308,17 @@ function fs_blog_colors() {
 		.ias_trigger a:active {
 			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}
+		*.has-secondary-color-background-color {
+			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
+		}
 		.site-desc,
 		.post-title a:hover, 
 		.post-title a:focus,
 		.comment-list .comment-meta .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		}
+		*.has-text-color.has-secondary-color-color {
+			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
 		}
 	</style>
 	<?php

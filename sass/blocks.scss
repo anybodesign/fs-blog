@@ -44,7 +44,9 @@
 
 // Links / Button
 
-.wp-block-button {}
+.wp-block-button {
+	margin-bottom: $grid-padding*2;
+}
 	
 .wp-block-button__link {
 	@extend .action-btn;
@@ -150,7 +152,9 @@
 	}
 
 	a.wp-block-file__button {
-		@extend .action-btn;
+		font-family: $font-bold;
+		font-weight: normal;
+		background-color: $text-color;
 		border-radius: 0;
 		font-size: 1.3rem !important;
 	}
@@ -165,6 +169,19 @@
 
 }
 
+// Media text
+
+.wp-block-media-text {
+	margin-bottom: $grid-padding*2;
+}
+
+// Cover
+
+.wp-block-cover, 
+.wp-block-cover-image {
+	height: auto;
+	margin-bottom: $grid-padding*2;
+}
 
 // Gallery /Gut  ** backwards compatibility -webkit- prefix? **
 

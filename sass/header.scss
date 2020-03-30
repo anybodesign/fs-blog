@@ -7,7 +7,8 @@
 #site_head {
 	position: relative;
 	text-align: center;
-	margin-bottom: $grid-padding*2;
+	//margin-bottom: $grid-padding*2;
+	z-index: 100;
 	
 	@include rwd(large) {
 		text-align: left;
@@ -56,19 +57,27 @@
 
 .site-brand-container {
 	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding: $grid-padding;
+	padding: 0 $grid-padding*2;
 	padding-bottom: 0;
 	
 	@include rwd(medium) {
 		flex-direction: column;
+		justify-content: flex-start
 	}
 	@include rwd(large) {
 		flex-direction: row;
-		align-items: flex-start;
+		justify-content: space-between;
+		align-items: center;
 	}
 	@include rwd(wide) {
-		padding: $grid-padding 0 0 0;
+		padding: 0;
 	}
+}
+.site-brand {
+	padding: $grid-padding/2 0;
+	z-index: 10;
 }

@@ -7,7 +7,6 @@
 
 // Skiplinks
 
-
 .skiplinks-nav {
 	position: absolute;
 	z-index: 100; 
@@ -37,13 +36,7 @@
 
 // Main nav
 
-
 #site_nav {
-	flex: 1 1 auto;
-	text-align: right;
-	
-	display: flex;
-	justify-content: flex-end;
 	
 	@include rwd(medium) {
 		display: block;
@@ -55,29 +48,37 @@
 }
 
 .main-menu {
-	display: none;
-	
 	position: absolute;
-	top: 80px; 
+	top: 0;
 	left: 0;
 	width: 100%;
 	padding-top: $grid-padding;
+	padding-top: 8rem; 
 	text-align: left;
 	background-color: #fff;
-	z-index: 10;
+	z-index: 9;
+
+	transform: translateY(-110%);
+	transition: transform .4s ease-in-out;
+	z-index: 1;
+	
+	.menu-opened + & {
+		transform: translateY(0);
+	}
 
 	@include rwd(medium) {
+		position: relative;
 		top: auto;
 		text-align: center;
+		transform: none;
+		padding-top: 0;
 	}
-	
+
 	@include rwd(large) {
-		position: relative;
 		left: auto;
 		width: auto;
-		padding-top: 0;
 		background-color: transparent;
-		text-align: right; 
+		text-align: left; 
 	}
 	
 	& > li {
@@ -94,15 +95,17 @@
 		& > a {
 			display: block;
 			text-decoration: none;
-			padding: $grid-padding;
-			border-bottom: #eee 1px solid;
+			padding: $grid-padding $grid-padding*2;
+			border-bottom: lighten($text-color, 55%) 1px solid;
 			
 			@include rwd(medium) {
+				padding: $grid-padding;
+				border-width: 2px;
 				border-color: transparent; 
 			}
 			@include rwd(large) {
-				border-width: 5px;
-				padding: $grid-padding*5 $grid-padding;
+				border-width: 4px;
+				padding: $grid-padding*2.5 $grid-padding;
 				
 			}
 		}
@@ -116,132 +119,196 @@
 
 		}
 		
-		// If Menu item has children
-		
-		&.menu-item-has-children {
-			
-			@include rwd(medium) {
-				padding-right: $grid-padding*3;
-			}
-			@include rwd(wide) {
-				padding-right: 0;
-				
-				&:hover > .sub-menu,
-				&:focus > .sub-menu {
-					visibility: visible;
-					opacity: 1;
-				}
-			}
-				
-		}
-		
-		// Sub-Menus behaviors
-		
-		.sub-menu {
-			display: none;
-			position: relative;
-			border-bottom: #ccc 1px dashed;
-			
-			@include rwd(medium) {
-				position: absolute;
-				background-color: #fff;
-				padding: $grid-padding;
-				text-align: left;
-				border-bottom: 0;
-				min-width: 100%;
-				z-index: 100;
-			}
-			@include rwd(wide) {
-				display: block;
-				visibility: hidden;
-				opacity: 0;
-				transition: opacity .2s ease-in-out;
-			}
-			
-			
-		
-			& > li {
-				
-				& > a {
-					display: block;
-					text-decoration: none;
-					padding: $grid-padding;
-					
-				}
-				& > a:hover, & > a:focus,
-				&.current-menu-item > a {
-					color: $secondary-color;
-				}
-				
-				@include rwd(medium) {
-					white-space: nowrap;
-					border-bottom: #ccc 1px solid;
-				}
-			}
-			
-			.current-menu-item &,
-			.current-menu-ancestor & {
-				
-			}			
-		}
-		
-	}
-	
-	@include rwd(medium) {
-		display: block;
 	}
 	
 }
 
+
+// Sub-Menus behaviors
+
+
+li.menu-item-has-children {
+	
+	& > a {
+		padding-right: 2.4rem;
+		
+		@include rwd(large) {
+			padding-right: 1.8rem;
+		}
+		@include rwd(wide) {
+			padding-right: 0;
+		}
+	}
+
+	@include rwd(wide) {
+		
+		&.unfold-parent > a {
+			padding-right: 1.8rem;
+		}
+		
+		&:hover > .sub-menu {
+			left: auto;
+			opacity: 1;
+			
+			& > li {
+				display: block;
+			}
+		}
+	}
+}
+
+.sub-menu-opened + .sub-menu {
+	transform: scaleY(1);
+	height: auto;
+	
+	& > li {
+		display: block;
+	}
+	
+	@include rwd(medium) {
+		left: auto;
+		opacity: 1;
+		
+		& > li {
+			display: block;
+		}
+	}
+}
+
+.sub-menu {
+	position: relative;
+	height: 1px;
+	transform: scaleY(0);
+	transform-origin: center top;
+	text-align: left;
+	overflow: hidden;
+	background-color: #fff;
+	transition: .2s ease-in-out;
+	
+	@include rwd(medium) {
+		position: absolute;
+		height: auto;
+		top: auto;
+		left: -999em;
+		opacity: 0;
+		transform: none;
+		min-width: 100%;
+		z-index: 100;
+		transition: opacity .2s ease-in-out;
+	}
+
+	& > li {
+		white-space: nowrap;
+		border-top: lighten($text-color, 55%) 1px solid;
+		
+		&:first-child {
+			border-top: 0;
+		}
+		
+		@include rwd(large) {
+			font-size: 1.4rem;
+		}
+		
+		@include rwd(wide) {
+			display: none;
+		}
+		
+		a {
+			display: block;
+			padding: $grid-padding;
+			text-decoration: none;
+		}
+		a:hover, 
+		a.focus-visible,
+		&.current-menu-item a {
+			background-color: $primary-color;
+			color: #fff;
+		}
+	}
+	
+	.current-menu-item &,
+	.current-menu-ancestor & {
+		
+	}			
+}
+
+
+
+// Sub-Menus trigger
+
+
 .sub-menu-unfold {
 	position: absolute;
-	top: $grid-padding*1.5; right: 0;
+	top: $grid-padding; 
+	right: $grid-padding*2;
 	display: block;
-	height: 24px; width: 24px;
-	margin-top: 0;
-	border: 0; padding: 0;
+	height: 2.6rem; 
+	width: 2.6rem;
+	margin: 0;
+	padding: 0;
+	border: 0; 
 	background: transparent !important;
 	
-	&::after, &::before {
-		content: "";
+	@include rwd(medium) {
+		right: 0;
+	}	
+	@include rwd(wide) {
+		left: -999rem;
+		
+		&:focus {
+			left: auto;
+			right: 0;
+		}
+	}
+	
+	&::after, 
+	&::before {
+		content: '';
 		display: block;
 		position: absolute;
-		top: 11px; left: 4px;
-		width: 16px; height: 3px;
-		background-color: $third-color;
-		@include transition();
-		
+		top: 14px; 
+		width: 16px; 
+		height: 2px;
+		background-color: $text-color;
+		transition: transform .2s ease-in-out;
+	}
+	&::before {
+		left: 0;
+		transform: rotate(45deg);		
 	}
 	&::after {
-		transform: rotate(-90deg);
+		transform: rotate(-45deg);
+		right: 0;
 	}
-	&::before {}
-	
 	span {
 		@include a11y-hidden();
 	}
 	
-	&.sub-menu-opened::after {transform: rotate(45deg);}
-	&.sub-menu-opened::before {transform: rotate(-45deg);}
+	&.sub-menu-opened::after {
+		transform: rotate(45deg);
+	}
+	&.sub-menu-opened::before {
+		transform: rotate(-45deg);
+	}
 	
 	@include rwd(medium) {
-		height: 16px; width: 16px;
-		top: 50%; margin-top: -8px;
-		border-radius: 8px;
+		height: 2rem; 
+		width: 2rem;
+		top: 50%; 
+		margin-top: -1.1rem;
 		
-		&::after, &::before {
-			top: 7px; left: 3px;
-			width: 10px; height: 2px;
+		&::after, 
+		&::before {
+			top: 9px; 
+			left: 7px;
+			width: 10px; 
+			height: 2px;
+		}
+		&::after {
+			left: 13px;
 		} 
 	}
-	@include rwd(large) {
-		margin-top: -10px;
-	}	
-	@include rwd(wide) {
-		display: none;
-	}
 }
-
 
 
 #menu-toggle {
@@ -249,44 +316,67 @@
 	// Hamburger Menu
 	
 	display: block; 
-	height: 23px; width: 23px;
+	height: 3.4rem; 
+	width: 3.4rem;
 	position: relative;
-	border: 0; border-radius: 0; padding: 0;
+	border: 0; 
+	border-radius: 0;
+	padding: 0;
 	margin: 0;
 	cursor: pointer;
+	z-index: 10;
 	@include a11y-hide(60px);
 
 	span {
 		position: absolute; 
-		top: 10px; right: 0;
+		top: 16px; 
+		right: 0;
+
+		&, 
+		&::after, 
+		&::before {
+			display: block;
+			width: 100%; 
+			height: 2px;
+			background-color: $text-color;
+			transition: all .3s linear;
+		}
+		&::after, 
+		&::before {
+			position: absolute;
+			content: ''; 
+		}
+		&::after {
+			width: 50%;
+			bottom: -12px; 
+			left: 0;
+		}
+		&::before {
+			width: 75%;
+			top: -12px; 
+			left: 0;
+		}
+
 	}
-	span, span::after, span::before {
-		display: block;
-		width: 23px; height: 3px;
-		background-color: #000;
-		transition: all .3s linear;
-	}
-	span::after, span::before {
-		position: absolute;
-		content: ""; 
-	}
-	span::after {bottom: -9px; left: 0;}
-	span::before {top: -9px; left: 0;}
 
 	&.menu-opened span {
 		background-color: transparent; 
 		height: 1px;
+
+		&::after {
+			top: 0;
+			transform: rotate(45deg);
+			background-color: $secondary-color;
+			width: 100%;
+		}
+		&::before {
+			top: 0;
+			transform: rotate(-45deg);
+			background-color: $secondary-color;
+			width: 100%;
+		}
 	}
-	&.menu-opened span::after {
-		top: 0;
-		transform: rotate(45deg);
-		background-color: $secondary-color;
-	}
-	&.menu-opened span::before {
-		top: 0;
-		transform: rotate(-45deg);
-		background-color: $secondary-color;
-	}
+		
 
 	&:hover {
 		background-color: transparent;

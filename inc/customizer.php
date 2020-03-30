@@ -279,9 +279,6 @@ function fs_blog_colors() {
 		.site-desc,
 		.post-title a:hover, 
 		.post-title a:focus,
-		.main-menu>li .sub-menu>li>a:hover, 
-		.main-menu>li .sub-menu>li>a:focus, 
-		.main-menu>li .sub-menu>li.current-menu-item>a,
 		.comment-list .comment-meta .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}

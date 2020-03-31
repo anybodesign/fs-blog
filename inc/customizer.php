@@ -269,9 +269,10 @@ function fs_blog_colors() {
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		.sub-menu > li a:hover, 
-		.sub-menu > li a.focus-visible, 
+		.sub-menu > li a:focus, 
 		.sub-menu > li.current-menu-item a,
-		.post-picture { 
+		.post-picture,
+		.wp-block-file a.wp-block-file__button { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		*.has-primary-color-background-color { 
@@ -285,12 +286,24 @@ function fs_blog_colors() {
 			border-left-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>; 
 			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
-		.formfield-select--container {
+		.formfield-select--container::after {
 			border-top-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
+		}
+		.content-area p a:not([class*="-btn"]),
+		.content-area .wp-block-file a:first-child {
+			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
 		}		
 		.main-menu > li > a:hover, 
 		.main-menu > li > a:focus,
-		.calendar_wrap table td a { 
+		.post-title a:hover,
+		.post-title a:focus,
+		.post-header:hover .post-title a,
+		.calendar_wrap table td a,
+		.acf-block-list-item .list-featured,
+		.acf-block-post-title a:hover,
+		.acf-block-post-title a:focus,
+		.content-area p a:not([class*="-btn"]):hover,
+		.content-area .wp-block-file a:first-child:hover { 
 			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		*.has-text-color.has-primary-color-color { 
@@ -312,8 +325,6 @@ function fs_blog_colors() {
 			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
 		}
 		.site-desc,
-		.post-title a:hover, 
-		.post-title a:focus,
 		.comment-list .comment-meta .comment-metadata a {
 			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}

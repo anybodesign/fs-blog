@@ -25,6 +25,7 @@
 	ul {
 		padding: 0;
 		list-style: none;
+		border-top: #fff 1px solid;
 		
 		li {
 			color: #fff;
@@ -49,7 +50,7 @@
 				position: relative;
 				display: flex;
 				flex-wrap: nowrap;
-				padding: $grid-padding 0;
+				padding: $grid-padding*2 0;
 				
 				.recentpost-thumbnail {
 					width: 6rem;
@@ -58,11 +59,16 @@
 					img {
 						width: 100%;
 						display: block;
+						border-radius: 50%;
 					}
 				}
 
 				.recentpost-title {
 					flex: 1 0 0;
+					
+					p[class*="like"] {
+						margin-bottom: $grid-padding/2;
+					}
 				}
 				
 				.read-more::after {

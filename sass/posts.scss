@@ -135,6 +135,16 @@
 .post-header {
 	position: relative;
 	margin-bottom: 1.5em;
+	
+	&:hover .post-title a {
+		color: $primary-color;
+	}
+}
+
+.post-excerpt {
+	p {
+		margin-bottom: $grid-padding;
+	}
 }
 
 .post-title {
@@ -149,9 +159,11 @@
 		padding-left: 0;
 		background-color: #fff;
 		text-decoration: none;
+		transition: color .3s ease-in-out;
 		
-		&:hover, &:focus {
-			color: $secondary-color;			
+		&:hover, 
+		&:focus {
+			color: $primary-color;			
 		}
 
 	}

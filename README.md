@@ -8,6 +8,15 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5 - 2020.03.31
+* New functions
+* Sass split
+* Improved nav JS & a11y
+* Improved banner pictures with function
+* Pridx Removed
+* Blocks CSS
+* ACF Blocks CSS
+
 ### 1.4.6 - 2018-05-07
 * Bugfix: Footer widgets below latests posts
 

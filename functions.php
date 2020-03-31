@@ -411,39 +411,36 @@ function fs_blog_widgets_init() {
 add_action( 'widgets_init', 'fs_blog_widgets_init' );
 
 
-// Excerpt
+// Excerpt default
 
-function fs_custom_excerpt( $length ) {
-    return 12;
+function fs_custom_excerpt( $lenght ) {
+  return 60;
 }
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 
-// No #more
+// Excerpt lenght custom
 
-/*
-function remove_more_jump_link($link) {
-$offset = strpos($link, '#more-');
-	if ($offset) {
-		$end = strpos($link, '"',$offset);
-	}
-	if ($end) {
-		$link = substr_replace($link, '', $offset, $end-$offset);
-	}
-return $link;
+function fs_excerpt( $limit ) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+
+  if (count($excerpt) >= $limit) {
+      array_pop($excerpt);
+      $excerpt = implode(" ", $excerpt) . '...';
+  } else {
+      $excerpt = implode(" ", $excerpt);
+  }
+
+  $excerpt = preg_replace('`\[[^\]]*\]`', '', $excerpt);
+
+  return $excerpt;
 }
-add_filter('the_content_more_link', 'remove_more_jump_link');
-*/
 
 // Excerpt link
 
 function fs_excerpt_more( $more ) {
-    return sprintf( '… <a class="read-more" href="%1$s" rel="nofollow">%2$s</a>',
-        get_permalink( get_the_ID() ),
-        __( 'Read More', 'fs-blog' )
-    );
+    return sprintf( '…');
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
-
 
 
 // Tinymce class

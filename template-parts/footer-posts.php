@@ -26,8 +26,9 @@
 							</div>
 							<?php } ?>
 							<div class="recentpost-title">
-								<p class="h5-like"><?php the_title(); ?></p>
-								<?php the_excerpt(); ?>
+								<p class="h4-like"><?php the_title(); ?></p>
+								<?php echo fs_excerpt(10); ?>
+								<p><a href="<?php the_permalink(); ?>" class="read-more"  rel="nofollow"><?php _e( 'Read Post', 'fs-blog' ); ?></a></p>
 							</div>
 						</li>					
 					<?php endwhile; ?>

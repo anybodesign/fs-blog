@@ -32,7 +32,10 @@
 						</header>
 						
 						<div class="post-content">
+							<div class="post-excerpt">
 							<?php the_excerpt(); ?>
+							</div>
+							<p><a href="<?php the_permalink(); ?>" class="read-more"  rel="nofollow"><?php _e( 'Read More', 'fs-blog' ); ?></a></p>
 						</div>
 						
 						<footer class="post-footer">

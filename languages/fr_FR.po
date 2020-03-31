@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-03-30 18:24+0200\n"
-"PO-Revision-Date: 2020-03-30 18:24+0200\n"
+"POT-Creation-Date: 2020-03-31 12:42+0200\n"
+"PO-Revision-Date: 2020-03-31 12:42+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -135,10 +135,6 @@ msgstr "Zone #2 de widgets du pied de page"
 #: functions.php:402
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
-
-#: functions.php:426
-msgid "Read More"
-msgstr "Lire la suite"
 
 #: functions.php:446
 msgid "Text intro"
@@ -344,21 +340,25 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:35
-msgid "<p>Read More</p>"
-msgstr "<p>Lire la suite</p>"
+#: template-parts/content-posts.php:36
+msgid "Read More"
+msgstr "Lire la suite"
 
-#: template-parts/content-posts.php:45
+#: template-parts/content-posts.php:46
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:53
+#: template-parts/content-posts.php:54
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
 #: template-parts/footer-posts.php:19
 msgid "Recent Posts"
 msgstr "Articles récents"
+
+#: template-parts/footer-posts.php:31
+msgid "Read Post"
+msgstr "Lire l'article"
 
 #: template-parts/header-logo.php:13
 msgid "Go to Home Page"
@@ -430,6 +430,9 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#~ msgid "<p>Read More</p>"
+#~ msgstr "<p>Lire la suite</p>"
 
 #, php-format
 #~ msgid "Continue reading %s"

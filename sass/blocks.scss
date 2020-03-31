@@ -141,29 +141,23 @@
 // Files
 
 .wp-block-file {
-	
-	a:first-child {
-		font-family: $font-regular;
-		text-decoration: none;
-		border-bottom: $secondary-color 2px solid;
-		transition: border .2s ease-in-out;
-		
-		&:hover {
-			border-bottom-width: 4px;
-		}
-		&.focus-visible {
-			background-color: $text-color;
-			border-bottom-color: $text-color;
-			color: #fff;
-		}
-	}
+	@extend p;
 
 	a.wp-block-file__button {
 		font-family: $font-bold;
 		font-weight: normal;
-		background-color: $text-color;
+		background-color: $primary-color;
 		border-radius: 0;
-		font-size: 1.3rem !important;
+		color: #fff !important;
+		border: 0 !important;
+		font-size: 1.4rem !important;
+		opacity: 1 !important;
+		transition: background .3s ease-in-out;
+		
+		&:hover,
+		&:focus {
+			background-color: $text-color;
+		}
 	}
 	
 }
@@ -224,7 +218,8 @@
 
 
 [class*=acf-block--] {
-
+	margin-bottom: $grid-padding*3;
+	
 	.acf-block-container {
 		width: 100%;
 		
@@ -243,7 +238,15 @@
 
 // Text+Img
 
-.acf-block--textimg {}
+.acf-block--textimg {
+	
+	.acf-block-textimg-picture {
+		figure {
+			padding: 0;
+			border: 0;
+		}
+	}
+}
 
 
 // Gallery 
@@ -259,7 +262,44 @@
 // Posts
 
 .acf-block---post {}
-.acf-block-post-item {}
+.acf-block-post-item {
+	position: relative;
+	
+	&:hover {
+		a {
+			text-decoration: none;
+		}
+		a img {
+			opacity: .7;
+		}	
+	}
+}
+.acf-block-post-figure {
+	@include img-opacity();
+}
+.acf-block-post-title {
+	margin-bottom: $grid-padding/2;
+	
+	a {
+		text-decoration: none;
+		transition: color .3s ease-in-out;
+
+		&::after {
+			@include linkblock();
+		}
+		&:hover,
+		&:focus {
+			color: $primary-color;
+		}
+	}
+}
+.acf-block-post-metas {
+	span {
+		font-size: 1.4rem;
+		color: $third-color;
+	}
+}
+
 
 // Testimonial
 
@@ -268,11 +308,27 @@
 	.testimonal-title {
 		@extend h2;
 	}
-	figure {
+	.testimonial-picture {
 		
+		img {
+			border-radius: 50%;
+		}
+	}
+	figure {
 		.page-content & {
 			padding: 0;
 			border: 0;
-		}
+		}		
 	}
+}
+
+
+// Advanced List
+
+.acf-block--advanced-list {
+	
+	.list-featured {
+		font-family: $font-bold;
+		color: $primary-color;
+	}	
 }

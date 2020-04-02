@@ -6,11 +6,11 @@
 
 // Define your custom fonts :)
 
-$f-regular: bitter-regular;
-$f-italic: bitter-italic;
-$f-bold: bitter-bold;
-$f-bolditalic: bitter-bolditalic;
-$f-title: share-bold;
+$f-regular: Bitter-Regular;
+$f-italic: Bitter-Italic;
+$f-bold: Bitter-Bold;
+$f-bolditalic: Bitter-BoldItalic;
+$f-title: Barlow-Bold;
 
 $fontface-regular: local('#{$f-regular}'), url('fonts/#{$f-regular}.woff2') format('woff2'), url('fonts/#{$f-regular}.woff') format('woff');
 $fontface-italic: local('#{$f-italic}'), url('fonts/#{$f-italic}.woff2') format('woff2'), url('fonts/#{$f-italic}.woff') format('woff');	

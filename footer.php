@@ -16,7 +16,7 @@
 			
 			<div class="row inner">
 				
-				<?php if ( is_active_sidebar( 'footer_area1' ) || get_theme_mod('author_bio') == true ) { ?> 
+				<?php if ( is_active_sidebar( 'footer_area1' ) || get_theme_mod('author_bio') != false ) { ?> 
 				<div class="footer-section">
 					<?php 
 						if ( get_theme_mod('author_bio') != false && !is_404() ) {
@@ -27,7 +27,7 @@
 				</div>
 				<?php } ?>
 				
-				<?php if ( is_active_sidebar( 'footer_area2' ) || get_theme_mod('last_posts') == true ) { ?> 
+				<?php if ( is_active_sidebar( 'footer_area2' ) || get_theme_mod('last_posts') != false ) { ?> 
 				<div class="footer-section">
 					<?php 
 						if ( get_theme_mod('last_posts') != false ) {
@@ -55,7 +55,7 @@
 							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<?php if(get_theme_mod('display_wp') == true) { ?>
+						<?php if(get_theme_mod('display_wp') != false) { ?>
 						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
 						<?php } ?>
 						

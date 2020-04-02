@@ -12,12 +12,15 @@
 					<div class="page-wrap<?php if ( $children || is_page_template( 'pagecustom-sidebar.php' ) ) { echo ' has-sidebar'; } ?>">
 						
 						<div class="page-content">
-							<?php the_content(); ?>
+							<?php 
+								the_content();
+									
+								if ( comments_open() || get_comments_number() ) :
+									comments_template();
+								endif;
+							?>
 						</div>
 
-						<?php if ( comments_open() || get_comments_number() ) : ?>
-							<?php comments_template(); ?>
-						<?php endif;?>
 						
 						<?php if ( $children || is_page_template( 'pagecustom-sidebar.php' ) ) { ?>
 						<aside class="page-sidebar" role="complementary">

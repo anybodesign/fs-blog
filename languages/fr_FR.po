@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-03-31 12:42+0200\n"
-"PO-Revision-Date: 2020-03-31 12:42+0200\n"
+"POT-Creation-Date: 2020-04-02 16:01+0200\n"
+"PO-Revision-Date: 2020-04-02 16:01+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -136,27 +136,31 @@ msgstr "Zone #2 de widgets du pied de page"
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:446
+#: functions.php:412
+msgid "Page widgets Area"
+msgstr "Zone de widgets pour les pages"
+
+#: functions.php:470
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:452
+#: functions.php:476
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:458
+#: functions.php:482
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:478
+#: functions.php:502
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:479
+#: functions.php:503
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:480
+#: functions.php:504
 msgid "Search"
 msgstr "Recherche"
 
@@ -307,11 +311,6 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
-#. Template Name of the plugin/theme
-#: pagecustom-nosidebar.php:9
-msgid "Page without Sidebar"
-msgstr "Page sans barre latérale"
-
 #: template-parts/content-none.php:13
 msgid "Nothing Found"
 msgstr "Aucun résultat"
@@ -340,15 +339,15 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:36
+#: template-parts/content-posts.php:38
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: template-parts/content-posts.php:46
+#: template-parts/content-posts.php:48
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:54
+#: template-parts/content-posts.php:56
 msgid "Pages:"
 msgstr "Pages&nbsp;:"
 
@@ -430,6 +429,14 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Fullwidth Page"
+msgstr "Page pleine largeur"
+
+#. Template Name of the plugin/theme
+msgid "Page with Sidebar"
+msgstr "Page avec barre latérale"
 
 #~ msgid "<p>Read More</p>"
 #~ msgstr "<p>Lire la suite</p>"
@@ -618,9 +625,6 @@ msgstr "https://anybodesign.com/"
 #~ msgctxt "Taxonomy Singular Name"
 #~ msgid "Service Category"
 #~ msgstr "Catégorie de service"
-
-#~ msgid "Primary Widgets Area"
-#~ msgstr "Zone primaire Widgets"
 
 #~ msgid "Social Networks"
 #~ msgstr "Réseaux sociaux"

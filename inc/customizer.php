@@ -286,7 +286,8 @@ function fs_blog_colors() {
 			border-left-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>; 
 			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
-		.formfield-select--container::after {
+		.formfield-select--container::after,
+		.comment-list .comment {
 			border-top-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
 		}
 		.content-area p a:not([class*="-btn"]),

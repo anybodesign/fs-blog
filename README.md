@@ -8,6 +8,14 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.1 - 2020.04.02
+* Fullwidth and Sidebar page templates
+* Sidebar for pages
+* New webfonts
+* Some CSS fix
+* New Comments CSS
+* Conditions fixed in footer
+
 ### 1.5 - 2020.03.31
 * New functions
 * Sass split

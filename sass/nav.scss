@@ -323,6 +323,7 @@ li.menu-item-has-children {
 	border-radius: 0;
 	padding: 0;
 	margin: 0;
+	background-color: transparent;
 	cursor: pointer;
 	z-index: 10;
 	@include a11y-hide(60px);

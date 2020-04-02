@@ -111,7 +111,7 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Black', 'fs-blog' ),
 	        'slug' => 'black',
-	        'color' => '#4a4a4a',
+	        'color' => '#303030',
 	    ),
 	    array(
 	        'name' => esc_html__( 'White', 'fs-blog' ),
@@ -130,11 +130,6 @@ function fs_setup() {
 	        'name' => esc_html__( 'Secondary color', 'fs-blog' ),
 	        'slug' => 'secondary-color',
 	        'color' => get_theme_mod('secondary_color', '#606060'),
-	    ),
-	    array(
-	        'name' => esc_html__( 'Complementary color', 'fs-blog' ),
-	        'slug' => 'third-color',
-	        'color' => get_theme_mod('third_color', '#8def12'),
 	    ),
 	    
 	));	

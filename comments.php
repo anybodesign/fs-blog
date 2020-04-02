@@ -22,6 +22,7 @@ if ( post_password_required() ) {
 								wp_list_comments( 
 									array(
 										'avatar_size' => 128,
+										'reverse_top_level' => true,
 									)
 								);
 							?>

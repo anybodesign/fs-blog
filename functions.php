@@ -377,8 +377,8 @@ function fs_blog_widgets_init() {
 		'description' 	=> 	'',
 		'before_widget' => 	'<div class="widget-container">',
 		'after_widget' 	=> 	'</div>',
-		'before_title' 	=> 	'<h3 class="widget-title">',
-		'after_title' 	=> 	'</h3>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
 	));
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Footer Widgets Area #1', 'fs-blog' ),
@@ -386,8 +386,8 @@ function fs_blog_widgets_init() {
 		'description' 	=> 	'',
 		'before_widget' => 	'',
 		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'<h3 class="widget-title">',
-		'after_title' 	=> 	'</h3>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
 	));
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Footer Widgets Area #2', 'fs-blog' ),
@@ -395,8 +395,8 @@ function fs_blog_widgets_init() {
 		'description' 	=> 	'',
 		'before_widget' => 	'',
 		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'<h3 class="widget-title">',
-		'after_title' 	=> 	'</h3>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
 	));
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Footer Widgets Area #3', 'fs-blog' ),
@@ -404,9 +404,20 @@ function fs_blog_widgets_init() {
 		'description' 	=> 	'',
 		'before_widget' => 	'',
 		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'<h3 class="widget-title">',
-		'after_title' 	=> 	'</h3>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
 	));
+
+	register_sidebar(array(
+		'name'			=>	esc_html__( 'Page widgets Area', 'fs-blog' ),
+		'id'			=>	'page_widgets',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div class="widget-container">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+
 }
 add_action( 'widgets_init', 'fs_blog_widgets_init' );
 

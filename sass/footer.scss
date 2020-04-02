@@ -16,7 +16,11 @@
 .footer-section {
 	padding: $grid-padding;
 	width: 33.3333%;
-	
+
+	.widget-title {
+		@extend h3;
+	}
+		
 	p,
 	.widget-title {
 		color: #fff;

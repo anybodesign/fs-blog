@@ -255,6 +255,7 @@ function fs_blog_colors() {
 	?>
 	<style>
 		.page-banner,
+		.widget-container ul li.current_page_item a,
 		.widget-container ul li.current-cat a,
 		.widget-container ul li a:hover,
 		.widget-container ul li a:focus,

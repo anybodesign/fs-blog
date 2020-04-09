@@ -49,21 +49,17 @@
 
 .main-menu {
 	position: absolute;
-	top: 0;
+	top: auto;
 	left: 0;
 	width: 100%;
-	padding-top: $grid-padding;
-	padding-top: 8rem; 
+	padding-top: $grid-padding*2;
 	text-align: left;
 	background-color: #fff;
-	z-index: 9;
-
-	transform: translateY(-110%);
-	transition: transform .4s ease-in-out;
+	transform: translateX(-110%);
 	z-index: 1;
 	
 	.menu-opened + & {
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 
 	@include rwd(medium) {
@@ -183,7 +179,7 @@ li.menu-item-has-children {
 	text-align: left;
 	overflow: hidden;
 	background-color: #fff;
-	transition: .2s ease-in-out;
+	//transition: .2s ease-in-out;
 	
 	@include rwd(medium) {
 		position: absolute;
@@ -327,11 +323,11 @@ li.menu-item-has-children {
 	cursor: pointer;
 	z-index: 10;
 	@include a11y-hide(60px);
-
+	
 	span {
 		position: absolute; 
 		top: 16px; 
-		right: 0;
+		left: 0;
 
 		&, 
 		&::after, 
@@ -340,7 +336,7 @@ li.menu-item-has-children {
 			width: 100%; 
 			height: 2px;
 			background-color: $text-color;
-			transition: all .3s linear;
+			transition: width .2s linear;
 		}
 		&::after, 
 		&::before {
@@ -357,24 +353,37 @@ li.menu-item-has-children {
 			top: -12px; 
 			left: 0;
 		}
-
+	}
+	
+	&:not([class*="menu-opened"]):hover,
+	&:not([class*="menu-opened"]):focus {
+		
+		span {
+			width: 90%;
+		} 
+		span::after {
+			width: 65%;
+		} 
+		span::before {
+			width: 40%; 
+		}
 	}
 
 	&.menu-opened span {
 		background-color: transparent; 
 		height: 1px;
 
-		&::after {
-			top: 0;
-			transform: rotate(45deg);
-			background-color: $secondary-color;
-			width: 100%;
-		}
+		&::after, 
 		&::before {
 			top: 0;
-			transform: rotate(-45deg);
 			background-color: $secondary-color;
-			width: 100%;
+			width: 65%;
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+		&::before {
+			transform: rotate(-45deg);
 		}
 	}
 		

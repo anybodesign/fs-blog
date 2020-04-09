@@ -41,7 +41,6 @@
 	}
 }
 
-
 // Links / Button
 
 .wp-block-button {
@@ -116,6 +115,15 @@
 	
 	&.alignfull {
 		width: 100%;
+		
+		.page-content & {
+			padding: 0;
+			border: 0;
+			
+			figcaption {
+				text-align: center;
+			}
+		}
 	}	
 }
 

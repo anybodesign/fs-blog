@@ -90,11 +90,15 @@
 	& > * {
 		width: 100%;
 		padding: 0 $grid-padding;
-		@include center();
+		@include center-small();
+		
+		.page-sidebar & {
+			
+		}
 	}
 	
 	& > *.alignwide {
-		max-width: $max-width*1.3;	// 1248px
+		max-width: $max-width-large;
 	}
 	& > *.alignfull {
 		margin-left: 0;
@@ -112,7 +116,7 @@
 	& > [class*="wp-block-verse"] {	
 		position: relative;
 		margin: $grid-padding*2 auto;
-		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+		max-width: calc(#{$max-width-small} - #{$grid-padding}*2);
 	}
 
 	

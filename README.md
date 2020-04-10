@@ -8,6 +8,12 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.4 - 2020.04.10
+* Typography CSS update
+* Footer widget container
+* Banner for category
+* Removed unused CSS
+
 ### 1.5.3 - 2020.04.10
 * Infinite Ajax Scroll updated (3.0)
 

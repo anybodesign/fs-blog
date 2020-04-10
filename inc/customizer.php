@@ -265,8 +265,6 @@ function fs_blog_colors() {
 		.post:nth-child(3n) .post-figure,
 		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit],
 		.search-form::after,
-		.ias_trigger a:link,
-		.ias_trigger a:visited,
 		.formfield-radio input[type="radio"] + label::after,
 		.formfield-radio input[type="radio"] + span::after,
 		.sub-menu > li a:hover, 
@@ -318,9 +316,7 @@ function fs_blog_colors() {
 		.action-btn-dark,
 		button.action-btn-dark,
 		input[type=submit].action-btn-dark,
-		#site_foot,
-		.ias_trigger a:hover,
-		.ias_trigger a:active {
+		#site_foot {
 			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
 		}
 		*.has-secondary-color-background-color {

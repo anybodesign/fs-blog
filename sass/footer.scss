@@ -15,7 +15,15 @@
 
 .footer-section {
 	padding: $grid-padding;
-	width: 33.3333%;
+	width: 100%;
+
+	@include rwd(medium) {
+		padding: $grid-padding*3;
+	}	
+	@include rwd(large) {
+		padding: $grid-padding;
+		width: 33.3333%;
+	}
 	
 	.footer-widget-container {
 		margin-bottom: $grid-padding*3;

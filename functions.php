@@ -197,7 +197,7 @@ function fs_scripts_load() {
 		    	wp_enqueue_script(
 			    	'ias', 
 			    	FS_THEME_URL . '/js/infinite-ajax-scroll.min.js',
-			    	array('jquery'), 
+			    	array(), 
 			    	'3.0', 
 			    	true
 		    	);

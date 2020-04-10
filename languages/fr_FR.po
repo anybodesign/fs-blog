@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2020-04-02 16:01+0200\n"
-"PO-Revision-Date: 2020-04-02 16:01+0200\n"
+"POT-Creation-Date: 2020-04-09 17:25+0200\n"
+"PO-Revision-Date: 2020-04-09 17:25+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -24,15 +24,15 @@ msgstr ""
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:33
+#: comments.php:38
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:40
+#: comments.php:45
 msgid "Do we talk about it?"
 msgstr "On en discute&nbsp;?"
 
-#: comments.php:41
+#: comments.php:46
 msgid "Add my comment!"
 msgstr "Ajouter mon commentaire&nbsp;!"
 
@@ -56,111 +56,107 @@ msgstr "Couleur primaire"
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
-#: functions.php:135
-msgid "Complementary color"
-msgstr "Couleur complémentaire"
-
-#: functions.php:146
+#: functions.php:141
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:147
+#: functions.php:142
 msgid "S"
 msgstr "S"
 
-#: functions.php:152
+#: functions.php:147
 msgid "Large"
 msgstr "Grand"
 
-#: functions.php:153
+#: functions.php:148
 msgid "L"
 msgstr "L"
 
-#: functions.php:262
+#: functions.php:264
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:263
+#: functions.php:265
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:329
+#: functions.php:331
 msgid "Thumbnail x2"
 msgstr "Thumbnail x2"
 
-#: functions.php:330
+#: functions.php:332
 msgid "Medium x2"
 msgstr "Medium x2"
 
-#: functions.php:331
+#: functions.php:333
 msgid "Large x2"
 msgstr "Large x2"
 
-#: functions.php:332
+#: functions.php:334
 msgid "Screen Medium"
 msgstr "Screen Medium"
 
-#: functions.php:333
+#: functions.php:335
 msgid "Screen Full"
 msgstr "Screen Full"
 
-#: functions.php:334
+#: functions.php:336
 msgid "Video Medium"
 msgstr "Video Medium"
 
-#: functions.php:335
+#: functions.php:337
 msgid "Video Full"
 msgstr "Video Full"
 
-#: functions.php:336
+#: functions.php:338
 msgid "Blog post"
 msgstr "Blog post"
 
-#: functions.php:337
+#: functions.php:339
 msgid "Blog post Full"
 msgstr "Blog post Full"
 
-#: functions.php:375
+#: functions.php:377
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:384
+#: functions.php:386
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:393
+#: functions.php:395
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:402
+#: functions.php:404
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:412
+#: functions.php:414
 msgid "Page widgets Area"
 msgstr "Zone de widgets pour les pages"
 
-#: functions.php:470
+#: functions.php:472
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:476
+#: functions.php:478
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:482
+#: functions.php:484
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:502
+#: functions.php:504
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:503
+#: functions.php:505
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:504
+#: functions.php:506
 msgid "Search"
 msgstr "Recherche"
 
@@ -299,15 +295,23 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:39
+#: index.php:41
+msgid "Load more"
+msgstr "Charger plus d’articles"
+
+#: index.php:45
+msgid "No more posts"
+msgstr "Pas d’autre article"
+
+#: index.php:51
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:40
+#: index.php:52
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:41
+#: index.php:53
 msgid "Page"
 msgstr "Page"
 
@@ -437,6 +441,9 @@ msgstr "Page pleine largeur"
 #. Template Name of the plugin/theme
 msgid "Page with Sidebar"
 msgstr "Page avec barre latérale"
+
+#~ msgid "Complementary color"
+#~ msgstr "Couleur complémentaire"
 
 #~ msgid "<p>Read More</p>"
 #~ msgstr "<p>Lire la suite</p>"

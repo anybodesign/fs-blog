@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2017-03-30 14:54+0200\n"
-"PO-Revision-Date: 2017-03-30 14:54+0200\n"
+"POT-Creation-Date: 2020-04-09 17:25+0200\n"
+"PO-Revision-Date: 2020-04-09 17:25+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -20,110 +20,298 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:21
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Page introuvable."
-
-#: 404.php:23
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Il semblerait que rien n’ai été trouvé à cette adresse. Essayez peut-être "
-"une recherche?"
-
 #: comments.php:18
 msgid "They talk about it"
 msgstr "Ils en parlent"
 
-#: comments.php:33
+#: comments.php:38
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: comments.php:40
+#: comments.php:45
 msgid "Do we talk about it?"
-msgstr "On en discute ?"
+msgstr "On en discute&nbsp;?"
 
-#: comments.php:41
+#: comments.php:46
 msgid "Add my comment!"
-msgstr "Ajouter mon commentaire !"
+msgstr "Ajouter mon commentaire&nbsp;!"
 
-#: footer.php:74
+#: footer.php:59
 msgid "Powered by WordPress!"
-msgstr "Propulsé par WordPress !"
+msgstr "Propulsé par WordPress&nbsp;!"
 
-#: functions.php:58
+#: functions.php:112
+msgid "Black"
+msgstr "Noir"
+
+#: functions.php:117
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:125 inc/customizer.php:106
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: functions.php:130 inc/customizer.php:122
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: functions.php:141
+msgid "Small"
+msgstr "Petite"
+
+#: functions.php:142
+msgid "S"
+msgstr "S"
+
+#: functions.php:147
+msgid "Large"
+msgstr "Grand"
+
+#: functions.php:148
+msgid "L"
+msgstr "L"
+
+#: functions.php:264
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:59
+#: functions.php:265
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:140
+#: functions.php:331
+msgid "Thumbnail x2"
+msgstr "Thumbnail x2"
+
+#: functions.php:332
+msgid "Medium x2"
+msgstr "Medium x2"
+
+#: functions.php:333
+msgid "Large x2"
+msgstr "Large x2"
+
+#: functions.php:334
+msgid "Screen Medium"
+msgstr "Screen Medium"
+
+#: functions.php:335
+msgid "Screen Full"
+msgstr "Screen Full"
+
+#: functions.php:336
+msgid "Video Medium"
+msgstr "Video Medium"
+
+#: functions.php:337
+msgid "Video Full"
+msgstr "Video Full"
+
+#: functions.php:338
+msgid "Blog post"
+msgstr "Blog post"
+
+#: functions.php:339
+msgid "Blog post Full"
+msgstr "Blog post Full"
+
+#: functions.php:377
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:149
+#: functions.php:386
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:158
+#: functions.php:395
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:167
+#: functions.php:404
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: header.php:33
-msgid "Go to main menu"
-msgstr "Aller au menu principal"
+#: functions.php:414
+msgid "Page widgets Area"
+msgstr "Zone de widgets pour les pages"
 
-#: header.php:34
-msgid "Go to main content\t"
-msgstr "Aller au contenu principal\t"
+#: functions.php:472
+msgid "Text intro"
+msgstr "Texte d’intro"
 
-#: header.php:43 header.php:50
-msgid "Go to Home Page"
-msgstr "Aller à la page d'accueil"
+#: functions.php:478
+msgid "Text mentions"
+msgstr "Mentions"
 
-#: header.php:66
-msgid "Unfold navigation menu"
-msgstr "Déplier le menu de navigation"
+#: functions.php:484
+msgid "Action button"
+msgstr "Bouton d’action"
 
-#: header.php:66
-msgid "Menu"
-msgstr "Menu"
+#: functions.php:504
+msgid "Search for:"
+msgstr "Rechercher :"
 
-#: inc/custom-settings.php:10 inc/custom-settings.php:11
-#: inc/custom-settings.php:69
-msgid "Custom Settings"
-msgstr "Réglages personnalisés"
+#: functions.php:505
+msgid "Keywords"
+msgstr "Mots clés"
 
-#: inc/custom-settings.php:27
-msgid "Site Settings"
-msgstr "Paramètres du site"
+#: functions.php:506
+msgid "Search"
+msgstr "Recherche"
 
-#: inc/custom-settings.php:36
-msgid "Copyright"
-msgstr "Copyright"
+#: inc/customizer.php:18
+msgid "Pictures"
+msgstr "Images"
 
-#: inc/custom-settings.php:58
-msgid "The site&rsquo;s copyright, displayed in the footer"
-msgstr "Le copyright du site, affiché dans le footer"
+#: inc/customizer.php:19
+msgid "Pictures customisation"
+msgstr "Personnalisation des images"
+
+#: inc/customizer.php:23
+msgid "Footer"
+msgstr "Pied de page"
+
+#: inc/customizer.php:24
+msgid "Customise the footer"
+msgstr "Personnaliser le pied de page"
+
+#: inc/customizer.php:42
+msgid "Site Logo"
+msgstr "Logo du site"
+
+#: inc/customizer.php:57
+msgid "Hide the tagline (in an accessible way)"
+msgstr "Masquer le slogan (de manière accessible)"
+
+#: inc/customizer.php:66
+msgid "Hello there :)"
+msgstr "Coucou :)"
+
+#: inc/customizer.php:70
+msgid "Front page welcome title"
+msgstr "Titre de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:71 inc/customizer.php:85
+msgid "Add a custom text instead of Hello."
+msgstr "Ajouter un texte personnalisé au lieu de Hello."
+
+#: inc/customizer.php:79
+msgid "Ex: Welcome to my awesome WordPress blog."
+msgstr "Ex : Bienvenue sur mon super blog WordPress."
+
+#: inc/customizer.php:84
+msgid "Front page welcome text"
+msgstr "Texte de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:135
+msgid "Default Banner"
+msgstr "Bannière par défaut"
+
+#: inc/customizer.php:136
+msgid "Choose a default picture for the banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:149
+msgid "Blog Banner"
+msgstr "Bannière de blog"
+
+#: inc/customizer.php:150
+msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:163
+msgid "404 error"
+msgstr "Erreur 404"
+
+#: inc/customizer.php:164
+msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
+
+#: inc/customizer.php:186
+msgid "Show the author’s Bio"
+msgstr "Afficher la bio de l’auteur"
+
+#: inc/customizer.php:200
+msgid "Show the last posts"
+msgstr "Afficher les derniers articles"
+
+#: inc/customizer.php:212
+msgid "Custom footer text"
+msgstr "Texte de pied de page personnalisé"
+
+#: inc/customizer.php:213
+msgid "Add a custom text instead of the year and blog name."
+msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
+
+#: inc/customizer.php:227
+msgid "Display WordPress Link"
+msgstr "Afficher le lien WordPress"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
+msgid "Check for updates"
+msgstr "Vérifier les mises à jour"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+msgid "View details"
+msgstr "Voir les détails"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#, php-format
+msgid "More information about %s"
+msgstr "Plus d'informations sur %s"
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "L’extension %s est à jour."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Une nouvelle version de l'extension %s est disponible."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
+
+#: inc/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
+
+#: inc/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "Il n’y a aucun historique des mises à jour disponible."
 
 #: inc/subnav-walker.php:12
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:42
+#: index.php:41
+msgid "Load more"
+msgstr "Charger plus d’articles"
+
+#: index.php:45
+msgid "No more posts"
+msgstr "Pas d’autre article"
+
+#: index.php:51
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:43
+#: index.php:52
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:44
+#: index.php:53
 msgid "Page"
 msgstr "Page"
 
@@ -136,7 +324,8 @@ msgstr "Aucun résultat"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
+"Prêt à publier votre premier article&nbsp;? <a href=« %1$s »>Commencez ici</"
+"a>."
 
 #: template-parts/content-none.php:21
 msgid ""
@@ -154,27 +343,64 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
-#: template-parts/content-posts.php:36
-#, php-format
-msgid "Continue reading %s"
-msgstr "Lire la suite de l'article %s"
+#: template-parts/content-posts.php:38
+msgid "Read More"
+msgstr "Lire la suite"
 
 #: template-parts/content-posts.php:48
 msgid "Tagged with:"
 msgstr "Étiquetté&nbsp;:"
 
-#: template-parts/content-posts.php:55 template-parts/content-search.php:33
+#: template-parts/content-posts.php:56
 msgid "Pages:"
-msgstr "Pages :"
+msgstr "Pages&nbsp;:"
 
-#: template-parts/footer-posts.php:20
+#: template-parts/footer-posts.php:19
 msgid "Recent Posts"
 msgstr "Articles récents"
 
-#: template-parts/page-banner.php:29
+#: template-parts/footer-posts.php:31
+msgid "Read Post"
+msgstr "Lire l'article"
+
+#: template-parts/header-logo.php:13
+msgid "Go to Home Page"
+msgstr "Aller à la page d’accueil"
+
+#: template-parts/header-nav.php:15
+msgid "Unfold navigation menu"
+msgstr "Déplier le menu de navigation"
+
+#: template-parts/header-nav.php:15
+msgid "Menu"
+msgstr "Menu"
+
+#: template-parts/header-skiplinks.php:15
+msgid "Go to main content"
+msgstr "Aller au contenu principal"
+
+#: template-parts/header-skiplinks.php:16
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
+
+#: template-parts/page-404.php:6
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Il semblerait que rien n’ait été trouvé à cette adresse. Essayez peut-être "
+"une recherche&nbsp;?"
+
+#: template-parts/page-banner.php:12
+msgid "Hello :)"
+msgstr "Hello :)"
+
+#: template-parts/page-banner.php:19
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de la recherche pour : %s"
+msgstr "Résultats de la recherche pour&nbsp;: %s"
+
+#: template-parts/page-banner.php:25
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops&nbsp;! Page introuvable."
 
 #: template-parts/post-meta.php:15
 msgid "Posted on&nbsp;"
@@ -207,6 +433,54 @@ msgstr "Thomas Villain"
 #. Author URI of the plugin/theme
 msgid "https://anybodesign.com/"
 msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Fullwidth Page"
+msgstr "Page pleine largeur"
+
+#. Template Name of the plugin/theme
+msgid "Page with Sidebar"
+msgstr "Page avec barre latérale"
+
+#~ msgid "Complementary color"
+#~ msgstr "Couleur complémentaire"
+
+#~ msgid "<p>Read More</p>"
+#~ msgstr "<p>Lire la suite</p>"
+
+#, php-format
+#~ msgid "Continue reading %s"
+#~ msgstr "Continuer la lecture %s"
+
+#~ msgid "No picture in the banner"
+#~ msgstr "Aucune image dans la bannière"
+
+#~ msgid "Intro Text"
+#~ msgstr "Texte d’intro"
+
+#~ msgid "Mention Text"
+#~ msgstr "Mentions"
+
+#~ msgid "Theme Footer"
+#~ msgstr "Pied de page du thème"
+
+#~ msgid "Colors customisation"
+#~ msgstr "Personnalisation des couleurs"
+
+#~ msgid "Hide the tagline"
+#~ msgstr "Masquer le slogan"
+
+#~ msgid "Third color"
+#~ msgstr "Troisième couleur"
+
+#~ msgid "Site Settings"
+#~ msgstr "Paramètres du site"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "The site&rsquo;s copyright, displayed in the footer"
+#~ msgstr "Le copyright du site, affiché dans le footer"
 
 #~ msgid "Scroll Down"
 #~ msgstr "Faire défiler vers le bas"
@@ -290,12 +564,6 @@ msgstr "https://anybodesign.com/"
 #~ msgid "Update Slide"
 #~ msgstr "Mettre à jour la slide"
 
-#~ msgid "View Slide"
-#~ msgstr "Voir la slide"
-
-#~ msgid "Search Slide"
-#~ msgstr "Chercher une slide"
-
 #~ msgid "The Slides"
 #~ msgstr "Les slides"
 
@@ -365,9 +633,6 @@ msgstr "https://anybodesign.com/"
 #~ msgid "Service Category"
 #~ msgstr "Catégorie de service"
 
-#~ msgid "Primary Widgets Area"
-#~ msgstr "Zone primaire Widgets"
-
 #~ msgid "Social Networks"
 #~ msgstr "Réseaux sociaux"
 
@@ -410,9 +675,6 @@ msgstr "https://anybodesign.com/"
 
 #~ msgid "Search results"
 #~ msgstr "Résultats de la recherche"
-
-#~ msgid "Site Copyright"
-#~ msgstr "Copyright du Site"
 
 #~ msgid "All Settings"
 #~ msgstr "Tous les paramètres"

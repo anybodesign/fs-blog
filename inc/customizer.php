@@ -290,6 +290,7 @@ function fs_blog_colors() {
 			border-top-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
 		}
 		.content-area p a:not([class*="-btn"]),
+		.breadcrumbs span a:not([class*="-btn"]),		
 		.content-area .wp-block-file a:first-child {
 			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
 		}		
@@ -303,6 +304,7 @@ function fs_blog_colors() {
 		.acf-block-post-title a:hover,
 		.acf-block-post-title a:focus,
 		.content-area p a:not([class*="-btn"]):hover,
+		.breadcrumbs span a:not([class*="-btn"]):hover,
 		.content-area .wp-block-file a:first-child:hover { 
 			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}

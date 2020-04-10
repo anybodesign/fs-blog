@@ -396,3 +396,34 @@ li.menu-item-has-children {
 		display: none;				
 	}
 }
+
+
+// Breadcrumbs 
+
+.breadcrumbs {
+	display: none;
+	
+	@include rwd(large) {
+		display: block;
+		
+		.inner {
+			padding: $grid-padding*3;
+			padding-top: 0;
+			font-size: 1.4rem;
+		}
+		span {
+			
+			a {
+				@include link-style();
+				margin: 0 $grid-padding/2;
+			}
+			
+			&:first-child a {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+	
+	

@@ -67,7 +67,8 @@
 				transition: .5s ease-in-out;
 			}
 
-			&:hover, &:focus {
+			&:hover, 
+			&:focus {
 				img {
 					transform: scale(1.05);
 					opacity: .8;
@@ -269,6 +270,14 @@
 	left: 50%; margin-left: -16px;
 }
 
+// IAS 3
+
+.spinner {
+	padding: $grid-padding*2 0;
+}
+.no-more {
+	display: none;
+}
 
 
 /* ------------------------- */

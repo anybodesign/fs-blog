@@ -425,7 +425,7 @@ add_action( 'widgets_init', 'fs_blog_widgets_init' );
 // Excerpt default
 
 function fs_custom_excerpt( $lenght ) {
-  return 60;
+  return 24;
 }
 add_filter( 'excerpt_length', 'fs_custom_excerpt', 999 );
 

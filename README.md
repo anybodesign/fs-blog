@@ -8,6 +8,9 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.3 - 2020.04.10
+* Infinite Ajax Scroll updated (3.0)
+
 ### 1.5.2 - 2020.04.09
 * CSS updates and fixes
 * Custom blocks CSS update

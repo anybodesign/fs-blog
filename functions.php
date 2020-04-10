@@ -366,6 +366,9 @@ function fs_bg_img() {
 // Widgets
 
 function fs_blog_widgets_init() {
+	
+	// Sidebars 
+	
 	register_sidebar(array(
 		'name'			=>	esc_html__( 'Sidebar Widgets Area', 'fs-blog' ),
 		'id'			=>	'widgets_area1',
@@ -376,11 +379,23 @@ function fs_blog_widgets_init() {
 		'after_title' 	=> 	'</p>',
 	));
 	register_sidebar(array(
+		'name'			=>	esc_html__( 'Page widgets Area', 'fs-blog' ),
+		'id'			=>	'page_widgets',
+		'description' 	=> 	'',
+		'before_widget' => 	'<div class="widget-container">',
+		'after_widget' 	=> 	'</div>',
+		'before_title' 	=> 	'<p class="widget-title">',
+		'after_title' 	=> 	'</p>',
+	));
+	
+	// Footer
+	
+	register_sidebar(array(
 		'name'			=>	esc_html__( 'Footer Widgets Area #1', 'fs-blog' ),
 		'id'			=>	'footer_area1',
 		'description' 	=> 	'',
-		'before_widget' => 	'',
-		'after_widget' 	=> 	'',
+		'before_widget' => 	'<div class="footer-widget-container">',
+		'after_widget' 	=> 	'</div>',
 		'before_title' 	=> 	'<p class="widget-title">',
 		'after_title' 	=> 	'</p>',
 	));
@@ -388,8 +403,8 @@ function fs_blog_widgets_init() {
 		'name'			=>	esc_html__( 'Footer Widgets Area #2', 'fs-blog' ),
 		'id'			=>	'footer_area2',
 		'description' 	=> 	'',
-		'before_widget' => 	'',
-		'after_widget' 	=> 	'',
+		'before_widget' => 	'<div class="footer-widget-container">',
+		'after_widget' 	=> 	'</div>',
 		'before_title' 	=> 	'<p class="widget-title">',
 		'after_title' 	=> 	'</p>',
 	));
@@ -397,17 +412,7 @@ function fs_blog_widgets_init() {
 		'name'			=>	esc_html__( 'Footer Widgets Area #3', 'fs-blog' ),
 		'id'			=>	'footer_area3',
 		'description' 	=> 	'',
-		'before_widget' => 	'',
-		'after_widget' 	=> 	'',
-		'before_title' 	=> 	'<p class="widget-title">',
-		'after_title' 	=> 	'</p>',
-	));
-
-	register_sidebar(array(
-		'name'			=>	esc_html__( 'Page widgets Area', 'fs-blog' ),
-		'id'			=>	'page_widgets',
-		'description' 	=> 	'',
-		'before_widget' => 	'<div class="widget-container">',
+		'before_widget' => 	'<div class="footer-widget-container">',
 		'after_widget' 	=> 	'</div>',
 		'before_title' 	=> 	'<p class="widget-title">',
 		'after_title' 	=> 	'</p>',

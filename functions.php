@@ -343,7 +343,7 @@ function fs_bg_img() {
 	$img_blog = get_theme_mod('bg_blog');
 	$img_banner = get_theme_mod('bg_banner');
 	
-	if ( is_home() && $img_blog ) {
+	if ( is_home() && $img_blog || is_category() && $img_blog ) {
 		$bg = ' style="background-image: url('.get_theme_mod('bg_blog', 'none').')"';
 	}
 	else if ( is_404() && $img_404 ) {

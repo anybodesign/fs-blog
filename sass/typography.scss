@@ -10,8 +10,10 @@ html {
 	font-size: calc(1em * .625); 	/* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
 }
 body {
-	font-size: 1.6em; 				/* base font-size is equivalent "14px" */
-    line-height: 1.5;
+	font-family: $font-regular;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: $text-color;
 }
 
 // Fonts
@@ -103,22 +105,8 @@ h6,
 }
 
 
-p, 
-ul, ol, dl, 
-blockquote, 
-pre, 
-td, th, 
-textarea,
-label, legend, figcaption, 
-hgroup, address,
-time, span,
-small {
-    font-size: 1em;				/* equiv 16px */ 			
-    font-size: 1.6rem;
-    line-height: 1.5;
+p {
     margin: 0 0 1.5em 0;
-	font-family: $font-regular;
-	color: $text-color;
 }
 
 b, strong {
@@ -127,6 +115,14 @@ b, strong {
 }
 i, em {
 	font-family: $font-italic;
+	font-style: normal;
+}
+em strong, strong em,
+i strong, strong i,
+em b, b em,
+i b, b i {
+	font-family: $font-bolditalic;
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -140,7 +136,8 @@ a {
 	color: inherit;
 	background-color: transparent;
 }
-a:hover {
+a:hover,
+a:focus {
 	text-decoration: none;
 }
 
@@ -248,24 +245,30 @@ textarea, input, video {
 
 // Lists
 
-
 ul, ol {
-	padding-left: 1.5em;
+	padding-left: $grid-padding*2;
+	
+	.page-content > & {
+		padding-left: $grid-padding*3;
+	}
 }
+
 ul {
-	list-style: circle;
+	list-style-type: disc;
 }
 ol {
-	list-style: decimal;
+	list-style-type: decimal;
 }
 
-nav ul, nav ol {
+nav ul, 
+nav ol {
 	padding: 0; 
 	margin: 0; 
-	list-style: none;
+	list-style-type: none;
 }
 
-li ul, li ol {
+li ul, 
+li ol {
 	margin-top: 0; 
 	margin-bottom: 0;
 }
@@ -281,16 +284,22 @@ img {
 }
 
 figure {
-	margin: 0 0 1em 0;
+	position: relative;
+	max-width: 100%;
+	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
-}
-figure img {
-	display: block;
-	width: 100%; height: auto;
+	
+	img {
+		display: block;
+		width: 100%; 
+		height: auto;
+	}
 }
 figcaption {
-	font-size: .85em; line-height: 1;
-	margin: .5em 0;
+	font-family: $font-italic;
+	font-size: 1.3rem; 
+	line-height: 1.1;
+	margin: $grid-padding 0;
 }
 
 

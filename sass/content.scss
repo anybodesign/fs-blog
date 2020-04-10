@@ -107,8 +107,7 @@
 	}
 	
 	& > [class*="wp-block-gallery"],
-	& > [class*="wp-block-cover-image"],
-	& > [class*="wp-block-quote"] {
+	& > [class*="wp-block-cover-image"] {
 		@include center();
 		margin-bottom: $grid-padding*2;
 	}

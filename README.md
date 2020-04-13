@@ -8,6 +8,14 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.5 - 2020.04.13
+* Mobile subnav padding
+* Centering quotes ans CSS updates
+* Custom excerpts fix
+* Responsive display of footer columns
+* Breadcrumb CSS styles (Breadcrumb Navxt plugin)
+* No default welcome text
+
 ### 1.5.4 - 2020.04.10
 * Typography CSS update
 * Footer widget container

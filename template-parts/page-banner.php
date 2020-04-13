@@ -8,8 +8,6 @@
 	
 							<?php if ( get_theme_mod('welcome_title') ) {
 								echo get_theme_mod( 'welcome_title', '' ); 
-							} else {
-								esc_html_e( 'Hello :)', 'fs-blog' ); 	
 							} ?>
 							
 							<?php } else if (is_home() ) { ?>

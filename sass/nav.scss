@@ -105,7 +105,8 @@
 				
 			}
 		}
-		& > a:hover, & > a:focus {
+		& > a:hover, 
+		& > a:focus {
 			color: $primary-color;
 
 		}
@@ -211,8 +212,12 @@ li.menu-item-has-children {
 		
 		a {
 			display: block;
-			padding: $grid-padding;
+			padding: $grid-padding $grid-padding*2;
 			text-decoration: none;
+			
+			@include rwd(medium) {
+				padding: $grid-padding;
+			}
 		}
 		a:hover, 
 		a:focus,

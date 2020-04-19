@@ -11,7 +11,7 @@
 ?>
 		</main> <?php // END content ?>
 		
-
+		<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 		<footer role="contentinfo" id="site_foot">
 			
 			<div class="row inner">
@@ -76,7 +76,7 @@
 			</div>
 			
 		</footer>
-
+		<?php } ?>
 		
 </div> <?php // END wrapper ?>
 

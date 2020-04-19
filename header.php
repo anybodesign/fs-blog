@@ -27,18 +27,25 @@
 	
 	<header role="banner" id="site_head">
 		
-		<?php get_template_part('template-parts/header', 'skiplinks'); ?>
+	<?php 
+		if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+			get_template_part('template-parts/header', 'skiplinks');
+		}
+	?>
 		
 		<div class="row inner">
 			
 			<div class="site-brand-container">
 				<?php get_template_part('template-parts/header', 'brand'); ?>
-				<?php get_template_part('template-parts/header', 'nav'); ?>
+				<?php 
+					if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+						get_template_part('template-parts/header', 'nav');
+					}
+				?>
 			</div>
 
 		</div>
 
 	</header>
-	
 	
 		<main id="site_content" class="content-area" role="main">

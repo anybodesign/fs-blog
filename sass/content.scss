@@ -37,7 +37,8 @@
 			min-height: 36rem;
 		}
 		.home &,
-		.error404 & {
+		.error404 &,
+		.page-template-pagecustom-maintenance & {
 			min-height: 50vh;
 		}
 	}

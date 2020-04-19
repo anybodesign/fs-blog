@@ -172,10 +172,13 @@
 	.blog .post-picture + &,
 	.archive .post-picture + &,
 	.search .post-picture + & {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		margin-bottom: 0;
+		
+		@include rwd(medium) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			margin-bottom: 0;
+		}
 	}
 	
 }

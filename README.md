@@ -8,6 +8,9 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.6.1 - 2020.04.19
+* Fixed: Post title display
+
 ### 1.5.6 - 2020.04.19
 * Fixed: Title font size
 * Maintenance template page

@@ -8,6 +8,10 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.6 - 2020.04.19
+* Fixed: Title font size
+* Maintenance template page
+
 ### 1.5.5 - 2020.04.13
 * Mobile subnav padding
 * Centering quotes ans CSS updates

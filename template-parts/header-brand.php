@@ -9,30 +9,27 @@
  * @since FS Blog 1.0
  */
 ?>
-			<?php if ( has_nav_menu( 'main_menu' ) ) : ?>
 			<div class="site-brand">
-			<?php else: ?>
-			<div class="site-brand">
-			<?php endif; ?>
-				
-				<?php if ( is_front_page() ) { ?>
-				<h1 class="site-title">
-				<?php } else { ?>
-				<p class="site-title">
-				<?php } ?>
-					
-					<?php get_template_part('template-parts/header', 'logo'); ?>
 
 				<?php if ( is_front_page() ) { ?>
+				<h1 class="site-title">
+					<?php get_template_part('template-parts/header', 'logo'); ?>
 				</h1>
+				
 				<?php } else { ?>
+				
+				<p class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php _e('Go to Home Page', 'fs-blog'); ?>">
+					<?php get_template_part('template-parts/header', 'logo'); ?>
+					</a>
 				</p>
 				<?php } ?>
-	
+
+				
 				<?php 
 					$site_desc = get_bloginfo( 'description', 'display' );
 					if ( $site_desc || is_customize_preview() ) { ?>
-					<p class="site-desc <?php if(get_theme_mod('wp_baseline') == true) { echo'screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
+					<p class="site-desc <?php if(get_theme_mod('wp_baseline') == true) { echo 'screen-reader-text'; } ?>"><?php echo $site_desc; ?></p>
 				<?php } ?>
 				
 			</div>

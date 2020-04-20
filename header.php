@@ -33,17 +33,13 @@
 		}
 	?>
 		
-		<div class="row inner">
-			
-			<div class="site-brand-container">
-				<?php get_template_part('template-parts/header', 'brand'); ?>
-				<?php 
-					if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
-						get_template_part('template-parts/header', 'nav');
-					}
-				?>
-			</div>
-
+		<div class="site-brand-container inner">
+			<?php get_template_part('template-parts/header', 'brand'); ?>
+			<?php 
+				if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) {
+					get_template_part('template-parts/header', 'nav');
+				}
+			?>
 		</div>
 
 	</header>

@@ -8,18 +8,49 @@
  */
  
 
+// Customizer JS
+
+add_action( 'customize_preview_init', 'fs_customizer_scripts' );
+function fs_customizer_scripts() {
+	wp_enqueue_script(
+		'fs-customizer',
+	    	FS_THEME_URL . '/js/customizer.js',
+	    	array( 'customize-preview' ), 
+	    	false, 
+	    	true
+	);
+}
+
 // Customizer Settings
  
-function fs_blog_customize_register($wp_customize) {
+function fs_blog_customize_register($fs_customize) {
+
+	// Title and Description
+	// -
+	// + + + + + + + + + + 
+	
+	$fs_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$fs_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+	if ( isset( $fs_customize->selective_refresh ) ) {
+		$fs_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => array('.site-title', '.site-title a'),
+			'render_callback' => 'fs_customize_partial_blogname',
+		) );
+		$fs_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '.site-desc',
+			'render_callback' => 'fs_customize_partial_blogdescription',
+		) );
+	}	 
 	 
 	// Create Some Sections
 	
-	$wp_customize->add_section('fs_pictures_section', array(
+	$fs_customize->add_section('fs_pictures_section', array(
 		'title' 		=> __('Pictures', 'fs-blog'),
 		'description' 	=> __('Pictures customisation', 'fs-blog'),
 		'priority'		=> 40,
 	));
-	$wp_customize->add_section('fs_footer_section', array(
+	$fs_customize->add_section('fs_footer_section', array(
 		'title' 		=> __('Footer', 'fs-blog'),
 		'description' 	=> __('Customise the footer', 'fs-blog'),
 		'priority'		=> 30,
@@ -34,11 +65,11 @@ function fs_blog_customize_register($wp_customize) {
 
 		// Site logo
 		
-		$wp_customize->add_setting('site_logo', array(
+		$fs_customize->add_setting('site_logo', array(
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
 		
-		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'site_logo', array(
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'site_logo', array(
 			'label'			=> __('Site Logo', 'fs-blog'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'site_logo',
@@ -47,12 +78,13 @@ function fs_blog_customize_register($wp_customize) {
 
 		// Hide/Show Baseline
 		
-		$wp_customize->add_setting('wp_baseline', array(
-			'default'	=> false,
+		$fs_customize->add_setting('wp_baseline', array(
+			'default'			=> false,
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
-		$wp_customize->add_control('wp_baseline', array(
+		$fs_customize->add_control('wp_baseline', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Hide the tagline (in an accessible way)', 'fs-blog'),
 			'section'		=> 'title_tagline',
@@ -62,11 +94,12 @@ function fs_blog_customize_register($wp_customize) {
 
 		// Banner Welcome title
 		
-		$wp_customize->add_setting('welcome_title', array(
+		$fs_customize->add_setting('welcome_title', array(
 			'default'			=> __('Hello there :)','fs-blog'),
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
-		$wp_customize->add_control('welcome_title', array(
+		$fs_customize->add_control('welcome_title', array(
 			'label'			=> __('Front page welcome title', 'fs-blog'),
 			'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
 			'section'		=> 'title_tagline',
@@ -75,11 +108,12 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// Banner Welcome text
 		
-		$wp_customize->add_setting('welcome_text', array(
+		$fs_customize->add_setting('welcome_text', array(
 			'default'			=> __('Ex: Welcome to my awesome WordPress blog.','fs-blog'),
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
-		$wp_customize->add_control('welcome_text', array(
+		$fs_customize->add_control('welcome_text', array(
 			'type'			=> 'textarea',
 			'label'			=> __('Front page welcome text', 'fs-blog'),
 			'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
@@ -95,14 +129,14 @@ function fs_blog_customize_register($wp_customize) {
 
 		// Primary color
 		
-		$wp_customize->add_setting('primary_color', array(
+		$fs_customize->add_setting('primary_color', array(
 			'default'			=> '9c0',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
 			'transport'			=> 'refresh', 
 		));
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'primary_color', array(
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'primary_color', array(
 			'label'		=> __('Primary color', 'fs-blog'),
 			'section'	=> 'colors',
 			'settings'	=> 'primary_color',
@@ -111,14 +145,14 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// Secondary color
 		
-		$wp_customize->add_setting('secondary_color', array(
+		$fs_customize->add_setting('secondary_color', array(
 			'default'			=> '606060',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
 			'transport'			=> 'refresh', 
 		));
-		$wp_customize->add_control( new WP_Customize_Color_control($wp_customize, 'secondary_color', array(
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'secondary_color', array(
 			'label'		=> __('Secondary color', 'fs-blog'),
 			'section'	=> 'colors',
 			'settings'	=> 'secondary_color',
@@ -127,11 +161,11 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// Header default image
 		
-		$wp_customize->add_setting('bg_banner', array(
+		$fs_customize->add_setting('bg_banner', array(
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
 		
-		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_banner', array(
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'bg_banner', array(
 			'label'			=> __('Default Banner', 'fs-blog'),
 			'description'	=> __('Choose a default picture for the banner. (2048 x 625 pixels max.)', 'fs-blog'),		
 			'section'		=> 'fs_pictures_section',
@@ -141,11 +175,11 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// Blog picture
 		
-		$wp_customize->add_setting('bg_blog', array(
+		$fs_customize->add_setting('bg_blog', array(
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
 		
-		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_blog', array(
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'bg_blog', array(
 			'label'			=> __('Blog Banner', 'fs-blog'),
 			'description'	=> __('Choose a picture for the blog banner. (2048 x 625 pixels max.)', 'fs-blog'),		
 			'section'		=> 'fs_pictures_section',
@@ -155,11 +189,11 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// 404 Image
 		
-		$wp_customize->add_setting('bg_404', array(
+		$fs_customize->add_setting('bg_404', array(
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
 		
-		$wp_customize->add_control( new WP_Customize_Image_control($wp_customize, 'bg_404', array(
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'bg_404', array(
 			'label'			=> __('404 error', 'fs-blog'),
 			'description'	=> __('Choose a picture for the 404 error page. (2048 x 625 pixels max.)', 'fs-blog'),		
 			'section'		=> 'fs_pictures_section',
@@ -176,12 +210,13 @@ function fs_blog_customize_register($wp_customize) {
 
 		// Hide/Show Author’s Bio
 		
-		$wp_customize->add_setting('author_bio', array(
-			'default'	=> true,
+		$fs_customize->add_setting('author_bio', array(
+			'default'			=> true,
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
-		$wp_customize->add_control('author_bio', array(
+		$fs_customize->add_control('author_bio', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Show the author’s Bio', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
@@ -190,12 +225,13 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// Hide/Show Recent Posts
 		
-		$wp_customize->add_setting('last_posts', array(
-			'default'	=> true,
+		$fs_customize->add_setting('last_posts', array(
+			'default'			=> true,
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
-		$wp_customize->add_control('last_posts', array(
+		$fs_customize->add_control('last_posts', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Show the last posts', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
@@ -204,11 +240,12 @@ function fs_blog_customize_register($wp_customize) {
 	
 		// Footer text
 		
-		$wp_customize->add_setting('footer_text', array(
+		$fs_customize->add_setting('footer_text', array(
 			'default'			=> '',
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
-		$wp_customize->add_control('footer_text', array(
+		$fs_customize->add_control('footer_text', array(
 			'label'			=> __('Custom footer text', 'fs-blog'),
 			'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
@@ -217,12 +254,13 @@ function fs_blog_customize_register($wp_customize) {
 		
 		// WP Credits
 		
-		$wp_customize->add_setting('display_wp', array(
-			'default'	=> false,
+		$fs_customize->add_setting('display_wp', array(
+			'default'			=> false,
+			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
-		$wp_customize->add_control('display_wp', array(
+		$fs_customize->add_control('display_wp', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Display WordPress Link', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
@@ -238,7 +276,14 @@ function fs_blog_customize_register($wp_customize) {
 add_action('customize_register', 'fs_blog_customize_register');
 
 
-// Sanitize
+// Callbacks + Sanitize
+
+function fs_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+function fs_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
 
 // Checkbox
 function fs_customizer_sanitize_checkbox( $input ) {

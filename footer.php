@@ -56,7 +56,7 @@
 						} ?>
 						
 						<?php if(get_theme_mod('display_wp') != false) { ?>
-						<a href="//wordpress.org"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
+						<a href="//wordpress.org" class="wp-love"><?php _e('Powered by WordPress!', 'fs-blog'); ?></a>
 						<?php } ?>
 						
 					</p>

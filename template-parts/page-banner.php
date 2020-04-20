@@ -7,7 +7,7 @@
 							<?php if ( is_front_page() ) { ?>
 	
 							<?php if ( get_theme_mod('welcome_title') ) {
-								echo get_theme_mod( 'welcome_title', '' ); 
+								echo '<span class="welcome-title">' . get_theme_mod( 'welcome_title', '' ) . '</span>'; 
 							} ?>
 							
 							<?php } else if (is_home() ) { ?>
@@ -30,7 +30,7 @@
 	
 						<?php if ( is_front_page() || is_home() ) { ?>
 							<?php if ( get_theme_mod( 'welcome_text' ) ) { ?>
-								<p class="text-intro"><?php echo get_theme_mod('welcome_text', ''); ?></p>
+								<p class="text-intro welcome-text"><?php echo get_theme_mod('welcome_text', ''); ?></p>
 							<?php } ?>
 						<?php } ?>
 					</div>

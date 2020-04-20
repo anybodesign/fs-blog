@@ -19,7 +19,7 @@
                 $( '.site-desc' ).hide();
             }
             else {
-                $( '.site-desc' ).show();
+                $( '.site-desc' ).show().removeClass('screen-reader-text');
             }
         });
     });

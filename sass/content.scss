@@ -25,6 +25,9 @@
 		@include block-overlay(.5);
 	}
 
+	.home & {
+		min-height: 22rem;
+	}
 	.page-template-pagecustom-maintenance & {
 		min-height: 40vh;
 	}
@@ -35,7 +38,6 @@
 	@include rwd(large) {
 		min-height: 22rem;
 		margin-bottom: $grid-padding*4;
-		//background-attachment: fixed;
 		
 		.home.blog & {
 			min-height: 36rem;

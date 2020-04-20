@@ -206,13 +206,13 @@ input[type="submit"] {
 
 .formfield-checkbox input[type="checkbox"] + label::after,
 .formfield-checkbox input[type="checkbox"] + span::after {
-	top: -9px; 
-	left: 6px;
+	top: 6px; 
+	left: 3px;
 	content: '';
 	width: 10px;
 	height: 5px;
-	border-left: 2px solid $primary-color;
-	border-bottom: 2px solid $primary-color;	
+	border-left: 3px solid $primary-color;
+	border-bottom: 3px solid $primary-color;	
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
@@ -220,6 +220,10 @@ input[type="submit"] {
 .formfield-checkbox input[type="checkbox"]:checked + label::after,
 .formfield-checkbox input[type="checkbox"]:checked + span::after  {
 	opacity: 1;
+}
+
+.comment-form-cookies-consent {
+	@extend .formfield-checkbox;
 }
 
 // @note: for CF7

@@ -8,6 +8,11 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.5.7 - 2020.04.20
+* Maintenance page CSS update
+* Some CSS fix
+* Some live preview in the customizer
+
 ### 1.5.6.1 - 2020.04.19
 * Fixed: Post title display
 

@@ -270,9 +270,12 @@
 	// Img
 	
 	& > img {
-		max-width: none;
+		max-width: none !important;
 		width: 100%;
 		height: auto;
+	}
+	& > figure {
+		width: 100% !important;
 	}
 	
 }

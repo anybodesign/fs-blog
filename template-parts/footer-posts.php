@@ -25,7 +25,7 @@
 								<?php the_post_thumbnail('thumbnail'); ?>
 							</div>
 							<?php } ?>
-							<div class="recentpost-title">
+							<div class="recentpost-content">
 								<p class="h4-like"><?php the_title(); ?></p>
 								<?php echo fs_excerpt(10); ?>
 								<p><a href="<?php the_permalink(); ?>" class="read-more"  rel="nofollow"><?php _e( 'Read Post', 'fs-blog' ); ?></a></p>

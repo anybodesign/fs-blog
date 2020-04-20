@@ -32,6 +32,11 @@
 	&:active {
 		color: $text-color;
 		border-bottom-color: transparent;
+	}
+	&:hover:focus,
+	&:focus:hover {
+		color: #fff !important;
+		border-bottom-color: transparent;
 	}	
 }
 

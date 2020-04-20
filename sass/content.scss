@@ -24,6 +24,10 @@
 	&::after {
 		@include block-overlay(.5);
 	}
+
+	.page-template-pagecustom-maintenance & {
+		min-height: 40vh;
+	}
 	
 	@include rwd(medium) {
 		min-height: 18rem;
@@ -37,7 +41,7 @@
 			min-height: 36rem;
 		}
 		.home &,
-		.error404 &,
+		.error404,
 		.page-template-pagecustom-maintenance & {
 			min-height: 50vh;
 		}
@@ -129,10 +133,9 @@
 }
 
 .searchform {
-	
 	@include rwd(large) {
 		.error404 & {
-			max-width: 50%;
+			margin-bottom: $grid-padding*3;
 		}
 	}
 }
@@ -260,6 +263,14 @@
 	
 	.formfield-select--container {
 		//margin-top: $grid-padding*2;
+	}
+	
+	// Img
+	
+	& > img {
+		max-width: none;
+		width: 100%;
+		height: auto;
 	}
 	
 }

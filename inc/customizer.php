@@ -101,7 +101,7 @@ function fs_blog_customize_register($fs_customize) {
 		));
 		$fs_customize->add_control('welcome_title', array(
 			'label'			=> __('Front page welcome title', 'fs-blog'),
-			'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
+			'description'	=> __('Add a custom title for the front page banner.', 'fs-blog'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'welcome_title',
 		));
@@ -116,7 +116,7 @@ function fs_blog_customize_register($fs_customize) {
 		$fs_customize->add_control('welcome_text', array(
 			'type'			=> 'textarea',
 			'label'			=> __('Front page welcome text', 'fs-blog'),
-			'description'	=> __('Add a custom text instead of Hello.', 'fs-blog'),
+			'description'	=> __('Add a custom text for the front page banner.', 'fs-blog'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'welcome_text',
 		));

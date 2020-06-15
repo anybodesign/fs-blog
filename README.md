@@ -8,10 +8,11 @@ Just upload and activate the theme :)
 
 ## Changelog
 
-### 1.5.8 - 2020.—
+### 1.5.8 - 2020.06.15
 * Fix: Tagline live display in Customizer
 * Customizer: Fix welcome options description
-* …
+* Block Editor Styles added
+* Separator styles
 
 ### 1.5.7 - 2020.04.20
 * Maintenance page CSS update

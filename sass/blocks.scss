@@ -219,6 +219,21 @@
 	}
 }
 
+// Separator
+
+.wp-block-separator {
+	margin-top: $grid-padding*4;
+	margin-bottom: $grid-padding*4;
+	border: 0;
+	height: 1px;
+	width: 25% !important;
+	background-color: $text-color;
+	
+	&.is-style-wide {
+		width: 100% !important;
+	}
+}
+
 
 // ACF Blocks Stuff
 // -

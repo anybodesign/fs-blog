@@ -48,35 +48,5 @@
         });
     });
     
-    // Footer text
-    wp.customize('footer_text', function(value) {
-        value.bind( function( text ) {
-            $('.footer-copyright').text( text );
-        });
-    });
-
-    // Footer stuff
-    wp.customize('author_bio', function( value ) {
-        value.bind( function( to ) {
-            if( to ) {
-                $( '.author-info' ).show();
-            }
-            else {
-                $( '.author-info' ).hide();
-            }
-        });
-    });
-    wp.customize('last_posts', function( value ) {
-        value.bind( function( to ) {
-            if( to ) {
-                $( '.footer-posts' ).show();
-            }
-            else {
-                $( '.footer-posts' ).hide();
-            }
-        });
-    });
-    
-    
     
 })(jQuery);

@@ -8,6 +8,15 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.6 - 2021.06.16
+* Customizer: Back to top
+* Customizer: Recent posts options
+* Customizer: Post meta options
+* Customizer: Logo in banner
+* Fix: Frontpage banner background image
+* Fix: IAS pagination test
+* Fix: Live display in customizer
+
 ### 1.5.8 - 2020.06.15
 * Fix: Tagline live display in Customizer
 * Customizer: Fix welcome options description

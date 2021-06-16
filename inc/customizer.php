@@ -45,17 +45,34 @@ function fs_blog_customize_register($fs_customize) {
 	 
 	// Create Some Sections
 	
-	$fs_customize->add_section('fs_pictures_section', array(
-		'title' 		=> __('Pictures', 'fs-blog'),
-		'description' 	=> __('Pictures customisation', 'fs-blog'),
-		'priority'		=> 40,
+	$fs_customize->add_section(
+		'fs_options_section',
+		array(
+			'title'			=> __('Theme Options', 'fs-blog'),
+			'priority'		=> 50,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_pictures_section', 
+		array(
+			'title' 		=> __('Pictures', 'fs-blog'),
+			'description' 	=> __('Custom banners', 'fs-blog'),
+			'priority'		=> 40,
 	));
-	$fs_customize->add_section('fs_footer_section', array(
-		'title' 		=> __('Footer', 'fs-blog'),
-		'description' 	=> __('Customise the footer', 'fs-blog'),
-		'priority'		=> 30,
+	$fs_customize->add_section(
+		'fs_footer_section', 
+		array(
+			'title' 		=> __('Footer', 'fs-blog'),
+			'description' 	=> __('Customise the footer', 'fs-blog'),
+			'priority'		=> 30,
 	));
-	
+	$fs_customize->add_section(
+		'fs_blog_section',
+		array(
+			'title'			=> __('Blog Options', 'fs-blog'),
+			'priority'		=> 50,
+		)
+	);
 	
 	//
 	// Head Section
@@ -105,6 +122,28 @@ function fs_blog_customize_register($fs_customize) {
 			'section'		=> 'title_tagline',
 			'settings'		=> 'welcome_title',
 		));
+		
+		$fs_customize->add_setting('show_banner_logo', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		
+		$fs_customize->add_control('show_banner_logo', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display logo in the banner', 'fs-blog'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'show_banner_logo',
+		));
+		
+		$fs_customize->add_setting('banner_logo', array(
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'banner_logo', array(
+			'label'			=> __('Logo version for the banner', 'fs-blog'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'banner_logo',
+		)));
 		
 		// Banner Welcome text
 		
@@ -200,8 +239,88 @@ function fs_blog_customize_register($fs_customize) {
 			'settings'		=> 'bg_404',
 		)));
 		
+		
+		
+	// Blog options
+	// -
+	// + + + + + + + + + + 		
+		
+		// Post metas
+		
+		$fs_customize->add_setting(
+			'meta_date', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_date', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the publication date in post meta', 'fs-blog'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_date',
+			)
+		);
+		$fs_customize->add_setting(
+			'meta_author', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_author', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the author in post meta', 'fs-blog'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_author',
+			)
+		);
+		$fs_customize->add_setting(
+			'meta_category', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_category', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the category in post meta', 'fs-blog'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'meta_category',
+			)
+		);
+		
 
+	// Theme Options
+	// -
+	// + + + + + + + + + + 
+		
+		// Back to top
 	
+		$fs_customize->add_setting(
+			'back2top', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'back2top', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display a Back to top button', 'fs-blog'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'back2top',
+			)
+		);
+		
+			
 	//
 	// Footer Section
 	// 
@@ -212,13 +331,12 @@ function fs_blog_customize_register($fs_customize) {
 		
 		$fs_customize->add_setting('author_bio', array(
 			'default'			=> true,
-			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
 		$fs_customize->add_control('author_bio', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Show the author’s Bio', 'fs-blog'),
+			'label'			=> __('Display the author’s Bio', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
 			'settings'		=> 'author_bio',
 		));
@@ -227,17 +345,65 @@ function fs_blog_customize_register($fs_customize) {
 		
 		$fs_customize->add_setting('last_posts', array(
 			'default'			=> true,
-			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
 		
 		$fs_customize->add_control('last_posts', array(
 			'type'			=> 'checkbox',
-			'label'			=> __('Show the last posts', 'fs-blog'),
+			'label'			=> __('Display the last posts', 'fs-blog'),
 			'section'		=> 'fs_footer_section',
 			'settings'		=> 'last_posts',
 		));
-	
+		
+		// Number of posts
+		
+		$fs_customize->add_setting('posts_nb', array(
+			'default'				=> 3,
+			'sanitize_callback'		=> 'sanitize_text_field'
+		));
+		$fs_customize->add_control('posts_nb', array(
+			'type'			=> 'number',
+			'label'			=> __('Number of posts to display in the footer', 'fs-blog'),
+			'section'		=> 'fs_footer_section',
+			'settings'		=> 'posts_nb',
+		));
+		
+		$fs_customize->add_setting('posts_show_thumb', array(
+			'default'			=> true,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		
+		$fs_customize->add_control('posts_show_thumb', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display the posts thumbnails', 'fs-blog'),
+			'section'		=> 'fs_footer_section',
+			'settings'		=> 'posts_show_thumb',
+		));
+		$fs_customize->add_setting('posts_show_excerpt', array(
+			'default'			=> true,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		
+		$fs_customize->add_control('posts_show_excerpt', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display the posts excerpt', 'fs-blog'),
+			'section'		=> 'fs_footer_section',
+			'settings'		=> 'posts_show_excerpt',
+		));
+		$fs_customize->add_setting('posts_show_link', array(
+			'default'			=> true,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		
+		$fs_customize->add_control('posts_show_link', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display the posts permalinks', 'fs-blog'),
+			'section'		=> 'fs_footer_section',
+			'settings'		=> 'posts_show_link',
+		));
+		
+		
+		
 		// Footer text
 		
 		$fs_customize->add_setting('footer_text', array(
@@ -316,7 +482,8 @@ function fs_blog_colors() {
 		.sub-menu > li a:focus, 
 		.sub-menu > li.current-menu-item a,
 		.post-picture,
-		.wp-block-file a.wp-block-file__button { 
+		.wp-block-file a.wp-block-file__button,
+		#back2top { 
 			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
 		}
 		*.has-primary-color-background-color { 

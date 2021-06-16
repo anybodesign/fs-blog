@@ -3,6 +3,13 @@
 				<div class="page-banner"<?php fs_bg_img(); ?>>
 					
 					<div class="page-banner-title">
+						
+						<?php if ( get_theme_mod('show_banner_logo') && get_theme_mod('banner_logo') ) {
+							get_template_part('template-parts/header','logo-banner'); 
+						} else if ( get_theme_mod('show_banner_logo') && ! get_theme_mod('banner_logo') ) {
+							get_template_part('template-parts/header','logo');
+						} ?>
+						
 						<h1 class="page-title">
 							<?php if ( is_front_page() ) { ?>
 	

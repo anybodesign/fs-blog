@@ -30,6 +30,8 @@ get_header(); ?>
 					<?php endwhile; ?>
 					</div>
 					
+					<?php $pages = get_the_posts_pagination(); if (! empty( $pages) ) { ?>
+					
 					<div class="spinner">
 						<img src="<?php echo FS_THEME_URL; ?>/img/ajax-loader.gif" alt="">
 					</div>
@@ -40,7 +42,10 @@ get_header(); ?>
 						<p class="text-intro">
 							<?php _e('No more posts', 'fs-blog'); ?>
 						</p>
-					</div>
+					</div>	
+						
+					<?php } ?>
+					
 					
 					<div id="posts_nav">
 					<?php the_posts_pagination(array(

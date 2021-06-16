@@ -78,6 +78,12 @@
 		</footer>
 		<?php } ?>
 		
+		<?php if(get_theme_mod('back2top') == true) { ?>
+			<button id="back2top" title="<?php esc_html_e('Back to top','fs-blog'); ?>">
+				<img src="<?php echo FS_THEME_URL; ?>/img/ui/back-to-top.svg" alt="">
+			</button>
+		<?php } ?>		
+		
 </div> <?php // END wrapper ?>
 
 <?php wp_footer(); ?>

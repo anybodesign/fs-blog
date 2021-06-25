@@ -8,6 +8,11 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.6.1 - 2021.06.25
+* Customizer: Custom height for the logo in banner
+* Fix: Logo in banner but only for the front page
+* Some admin styles
+
 ### 1.6 - 2021.06.16
 * Customizer: Back to top
 * Customizer: Recent posts options

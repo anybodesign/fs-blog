@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: From Scratch\n"
-"POT-Creation-Date: 2021-06-16 17:13+0200\n"
-"PO-Revision-Date: 2021-06-16 17:14+0200\n"
+"POT-Creation-Date: 2021-06-25 11:13+0200\n"
+"PO-Revision-Date: 2021-06-25 11:13+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -52,11 +52,11 @@ msgstr "Noir"
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:125 inc/customizer.php:179
+#: functions.php:125 inc/customizer.php:189
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:130 inc/customizer.php:195
+#: functions.php:130 inc/customizer.php:205
 msgid "Secondary color"
 msgstr "Couleur secondaire"
 
@@ -76,91 +76,91 @@ msgstr "Grand"
 msgid "L"
 msgstr "L"
 
-#: functions.php:269
+#: functions.php:266
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:270
+#: functions.php:267
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: functions.php:336
+#: functions.php:333
 msgid "Thumbnail x2"
 msgstr "Thumbnail x2"
 
-#: functions.php:337
+#: functions.php:334
 msgid "Medium x2"
 msgstr "Medium x2"
 
-#: functions.php:338
+#: functions.php:335
 msgid "Large x2"
 msgstr "Large x2"
 
-#: functions.php:339
+#: functions.php:336
 msgid "Screen Medium"
 msgstr "Screen Medium"
 
-#: functions.php:340
+#: functions.php:337
 msgid "Screen Full"
 msgstr "Screen Full"
 
-#: functions.php:341
+#: functions.php:338
 msgid "Video Medium"
 msgstr "Video Medium"
 
-#: functions.php:342
+#: functions.php:339
 msgid "Video Full"
 msgstr "Video Full"
 
-#: functions.php:343
+#: functions.php:340
 msgid "Blog post"
 msgstr "Blog post"
 
-#: functions.php:344
+#: functions.php:341
 msgid "Blog post Full"
 msgstr "Blog post Full"
 
-#: functions.php:389
+#: functions.php:386
 msgid "Sidebar Widgets Area"
 msgstr "Zone de widget Sidebar"
 
-#: functions.php:398
+#: functions.php:395
 msgid "Page widgets Area"
 msgstr "Zone de widgets pour les pages"
 
-#: functions.php:410
+#: functions.php:407
 msgid "Footer Widgets Area #1"
 msgstr "Zone #1 de widgets du pied de page"
 
-#: functions.php:419
+#: functions.php:416
 msgid "Footer Widgets Area #2"
 msgstr "Zone #2 de widgets du pied de page"
 
-#: functions.php:428
+#: functions.php:425
 msgid "Footer Widgets Area #3"
 msgstr "Zone #3 de widgets du pied de page"
 
-#: functions.php:486
+#: functions.php:483
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:492
+#: functions.php:489
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:498
+#: functions.php:495
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:518
+#: functions.php:515
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:519
+#: functions.php:516
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:520
+#: functions.php:517
 msgid "Search"
 msgstr "Recherche"
 
@@ -188,122 +188,134 @@ msgstr "Personnaliser le pied de page"
 msgid "Blog Options"
 msgstr "Options du blog"
 
-#: inc/customizer.php:90
+#: inc/customizer.php:89
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:106
+#: inc/customizer.php:104
 msgid "Hide the tagline (in an accessible way)"
 msgstr "Masquer le slogan (de manière accessible)"
 
-#: inc/customizer.php:115
-msgid "Hello there :)"
-msgstr "Coucou :)"
-
-#: inc/customizer.php:120
-msgid "Front page welcome title"
-msgstr "Titre de bienvenue de la page d'accueil"
-
-#: inc/customizer.php:121
-msgid "Add a custom title for the front page banner."
-msgstr "Ajouter un titre personnalisé pour la bannière de la page d’accueil."
-
-#: inc/customizer.php:133
+#: inc/customizer.php:117
 msgid "Display logo in the banner"
 msgstr "Afficher le logo dans la bannière"
 
-#: inc/customizer.php:143
+#: inc/customizer.php:126
 msgid "Logo version for the banner"
 msgstr "Version du logo pour la bannière"
 
-#: inc/customizer.php:151
+#: inc/customizer.php:127
+msgid "Will be used instead the site logo."
+msgstr "Sera utilisé à la place le logo du site."
+
+#: inc/customizer.php:138
+msgid "Banner logo height"
+msgstr "Hauteur du logo de la bannière"
+
+#: inc/customizer.php:139
+msgid "Set a maximum height in pixels."
+msgstr "Définissez une hauteur maximale en pixels."
+
+#: inc/customizer.php:147
+msgid "Hello there :)"
+msgstr "Coucou :)"
+
+#: inc/customizer.php:152
+msgid "Front page welcome title"
+msgstr "Titre de bienvenue de la page d'accueil"
+
+#: inc/customizer.php:153
+msgid "Add a custom title for the front page banner."
+msgstr "Ajouter un titre personnalisé pour la bannière de la page d’accueil."
+
+#: inc/customizer.php:161
 msgid "Ex: Welcome to my awesome WordPress blog."
 msgstr "Ex : Bienvenue sur mon super blog WordPress."
 
-#: inc/customizer.php:157
+#: inc/customizer.php:167
 msgid "Front page welcome text"
 msgstr "Texte de bienvenue de la page d'accueil"
 
-#: inc/customizer.php:158
+#: inc/customizer.php:168
 msgid "Add a custom text for the front page banner."
 msgstr "Ajouter un texte personnalisé pour la bannière de la page d’accueil."
 
-#: inc/customizer.php:208
+#: inc/customizer.php:218
 msgid "Default Banner"
 msgstr "Bannière par défaut"
 
-#: inc/customizer.php:209
+#: inc/customizer.php:219
 msgid "Choose a default picture for the banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image par défaut pour la bannière. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:222
+#: inc/customizer.php:232
 msgid "Blog Banner"
 msgstr "Bannière de blog"
 
-#: inc/customizer.php:223
+#: inc/customizer.php:233
 msgid "Choose a picture for the blog banner. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une photo pour la bannière du blog. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:236
+#: inc/customizer.php:246
 msgid "404 error"
 msgstr "Erreur 404"
 
-#: inc/customizer.php:237
+#: inc/customizer.php:247
 msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 msgstr ""
 "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
 
-#: inc/customizer.php:261
+#: inc/customizer.php:271
 msgid "Show the publication date in post meta"
 msgstr "Afficher la date de publication dans les post meta"
 
-#: inc/customizer.php:277
+#: inc/customizer.php:287
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:293
+#: inc/customizer.php:303
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:317
+#: inc/customizer.php:327
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:339
+#: inc/customizer.php:349
 msgid "Display the author’s Bio"
 msgstr "Afficher la biographie de l’auteur"
 
-#: inc/customizer.php:353
+#: inc/customizer.php:363
 msgid "Display the last posts"
 msgstr "Afficher les derniers articles"
 
-#: inc/customizer.php:366
+#: inc/customizer.php:376
 msgid "Number of posts to display in the footer"
 msgstr "Nombre d’articles à afficher dans le pied de page"
 
-#: inc/customizer.php:378
+#: inc/customizer.php:388
 msgid "Display the posts thumbnails"
 msgstr "Afficher les vignettes des articles"
 
-#: inc/customizer.php:389
+#: inc/customizer.php:399
 msgid "Display the posts excerpt"
 msgstr "Afficher l’extrait des articles"
 
-#: inc/customizer.php:400
+#: inc/customizer.php:410
 msgid "Display the posts permalinks"
 msgstr "Afficher les permaliens des articles"
 
-#: inc/customizer.php:415
+#: inc/customizer.php:425
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:416
+#: inc/customizer.php:426
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:431
+#: inc/customizer.php:441
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 

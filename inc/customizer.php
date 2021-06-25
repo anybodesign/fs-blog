@@ -56,14 +56,14 @@ function fs_blog_customize_register($fs_customize) {
 		'fs_pictures_section', 
 		array(
 			'title' 		=> __('Pictures', 'fs-blog'),
-			'description' 	=> __('Custom banners', 'fs-blog'),
+			//'description' 	=> __('Custom banners', 'fs-blog'),
 			'priority'		=> 40,
 	));
 	$fs_customize->add_section(
 		'fs_footer_section', 
 		array(
 			'title' 		=> __('Footer', 'fs-blog'),
-			'description' 	=> __('Customise the footer', 'fs-blog'),
+			//'description' 	=> __('Customise the footer', 'fs-blog'),
 			'priority'		=> 30,
 	));
 	$fs_customize->add_section(
@@ -85,7 +85,6 @@ function fs_blog_customize_register($fs_customize) {
 		$fs_customize->add_setting('site_logo', array(
 			'sanitize_callback'		=> 'esc_url_raw'
 		));
-		
 		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'site_logo', array(
 			'label'			=> __('Site Logo', 'fs-blog'),
 			'section'		=> 'title_tagline',
@@ -100,15 +99,48 @@ function fs_blog_customize_register($fs_customize) {
 			'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 		));
-		
 		$fs_customize->add_control('wp_baseline', array(
 			'type'			=> 'checkbox',
 			'label'			=> __('Hide the tagline (in an accessible way)', 'fs-blog'),
 			'section'		=> 'title_tagline',
 			'settings'		=> 'wp_baseline',
 		));
-	
-
+		
+		// Logo in banner
+		
+		$fs_customize->add_setting('show_banner_logo', array(
+			'default'			=> false,
+			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+		));
+		$fs_customize->add_control('show_banner_logo', array(
+			'type'			=> 'checkbox',
+			'label'			=> __('Display logo in the banner', 'fs-blog'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'show_banner_logo',
+		));
+		
+		$fs_customize->add_setting('banner_logo', array(
+			'sanitize_callback'		=> 'esc_url_raw'
+		));
+		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'banner_logo', array(
+			'label'			=> __('Logo version for the banner', 'fs-blog'),
+			'description'	=> __('Will be used instead the site logo.', 'fs-blog'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'banner_logo',
+		)));
+		
+		$fs_customize->add_setting('banner_logo_height', array(
+			'transport'			=> 'postMessage',
+			'sanitize_callback'	=> 'sanitize_text_field',		
+		));
+		$fs_customize->add_control('banner_logo_height', array(
+			'type'			=> 'number',
+			'label'			=> __('Banner logo height', 'fs-blog'),
+			'description'	=> __('Set a maximum height in pixels.', 'fs-blog'),
+			'section'		=> 'title_tagline',
+			'settings'		=> 'banner_logo_height',
+		));
+		
 		// Banner Welcome title
 		
 		$fs_customize->add_setting('welcome_title', array(
@@ -122,28 +154,6 @@ function fs_blog_customize_register($fs_customize) {
 			'section'		=> 'title_tagline',
 			'settings'		=> 'welcome_title',
 		));
-		
-		$fs_customize->add_setting('show_banner_logo', array(
-			'default'			=> false,
-			'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-		));
-		
-		$fs_customize->add_control('show_banner_logo', array(
-			'type'			=> 'checkbox',
-			'label'			=> __('Display logo in the banner', 'fs-blog'),
-			'section'		=> 'title_tagline',
-			'settings'		=> 'show_banner_logo',
-		));
-		
-		$fs_customize->add_setting('banner_logo', array(
-			'sanitize_callback'		=> 'esc_url_raw'
-		));
-		
-		$fs_customize->add_control( new WP_Customize_Image_control($fs_customize, 'banner_logo', array(
-			'label'			=> __('Logo version for the banner', 'fs-blog'),
-			'section'		=> 'title_tagline',
-			'settings'		=> 'banner_logo',
-		)));
 		
 		// Banner Welcome text
 		
@@ -543,6 +553,12 @@ function fs_blog_colors() {
 		*.has-text-color.has-secondary-color-color {
 			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
 		}
+		<?php if ( get_theme_mod('banner_logo_height') ) { ?>
+		.page-banner-title img.logo {
+			max-height: <?php echo get_theme_mod('banner_logo_height'); ?>px;	
+		}
+		<?php } ?>
+		
 	</style>
 	<?php
 }

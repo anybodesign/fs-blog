@@ -133,7 +133,7 @@ li.menu-item-has-children {
 			padding-right: 1.8rem;
 		}
 		@include rwd(wide) {
-			padding-right: 0;
+			padding-right: $grid-padding;
 		}
 	}
 

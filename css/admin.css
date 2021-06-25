@@ -1,0 +1,13 @@
+#customize-control-show_banner_logo,
+#customize-control-last_posts,
+#customize-control-footer_text {
+	padding-top: 30px;
+	margin-top: 25px;
+	border-top: #333 1px dashed;	
+}
+#customize-control-welcome_text,
+#customize-control-banner_logo_height {
+	padding-bottom: 30px;
+	margin-bottom: 25px;
+	border-bottom: #333 1px dashed;	
+}

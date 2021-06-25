@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 
-define( 'FS_THEME_VERSION', '1.5.8' );
+define( 'FS_THEME_VERSION', '1.6.1' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -174,13 +174,10 @@ function fs_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'fs_block_editor_styles' );
 
 
-//	Admin style and script
-/*
-add_action('admin_print_styles', 'fs_acf_admin_css', 11 );
+add_action('admin_enqueue_scripts', 'fs_acf_admin_css', 11 );
 function fs_acf_admin_css() {
 	wp_enqueue_style( 'admin-css', FS_THEME_URL . '/css/admin.css' );
 }
-*/
 
 // ------------------------
 // Enqueue JS & CSS

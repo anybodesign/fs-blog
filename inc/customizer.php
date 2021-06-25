@@ -130,7 +130,7 @@ function fs_blog_customize_register($fs_customize) {
 		)));
 		
 		$fs_customize->add_setting('banner_logo_height', array(
-			'transport'			=> 'postMessage',
+			//'transport'			=> 'postMessage',
 			'sanitize_callback'	=> 'sanitize_text_field',		
 		));
 		$fs_customize->add_control('banner_logo_height', array(

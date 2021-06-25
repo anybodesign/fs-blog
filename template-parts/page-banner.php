@@ -4,9 +4,9 @@
 					
 					<div class="page-banner-title">
 						
-						<?php if ( get_theme_mod('show_banner_logo') && get_theme_mod('banner_logo') ) {
+						<?php if ( get_theme_mod('show_banner_logo') && get_theme_mod('banner_logo') && is_front_page() ) {
 							get_template_part('template-parts/header','logo-banner'); 
-						} else if ( get_theme_mod('show_banner_logo') && ! get_theme_mod('banner_logo') ) {
+						} else if ( get_theme_mod('show_banner_logo') && ! get_theme_mod('banner_logo') && is_front_page() ) {
 							get_template_part('template-parts/header','logo');
 						} ?>
 						

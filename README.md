@@ -8,6 +8,10 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.6.2 - 2021.06.28
+* Fix: resized images width
+* Add class noborder
+
 ### 1.6.1 - 2021.06.25
 * Customizer: Custom height for the logo in banner
 * Fix: Logo in banner but only for the front page

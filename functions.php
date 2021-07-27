@@ -3,7 +3,10 @@
 define( 'FS_THEME_VERSION', '1.6.2' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
-	
+
+$primary = get_theme_mod('primary_color', '#9c0');
+$secondary = get_theme_mod('secondary_color', '#606060');
+$third = get_theme_mod('third_color', '#707070');	
 
 // ------------------------
 // Theme Setup
@@ -17,6 +20,9 @@ if ( ! function_exists( 'fs_setup' ) ) :
 
 function fs_setup() {
 	
+	global $primary;
+	global $secondary;
+	global $third;
 	
 	// I18n
 	
@@ -124,17 +130,17 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Primary color', 'fs-blog' ),
 	        'slug' => 'primary-color',
-	        'color' => get_theme_mod('primary_color', '#99cc00'),
+	        'color' => $primary,
 	    ),
 	    array(
 	        'name' => esc_html__( 'Secondary color', 'fs-blog' ),
 	        'slug' => 'secondary-color',
-	        'color' => get_theme_mod('secondary_color', '#606060'),
+	        'color' => $secondary,
 	    ),
 		array(
 	        'name' => esc_html__( 'Third color', 'fs-blog' ),
 	        'slug' => 'third-color',
-	        'color' => get_theme_mod('third_color', '#606060'),
+	        'color' => $third,
 	    ),
 	    
 	));	
@@ -526,6 +532,42 @@ function fs_search_form( $form ) {
 }
 add_filter( 'get_search_form', 'fs_search_form' );
 
+// ------------------------
+// ACF
+// ------------------------
+
+
+if( class_exists('acf') ) {
+
+	// ACF colors
+
+	add_action('acf/input/admin_footer', 'fs_acf_colors_script');	
+
+	function fs_acf_colors_script() {
+
+		global $primary;
+		global $secondary;
+		global $third;
+				
+		$colors = ' "'.$primary.'", "'.$secondary.'", "'.$third.'" ';
+	 ?>
+	    <script type="text/javascript">
+	    (function($){
+	        
+			acf.add_filter('color_picker_args', function( args, field ){
+			
+			    args.palettes = [ <?php echo $colors; ?> ]
+			
+			    return args;
+			
+			});	
+	        
+	    })(jQuery);
+	    </script>
+	    <?php
+	}
+	
+}
 
 
 // Auto-Updater

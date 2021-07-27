@@ -275,12 +275,47 @@
 
 // Gallery 
 
-.acf-block--gallery {}
+.acf-block--gallery {
+	
+	&.outside {
+		
+		.acf-block-gallery-caption-title {
+			font-family: $font-title;
+			font-size: 2.2rem;
+			margin-bottom: $grid-padding;
+		}
+	}
+}
 
 
 // CTA
 
-.acf-block--cta {}
+.acf-block--cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	&.boxed-cta {
+		min-height: 30rem;
+		
+		@include rwd(large) {
+			min-height: 45rem;
+		}
+		
+		.acf-block-cta-btn {
+			margin-top: $grid-padding*2;
+		}
+	}
+
+	
+	.acf-block-cta-text {
+		* {
+			margin: 0;
+		}
+	}
+		
+}
 
 
 // Posts
@@ -303,6 +338,7 @@
 }
 .acf-block-post-title {
 	margin-bottom: $grid-padding/2;
+	font-size: 2.2rem;
 	
 	a {
 		text-decoration: none;
@@ -318,12 +354,24 @@
 	}
 }
 .acf-block-post-metas {
+	margin-bottom: $grid-padding;
+	
 	span {
 		font-size: 1.4rem;
 		color: var(--third_color);
 	}
 }
-
+.acf-block-post-intro,
+.acf-block-post-link {
+	text-align: center;
+	
+	.acf-block-post-intro-title,
+	p {
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
 // Testimonial
 
@@ -344,6 +392,16 @@
 			border: 0;
 		}		
 	}
+	
+	.testimonial-caption {
+		padding-left: 4.5em;
+		font-size: 1.6rem;
+		
+		span { 
+			display: block;
+			
+		}
+	}
 }
 
 
@@ -355,4 +413,20 @@
 		font-family: $font-bold;
 		color: var(--primary_color);
 	}	
+}
+
+// Cards
+
+.acf-block--cards {
+	
+	.acf-block-cards-item {
+		
+	}
+	.acf-block-cards-content {
+		text-align: center;
+		background-color: #fff;
+	}
+	.acf-block-cards-subtitle {
+		font-size: 2.2rem;
+	}
 }

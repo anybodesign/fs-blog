@@ -101,13 +101,33 @@
 
 	// Centering Blocks and content
 	
+	// Centering Blocks and content
+	
 	& > * {
 		width: 100%;
 		padding: 0 $grid-padding;
-		@include center-small();
+		@include center();
+	}
+	
+	@include rwd(medium) {
 		
-		.page-sidebar & {
+		.page-wrap:not(.has-sidebar) & {
+			& > p,
+			& > [class*="contact-form-7"],
+			& .acf-block-text--1col,
+			& #comments {
+				padding-right: 20rem;
+			}
 			
+			& > p.has-text-align-center {
+				padding-right: 10rem;
+				padding-left: 10rem;
+			}
+		}
+			
+		
+		.has-sidebar & {
+			//padding-right: 8.3333%;
 		}
 	}
 	
@@ -120,8 +140,17 @@
 		max-width: none;
 	}
 	
+	// Beaver container
+	& > *.fl-builder-content {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+		padding: 0;
+	}
+	
 	& > [class*="wp-block-gallery"],
-	& > [class*="wp-block-cover-image"] {
+	& > [class*="wp-block-cover-image"],
+	& > [class*="wp-block-quote"] {
 		@include center();
 		margin-bottom: $grid-padding*2;
 	}
@@ -129,7 +158,19 @@
 	& > [class*="wp-block-verse"] {	
 		position: relative;
 		margin: $grid-padding*2 auto;
-		max-width: calc(#{$max-width-small} - #{$grid-padding}*2);
+		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+	
+	& > span {
+		display: block;
+	    margin-bottom: 1.5em;
+	}
+	
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 75%;
+		}
 	}
 
 	

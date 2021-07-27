@@ -27,8 +27,12 @@ $width-xwide: 90em;	 		// @note: 1440px
 
 // Colors
 
-$primary-color: #9c0;		// @note: Green
-$secondary-color: #606060;	// @note: Grey
-$third-color: #707070;		// @note: Dark Grey
+:root {
+	
+	--primary_color: #9c0; 
+	--secondary_color: #606060;
+	--third_color: #707070; 
+}
+
 $text-color: #303030;		// @note: Darker Grey
-$bg-color: #fff;				// @note: White
+$bg-color: #fff;			// @note: White

@@ -107,7 +107,7 @@
 		}
 		& > a:hover, 
 		& > a:focus {
-			color: $primary-color;
+			color: var(--primary_color);
 
 		}
 		&.current-menu-item > a,
@@ -222,7 +222,7 @@ li.menu-item-has-children {
 		a:hover, 
 		a:focus,
 		&.current-menu-item a {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 			color: #fff;
 		}
 	}
@@ -381,7 +381,7 @@ li.menu-item-has-children {
 		&::after, 
 		&::before {
 			top: 0;
-			background-color: $secondary-color;
+			background-color: var(--secondary_color);
 			width: 65%;
 		}
 		&::after {

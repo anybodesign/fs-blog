@@ -9,11 +9,11 @@
 
 	text-decoration: none;
 	color: $text-color;
-	border-bottom: $primary-color 1px solid;
+	border-bottom: var(--primary_color) 1px solid;
 	transition: .2s ease-in-out;
 	
 	&:hover {
-		color: $primary-color;
+		color: var(--primary_color);
 		border-bottom-width: 2px;
 	}
 	&:focus {

@@ -404,13 +404,14 @@ input[type=submit].action-btn {
 	font-family: $font-bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	color: #fff;
 	transition: background .2s linear;
 
 	&:hover,
 	&:focus {
 		background-color: $text-color;
+		color: #fff !important;
 	}
 }
 .action-btn-white,

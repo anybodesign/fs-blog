@@ -192,7 +192,7 @@ input[type="submit"] {
 .formfield-radio input[type="radio"] + span::after {
 	width: 6px; 
 	height: 6px;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	top: 9px; 
 	left: 6px;
 	border-radius: 100%;
@@ -211,8 +211,8 @@ input[type="submit"] {
 	content: '';
 	width: 10px;
 	height: 5px;
-	border-left: 3px solid $primary-color;
-	border-bottom: 3px solid $primary-color;	
+	border-left: 3px solid var(--primary_color);
+	border-bottom: 3px solid var(--primary_color);	
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
@@ -267,7 +267,7 @@ span.wpcf7-list-item {
 		width: 0; 
 		height: 0;
 		border-color: transparent;
-		border-top-color: $primary-color; 
+		border-top-color: var(--primary_color); 
 		border-width: 6px;
 		border-style: solid;
 		pointer-events: none;

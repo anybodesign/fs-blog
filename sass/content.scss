@@ -16,7 +16,7 @@
 	min-height: 10rem;
 	padding: $grid-padding*4 $grid-padding;
 	margin-bottom: $grid-padding*2;
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -257,7 +257,7 @@
 			&.current_page_item a,
 			&.current-cat a,
 			a:hover, a:focus {
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				padding-right: $grid-padding;
 				color: #fff;
 			}
@@ -312,7 +312,7 @@
 	}
 	&::before {
 		width: 20px; height: 20px;
-		border: $primary-color 2px solid;
+		border: var(--primary_color) 2px solid;
 		border-radius: 100%;
 		top: $grid-padding*2; 
 		left: $grid-padding*2;
@@ -320,7 +320,7 @@
 	&::after {
 		width: 10px;
 		height: 2px;
-		background-color: $primary-color;
+		background-color: var(--primary_color);
 		transform: rotate(45deg);
 		top: 32px;
 		left: 28px;
@@ -354,12 +354,12 @@
 			padding-bottom: .5em;
 		}
 		td#today {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 			color: #fff;
 		}
 		td a {
 			font-family: $font-bold;
-			color: $primary-color;
+			color: var(--primary_color);
 		}
 	}
 }

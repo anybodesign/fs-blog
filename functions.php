@@ -131,6 +131,11 @@ function fs_setup() {
 	        'slug' => 'secondary-color',
 	        'color' => get_theme_mod('secondary_color', '#606060'),
 	    ),
+		array(
+	        'name' => esc_html__( 'Third color', 'fs-blog' ),
+	        'slug' => 'third-color',
+	        'color' => get_theme_mod('third_color', '#606060'),
+	    ),
 	    
 	));	
 	

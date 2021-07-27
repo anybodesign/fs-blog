@@ -179,11 +179,11 @@ function fs_blog_customize_register($fs_customize) {
 		// Primary color
 		
 		$fs_customize->add_setting('primary_color', array(
-			'default'			=> '9c0',
+			'default'			=> '#99cc00',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh', 
+			'transport'			=> 'postMessage', 
 		));
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'primary_color', array(
 			'label'		=> __('Primary color', 'fs-blog'),
@@ -195,16 +195,31 @@ function fs_blog_customize_register($fs_customize) {
 		// Secondary color
 		
 		$fs_customize->add_setting('secondary_color', array(
-			'default'			=> '606060',
+			'default'			=> '#606060',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh', 
+			'transport'			=> 'postMessage', 
 		));
 		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'secondary_color', array(
 			'label'		=> __('Secondary color', 'fs-blog'),
 			'section'	=> 'colors',
 			'settings'	=> 'secondary_color',
+		)));
+		
+		// Third color
+		
+		$fs_customize->add_setting('third_color', array(
+			'default'			=> '#707070',
+			'sanitize_callback'	=> 'sanitize_hex_color',
+			'capability'		=> 'edit_theme_options',
+			'type'				=> 'theme_mod',
+			'transport'			=> 'postMessage', 
+		));
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
+			'label'		=> __('Third color', 'fs-blog'),
+			'section'	=> 'colors',
+			'settings'	=> 'third_color',
 		)));
 
 		
@@ -475,87 +490,15 @@ function fs_customizer_sanitize_checkbox( $input ) {
 function fs_blog_colors() {
 	?>
 	<style>
-		.page-banner,
-		.widget-container ul li.current_page_item a,
-		.widget-container ul li.current-cat a,
-		.widget-container ul li a:hover,
-		.widget-container ul li a:focus,
-		.calendar_wrap table td#today,
-		.post-figure,
-		.post:nth-child(2n) .post-figure,
-		.post:nth-child(3n) .post-figure,
-		.action-btn, .action-btn-white, button.action-btn-white, input[type=submit].action-btn-white, .action-btn-dark, .search-form input[type=submit], button.action-btn-dark, input[type=submit].action-btn-dark, form input[type="submit"], .comment-reply-link, .comment-form input[type=submit], button.action-btn, button.action-btn-white, button.action-btn-dark, button.comment-reply-link, input[type=submit].action-btn, input[type=submit].action-btn-white, input[type=submit].action-btn-dark, .search-form input[type=submit], form input[type=submit][type="submit"], input[type=submit].comment-reply-link, .comment-form input[type=submit],
-		.search-form::after,
-		.formfield-radio input[type="radio"] + label::after,
-		.formfield-radio input[type="radio"] + span::after,
-		.sub-menu > li a:hover, 
-		.sub-menu > li a:focus, 
-		.sub-menu > li.current-menu-item a,
-		.post-picture,
-		.wp-block-file a.wp-block-file__button,
-		#back2top { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		:root {
+			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#9c0')); ?>; 
+			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
+			--third_color: <?php echo esc_attr(get_theme_mod('third_color', '#707070')); ?>;
 		}
-		*.has-primary-color-background-color { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> !important;
-		}
-		.search-form::before {
-			border-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		.formfield-checkbox input[type="checkbox"] + label::after,
-		.formfield-checkbox input[type="checkbox"] + span::after {
-			border-left-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>; 
-			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		.formfield-select--container::after,
-		.comment-list .comment {
-			border-top-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
-		}
-		.content-area p a:not([class*="-btn"]),
-		.breadcrumbs span a:not([class*="-btn"]),		
-		.content-area .wp-block-file a:first-child {
-			border-bottom-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?>;
-		}		
-		.main-menu > li > a:hover, 
-		.main-menu > li > a:focus,
-		.post-title a:hover,
-		.post-title a:focus,
-		.post-header:hover .post-title a,
-		.calendar_wrap table td a,
-		.acf-block-list-item .list-featured,
-		.acf-block-post-title a:hover,
-		.acf-block-post-title a:focus,
-		.content-area p a:not([class*="-btn"]):hover,
-		.breadcrumbs span a:not([class*="-btn"]):hover,
-		.content-area .wp-block-file a:first-child:hover { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		*.has-text-color.has-primary-color-color { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> !important !
-		}
-
-		#menu-toggle.menu-opened span::before,
-		#menu-toggle.menu-opened span::after,
-		.tag-links ul li a,
-		.action-btn-dark,
-		button.action-btn-dark,
-		input[type=submit].action-btn-dark,
-		#site_foot {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-		*.has-secondary-color-background-color {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
-		}
-		.site-desc,
-		.comment-list .comment-meta .comment-metadata a {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-		*.has-text-color.has-secondary-color-color {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?> !important;
-		}
+		
 		<?php if ( get_theme_mod('banner_logo_height') ) { ?>
 		.page-banner-title img.logo {
-			max-height: <?php echo get_theme_mod('banner_logo_height'); ?>px;	
+			max-height: <?php echo esc_attr(get_theme_mod('banner_logo_height')); ?>px;	
 		}
 		<?php } ?>
 		

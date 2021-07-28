@@ -1,12 +1,12 @@
 <?php if ( !defined('ABSPATH') ) die();
 
-define( 'FS_THEME_VERSION', '1.7' );
+define( 'FS_THEME_VERSION', '1.7.1' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 
-$primary = get_theme_mod('primary_color', '#9c0');
-$secondary = get_theme_mod('secondary_color', '#606060');
-$third = get_theme_mod('third_color', '#707070');	
+$primary = get_theme_mod('primary_color', '#202020');
+$secondary = get_theme_mod('secondary_color', '#404040');
+$third = get_theme_mod('third_color', '#f0f0f0');	
 
 // ------------------------
 // Theme Setup

@@ -179,7 +179,7 @@ function fs_blog_customize_register($fs_customize) {
 		// Primary color
 		
 		$fs_customize->add_setting('primary_color', array(
-			'default'			=> '#99cc00',
+			'default'			=> '#202020',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
@@ -195,7 +195,7 @@ function fs_blog_customize_register($fs_customize) {
 		// Secondary color
 		
 		$fs_customize->add_setting('secondary_color', array(
-			'default'			=> '#606060',
+			'default'			=> '#404040',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
@@ -210,7 +210,7 @@ function fs_blog_customize_register($fs_customize) {
 		// Third color
 		
 		$fs_customize->add_setting('third_color', array(
-			'default'			=> '#707070',
+			'default'			=> '#f0f0f0',
 			'sanitize_callback'	=> 'sanitize_hex_color',
 			'capability'		=> 'edit_theme_options',
 			'type'				=> 'theme_mod',
@@ -491,9 +491,9 @@ function fs_blog_colors() {
 	?>
 	<style>
 		:root {
-			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#9c0')); ?>; 
-			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#606060')); ?>;
-			--third_color: <?php echo esc_attr(get_theme_mod('third_color', '#707070')); ?>;
+			--primary_color: <?php echo esc_attr(get_theme_mod('primary_color', '#202020')); ?>; 
+			--secondary_color: <?php echo esc_attr(get_theme_mod('secondary_color', '#404040')); ?>;
+			--third_color: <?php echo esc_attr(get_theme_mod('third_color', '#f0f0f0')); ?>;
 		}
 		
 		<?php if ( get_theme_mod('banner_logo_height') ) { ?>

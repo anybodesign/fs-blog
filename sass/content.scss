@@ -22,7 +22,7 @@
 	background-size: cover;
 
 	&::after {
-		@include block-overlay(.5);
+		@include block-overlay(bottom, .7);
 	}
 
 	.home & {

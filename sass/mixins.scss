@@ -103,12 +103,12 @@
 	display: block;
 	margin-bottom: .25em;
 }
-@mixin block-overlay($opacity: .7) {
+@mixin block-overlay($orientation: top, $opacity: .7) {
 	content: '';
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background-image: linear-gradient(to top, rgba(0,0,0, $opacity) 0%, rgba(0,0,0, 0) 100%);
+	background-image: linear-gradient(to $orientation, rgba(0,0,0, $opacity) 0%, rgba(0,0,0, 0) 100%);
 	z-index: 1;
 }
 

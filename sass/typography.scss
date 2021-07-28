@@ -3,19 +3,6 @@
 // -------------------------
 
 
-// Basics
-
-html {
-	font-size: .625em; 				/* fallback IE8+ */
-	font-size: calc(1em * .625); 	/* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
-}
-body {
-	font-family: $font-regular;
-	font-size: 1.6rem;
-	line-height: 1.5;
-	color: $text-color;
-}
-
 // Typography
 
 h1, h2, h3, h4, h5, h6,

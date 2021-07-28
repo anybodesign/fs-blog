@@ -394,12 +394,23 @@
 	}
 	
 	.testimonial-caption {
-		padding-left: 4.5em;
-		font-size: 1.6rem;
+		padding-left: 4rem;
+		font-size: 1.8rem;
 		
 		span { 
 			display: block;
 			
+		}
+	}
+	figure {
+		overflow: visible;
+	}
+	blockquote {
+		&::after {
+			left: -5rem;
+		}
+		&::before {
+			left: -4rem;
 		}
 	}
 }

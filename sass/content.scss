@@ -115,7 +115,8 @@
 			& > blockquote,
 			& > [class*="wpcf7"],
 			& .acf-block-text--1col,
-			& #comments {
+			& #comments,
+			& .searchform {
 				padding-right: 20rem;
 			}
 			

@@ -17,7 +17,7 @@ html.interface-interface-skeleton__html-container {
 	.block-editor-block-list__layout {
 		font-size: 1.6rem;
 		line-height: 1.5;
-		color: var(--text_color);
+		color: $text-color;
 	}
 }
 .edit-post-layout {
@@ -59,7 +59,7 @@ html.interface-interface-skeleton__html-container {
 .block-editor-block-list__layout {
 	
 	// Import custom block styles in admin
-	
+	@import 'typography.scss';
 	@import 'buttons.scss';
 	@import 'posts.scss';	
 	@import 'blocks.scss';
@@ -74,6 +74,15 @@ html.interface-interface-skeleton__html-container {
 		font-family:  $font-regular;
 		color: $text-color;
 	}
+	
+	i.mce-ico {
+		font-family: dashicons;	
+	}
+	i.mce-ico.mce-i-resize {
+		font-family: 'tinymce', Arial;
+	}
+	
+	
 	figure {
 		width: 100%;
 		
@@ -82,21 +91,6 @@ html.interface-interface-skeleton__html-container {
 			height: auto;
 		}
 	}
-	blockquote {
-		position: relative;
-		padding: 2rem;
-		background-color: #ccc;
-	}
-	blockquote,
-	blockquote p {
-		font-family: $font-italic !important;
-		font-style: normal;
-		font-size: 2rem;
-		
-	}
-	blockquote p {
-		margin-bottom: 0;
-	}	
 }
 
 
@@ -117,7 +111,7 @@ p.text-mentions {
 	}
 }
 a.action-btn {
-	background-color: var(--primary_color);
+	background-color: $text-color;
 	color: #fff !important;
 	padding: 5px 15px;
 	text-decoration: none;

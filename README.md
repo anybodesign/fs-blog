@@ -8,6 +8,12 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.7.1 - 2021.07.28
+* IAS JS fix
+* CSS Sass includes
+* Better editor styles
+* New default colors 
+
 ### 1.7 - 2021.07.28
 * Sass colors vars now CSS vars
 * ACF tinymce custom colors

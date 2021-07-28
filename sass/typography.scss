@@ -16,45 +16,6 @@ body {
 	color: $text-color;
 }
 
-// Fonts
-
-@font-face {
-	font-family: 'Regular';
-	src: $fontface-regular;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Italic';
-	src: $fontface-italic;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Bold';
-	src: $fontface-bold;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'BoldItalic';
-	src: $fontface-bolditalic;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Title';
-	src: $fontface-title;
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-
 // Typography
 
 h1, h2, h3, h4, h5, h6,
@@ -164,9 +125,36 @@ a:focus {
 
 q,
 blockquote {
+	position: relative;
 	max-width: 75%;
-	padding: .75em 0 .75em 1.5em;
-	border-left: #999 2px solid;
+	
+	.page-content > &,
+	.custom-post-content > & {
+		padding: .75em 0 .75em 2em;
+	}
+		
+	&::after,
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&::before {
+		width: 2px;
+		height: 100%;
+		background-color: var(--primary_color);
+		left: 1rem;
+		top: 0;
+	}
+	&::after {
+		content: "«";
+		font-family: $font-bold;
+		font-size: 4rem;
+		color: var(--primary_color);
+		left: 0;
+		top: -2.5rem;
+		background-color: #fff;
+	}
 }
 q,
 blockquote,
@@ -398,56 +386,6 @@ p.text-intro {
 }
 p.text-mentions {
 	font-size: 1.3rem;
-}
-
-
-
-// Buttons 
-
-.action-btn,
-button.action-btn,
-input[type=submit].action-btn {
-	display: inline-block;
-	padding: $grid-padding $grid-padding*2;
-	font-size: 1.6rem;
-	font-family: $font-bold;
-	text-transform: uppercase;
-	text-decoration: none;
-	background-color: var(--primary_color);
-	color: #fff;
-	transition: background .2s linear;
-
-	&:hover,
-	&:focus {
-		background-color: $text-color;
-		color: #fff !important;
-	}
-}
-.action-btn-white,
-button.action-btn-white,
-input[type=submit].action-btn-white {
-	@extend .action-btn;
-	background-color: #fff;
-	color: $text-color;
-
-	&:hover,
-	&:focus {
-		background-color: $text-color;
-		color: #fff;
-	}
-}
-.action-btn-dark,
-button.action-btn-dark,
-input[type=submit].action-btn-dark {
-	@extend .action-btn;
-	background-color: $text-color;
-	color: #fff;
-	
-	&:hover,
-	&:focus {
-		background-color: #fff;
-		color: $text-color;
-	}
 }
 
 

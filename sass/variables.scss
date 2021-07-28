@@ -36,3 +36,20 @@ $width-xwide: 90em;	 		// @note: 1440px
 
 $text-color: #303030;		// @note: Darker Grey
 $bg-color: #fff;			// @note: White
+
+
+// Fonts
+
+// Customize your Font-Stack
+
+$font-stack: Helvetica, Arial, sans-serif;
+
+// The Fonts
+
+$font-title: 'Title', $font-stack;
+$font-regular: 'Regular', $font-stack;
+$font-italic: 'Italic', $font-stack;
+$font-bold: 'Bold', $font-stack;
+$font-bolditalic: 'BoldItalic', $font-stack;
+
+$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;

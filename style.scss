@@ -23,8 +23,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // Global Styles
 @import 'sass/webfonts.scss';
 @import 'sass/typography.scss';
-@import 'sass/blocks.scss';
+@import 'sass/buttons.scss';
 @import 'sass/forms.scss';
+@import 'sass/forms-custom.scss';
 
 // Specific Styles
 @import 'sass/basics.scss';
@@ -32,6 +33,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'sass/nav.scss';
 @import 'sass/content.scss';
 @import 'sass/posts.scss';
+@import 'sass/blocks.scss';
 @import 'sass/footer.scss';
 
 // Helpers & Plugins

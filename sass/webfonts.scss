@@ -18,23 +18,40 @@ $fontface-bold: local('#{$f-bold}'), url('fonts/#{$f-bold}.woff2') format('woff2
 $fontface-bolditalic: local('#{$f-bolditalic}'), url('fonts/#{$f-bolditalic}.woff2') format('woff2'), url('fonts/#{$f-bolditalic}.woff') format('woff');
 $fontface-title: local('#{$f-title}'), url('fonts/#{$f-title}.woff2') format('woff2'), url('fonts/#{$f-title}.woff') format('woff');
 
-$fontface-regular-out: local('#{$f-regular}'), url('../fonts/#{$f-regular}.woff2') format('woff2'), url('../fonts/#{$f-regular}.woff') format('woff');
-$fontface-italic-out: local('#{$f-italic}'), url('../fonts/#{$f-italic}.woff2') format('woff2'), url('../fonts/#{$f-italic}.woff') format('woff');	
-$fontface-bold-out: local('#{$f-bold}'), url('../fonts/#{$f-bold}.woff2') format('woff2'), url('../fonts/#{$f-bold}.woff') format('woff');
-$fontface-bolditalic-out: local('#{$f-bolditalic}'), url('../fonts/#{$f-bolditalic}.woff2') format('woff2'), url('../fonts/#{$f-bolditalic}.woff') format('woff');
-$fontface-title-out: local('#{$f-title}'), url('../fonts/#{$f-title}.woff2') format('woff2'), url('../fonts/#{$f-title}.woff') format('woff');
+// Fonts
 
-
-// Customize your Font-Stack
-
-$font-stack: Helvetica, Arial, sans-serif;
-
-// The Fonts
-
-$font-title: 'Title', $font-stack;
-$font-regular: 'Regular', $font-stack;
-$font-italic: 'Italic', $font-stack;
-$font-bold: 'Bold', $font-stack;
-$font-bolditalic: 'BoldItalic', $font-stack;
-
-$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

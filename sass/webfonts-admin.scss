@@ -1,0 +1,57 @@
+// ------------------------------
+//
+// = Web Fonts ADMIN
+//
+// ------------------------------
+
+// Define your custom fonts :)
+
+$f-regular: Bitter-Regular;
+$f-italic: Bitter-Italic;
+$f-bold: Bitter-Bold;
+$f-bolditalic: Bitter-BoldItalic;
+$f-title: Barlow-Bold;
+
+$fontface-regular-out: local('#{$f-regular}'), url('../fonts/#{$f-regular}.woff2') format('woff2'), url('../fonts/#{$f-regular}.woff') format('woff');
+$fontface-italic-out: local('#{$f-italic}'), url('../fonts/#{$f-italic}.woff2') format('woff2'), url('../fonts/#{$f-italic}.woff') format('woff');	
+$fontface-bold-out: local('#{$f-bold}'), url('../fonts/#{$f-bold}.woff2') format('woff2'), url('../fonts/#{$f-bold}.woff') format('woff');
+$fontface-bolditalic-out: local('#{$f-bolditalic}'), url('../fonts/#{$f-bolditalic}.woff2') format('woff2'), url('../fonts/#{$f-bolditalic}.woff') format('woff');
+$fontface-title-out: local('#{$f-title}'), url('../fonts/#{$f-title}.woff2') format('woff2'), url('../fonts/#{$f-title}.woff') format('woff');
+
+// Fonts
+
+@font-face {
+	font-family: 'Regular';
+	src: $fontface-regular-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: $fontface-italic-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: $fontface-bold-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: $fontface-bolditalic-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: $fontface-title-out;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

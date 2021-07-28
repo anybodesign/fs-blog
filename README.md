@@ -8,6 +8,12 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.7 - 2021.07.28
+* Sass colors vars now CSS vars
+* ACF tinymce custom colors
+* CSS for ACF blocks
+* CSS banner overlay update
+
 ### 1.6.2 - 2021.06.28
 * Fix: resized images width
 * Add class noborder

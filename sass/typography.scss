@@ -115,32 +115,47 @@ blockquote {
 	position: relative;
 	max-width: 75%;
 	
-	.page-content > &,
-	.custom-post-content > & {
-		padding: .75em 0 .75em 2em;
+	// .page-content > &,
+	// .custom-post-content > & {
+	// 	padding: .75em 0 .75em 2em;
+	// }
+
+	p, cite {
+		&::after,
+		&::before {
+			display: block;
+			position: absolute;
+		}
+		&::before {
+			content: '';
+			width: 2px;
+			height: 100%;
+			background-color: var(--primary_color);
+			left: 1rem;
+			top: 0;
+		}
 	}
 		
-	&::after,
-	&::before {
-		content: '';
+	p {
+		position: relative;
+		margin-bottom: 0;
+		padding: .75em 0 .75em 2em;
+		
+		&::after {
+			content: '« ';
+			font-family: $font-bold;
+			font-size: 4rem;
+			color: var(--primary_color);
+			left: 0;
+			top: -2.5rem;
+			background-color: #fff;
+		}
+	}
+	
+	cite {
 		display: block;
-		position: absolute;
-	}
-	&::before {
-		width: 2px;
-		height: 100%;
-		background-color: var(--primary_color);
-		left: 1rem;
-		top: 0;
-	}
-	&::after {
-		content: "«";
-		font-family: $font-bold;
-		font-size: 4rem;
-		color: var(--primary_color);
-		left: 0;
-		top: -2.5rem;
-		background-color: #fff;
+		position: relative;
+		padding-left: 2em;
 	}
 }
 q,
@@ -150,9 +165,7 @@ blockquote p {
 	font-style: normal;
 	font-size: 2rem;
 }
-blockquote p {
-	margin-bottom: 0;
-}
+
 
 sub, sup {
   font-size: 75%;
@@ -274,11 +287,17 @@ figure {
 	overflow: hidden;
 	
 	&.noborder {
-		border: 0 !important;
+		img {
+			padding: 0;
+			border: 0;
+		}
 	}
 	
 	img {
 		display: block;
+		padding: $grid-padding;
+		border: $text-color 1px solid;
+		background-color: #fff;
 	}
 	
 	// WP block fix
@@ -292,7 +311,7 @@ figcaption {
 	font-family: $font-italic;
 	font-size: 1.3rem; 
 	line-height: 1.1;
-	margin: $grid-padding 0;
+	margin: $grid-padding;
 }
 
 

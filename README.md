@@ -8,6 +8,9 @@ Just upload and activate the theme :)
 
 ## Changelog
 
+### 1.8 - 2025.06.27
+* New Webfonts
+
 ### 1.7.2 - 2021.09.09
 * Bugfix: blockquote preview
 * CSS updates
